@@ -1,202 +1,1094 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CIS Controls v8 Reference Summary</title>
-  <style>
-    :root {
-      --bg-color: #121212;
-      --card-bg: #1e1e1e;
-      --text-color: #e0e0e0;
-      --accent: #00ffc3;
-      --badge-bg: #00bfa5;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      color: var(--accent);
-    }
-    h1 {
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.3em;
-    }
-    section {
-      background: var(--card-bg);
-      border: 1px solid #2e2e2e;
-      border-radius: 12px;
-      margin: 1.5rem 0;
-      padding: 1.5rem;
-      box-shadow: 0 0 20px rgba(0,255,195,0.1);
-      transition: transform 0.2s ease;
-    }
-    section:hover {
-      transform: scale(1.01);
-    }
-    .control-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .control-title span {
-      font-size: 1.4em;
-      font-weight: bold;
-    }
-    .badge {
-      background: var(--badge-bg);
-      color: #000;
-      padding: 0.25em 0.6em;
-      border-radius: 0.5em;
-      font-size: 0.8em;
-    }
-    .details {
-      margin-top: 1em;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 4rem;
-      font-size: 0.9em;
-      color: #888;
-    }
-    .toggle-button {
-      background: #333;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 0.4em 0.8em;
-      cursor: pointer;
-      font-size: 0.85em;
-      margin-top: 0.8em;
-      border-radius: 6px;
-      transition: background 0.2s ease;
-    }
-    .toggle-button:hover {
-      background: var(--accent);
-      color: #000;
-    }
-  </style>
-</head>
-<body>
-  <h1>CIS Controls v8 – Comprehensive Reference Guide</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Ensure optimal scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CIS Controls v8 – A Creative, Accessible Masterpiece</title>
+    <!-- Google Fonts for quirky, modern headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <style>
+      /*================================================
+        CSS Variables for Colors & Typography
+      =================================================*/
+      :root {
+        --bg-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --accent-color: #0ff;
+        --accent-hover: #aff;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --border-color: rgba(255, 255, 255, 0.1);
+        --heading-font: 'Poppins', sans-serif;
+        --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
 
-  <div id="controls">
+      /*================================================
+        Base & Global Styles (Mobile-First)
+      =================================================*/
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    <section>
-      <div class="control-title">
-        <span>Control 01: Inventory and Control of Enterprise Assets</span>
-        <span class="badge">Safeguards: 5</span>
-      </div>
-      <div class="details">
-        <p><strong>Why it's critical:</strong> You can't protect what you don’t know exists. Attackers routinely exploit unmanaged or unknown devices, which are often misconfigured or unpatched. Managed control of assets is essential for incident response, monitoring, and system recovery.</p>
-        <p><strong>Key guidance:</strong> Establish detailed asset inventories across physical, virtual, and cloud environments. Use tools like vulnerability scanners, DHCP logs, and passive discovery to dynamically maintain visibility. Ensure unauthorized assets are addressed regularly.</p>
-        <h4>🧰 Procedures and Tools</h4>
-        <ul>
-          <li>Run <strong>active discovery tools</strong> like <a href="https://nmap.org/" target="_blank">Nmap</a> or <a href="https://www.tenable.com/products/nessus" target="_blank">Nessus</a> daily to identify devices</li>
-          <li>Analyze <strong>DHCP logs</strong> and <strong>authentication logs</strong> to catch newly connected or unauthorized assets</li>
-          <li>Use endpoint management or inventory tools like <a href="https://www.manageengine.com/products/desktop-central/" target="_blank">ManageEngine</a> or <a href="https://www.lansweeper.com/" target="_blank">Lansweeper</a></li>
-          <li>Correlate logs from <strong>MDM, AD, VPN, SSO, IDS</strong>, and <strong>DPI</strong> for full coverage</li>
-          <li>Check out CIS’s <a href="https://www.cisecurity.org/controls/v8" target="_blank">Cloud/Mobile/IoT Companion Guides</a> for asset-specific best practices</li>
-        </ul>
-        <h4>🛡️ Safeguards</h4>
-        <ul>
-          <li><strong>1.1</strong> – Maintain detailed inventory with owner, IP, MAC, and approval status (IG1, IG2, IG3)</li>
-          <li><strong>1.2</strong> – Respond weekly to unauthorized assets (IG1, IG2, IG3)</li>
-          <li><strong>1.3</strong> – Run active discovery tools daily (IG2, IG3)</li>
-          <li><strong>1.4</strong> – Use DHCP logs to auto-update inventory (IG2, IG3)</li>
-          <li><strong>1.5</strong> – Use passive discovery tools at least weekly (IG3)</li>
-        </ul>
-      </div>
-    </section>
+      html, body {
+        font-family: var(--body-font);
+        background: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
 
-    <section>
-      <div class="control-title">
-        <span>Control 02: Inventory and Control of Software Assets</span>
-        <span class="badge">Safeguards: 7</span>
-      </div>
-      <div class="details">
-        <p><strong>Why it's critical:</strong> Vulnerable or malicious software is a common attack vector. Without an accurate inventory and control process, organizations risk running outdated, unauthorized, or malicious applications. These can be exploited to gain access, move laterally, or execute ransomware and data exfiltration.</p>
-        <p><strong>Key guidance:</strong> Maintain a continuously updated software inventory. Use automated allowlisting, restrict unauthorized installations, and monitor all software activity. Harden systems against software-based attacks using behavioral analysis and approved baseline images.</p>
-        <h4>🧰 Procedures and Tools</h4>
-        <ul>
-          <li>Use tools like <a href="https://osquery.io/" target="_blank">osquery</a> or <a href="https://www.microsoft.com/en-us/windows/applocker" target="_blank">AppLocker</a> to monitor and enforce software inventories</li>
-          <li>Implement software allowlisting with <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/wdac-overview" target="_blank">WDAC</a> or <a href="https://docs.hashicorp.com/nomad/" target="_blank">HashiCorp Nomad</a></li>
-          <li>Review logs using <a href="https://www.elastic.co/" target="_blank">Elastic</a> or <a href="https://www.splunk.com/" target="_blank">Splunk</a> to detect unauthorized software usage</li>
-          <li>Schedule weekly audits against CIS Benchmarks and image baselines</li>
-          <li>Integrate MDM/UEM for software push & removal (e.g. <a href="https://www.jamf.com/" target="_blank">Jamf</a>, <a href="https://www.ivanti.com/products/endpoint-manager" target="_blank">Ivanti</a>)</li>
-        </ul>
-        <h4>🛡️ Safeguards</h4>
-        <ul>
-          <li><strong>2.1</strong> – Maintain software inventory (IG1, IG2, IG3)</li>
-          <li><strong>2.2</strong> – Ensure only supported software is used (IG1, IG2, IG3)</li>
-          <li><strong>2.3</strong> – Address unauthorized software weekly (IG1, IG2, IG3)</li>
-          <li><strong>2.4</strong> – Utilize software allowlisting for executable code (IG2, IG3)</li>
-          <li><strong>2.5</strong> – Track software use by organization-defined criteria (IG2, IG3)</li>
-          <li><strong>2.6</strong> – Implement application behavior monitoring (IG3)</li>
-          <li><strong>2.7</strong> – Use automated tools to maintain software inventory (IG3)</li>
-        </ul>
-      </div>
-    </section>
+      a {
+        color: var(--accent-color);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      a:hover, a:focus {
+        color: var(--accent-hover);
+      }
 
-    <section>
-      <div class="control-title">
-        <span>Control 03: Data Protection</span>
-        <span class="badge">Safeguards: 14</span>
-      </div>
-      <div class="details">
-        <p><strong>Why it's critical:</strong> Data is the crown jewel of your organization. It exists across cloud platforms, endpoints, SaaS apps, and partner systems. Without proper classification, encryption, and secure handling, sensitive data can be exfiltrated, ransomed, or accidentally leaked.</p>
-        <p><strong>Key guidance:</strong> Classify data by sensitivity and apply least-privilege access. Enforce encryption at rest and in transit, and secure disposal of physical and digital media. DLP tools and usage audits are your besties here.</p>
-        <h4>🧰 Procedures and Tools</h4>
-        <ul>
-          <li>Use <a href="https://www.veracrypt.fr/" target="_blank">VeraCrypt</a> or <a href="https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview" target="_blank">BitLocker</a> for full disk and file-level encryption</li>
-          <li>Classify data using <a href="https://www.microsoft.com/en-us/security/business/information-protection/microsoft-purview" target="_blank">Microsoft Purview</a> or <a href="https://www.varonis.com/" target="_blank">Varonis</a></li>
-          <li>Monitor sensitive data movement with DLP tools like <a href="https://www.symantec.com/products/data-loss-prevention" target="_blank">Symantec DLP</a> or <a href="https://www.forcepoint.com/product/data-loss-prevention" target="_blank">Forcepoint DLP</a></li>
-          <li>Securely wipe data with <a href="https://dban.org/" target="_blank">DBAN</a>, <a href="https://www.bleachbit.org/" target="_blank">BleachBit</a>, or encrypted delete functions</li>
-          <li>Encrypt file transfers with <a href="https://www.openssh.com/" target="_blank">OpenSSH</a>, <a href="https://gnupg.org/" target="_blank">GnuPG</a>, or secure managed file transfer (MFT) solutions</li>
-        </ul>
-        <h4>🛡️ Safeguards</h4>
-        <ul>
-          <li><strong>3.1</strong> – Establish and maintain a data management process (IG1, IG2, IG3)</li>
-          <li><strong>3.2</strong> – Address data retention requirements (IG1, IG2, IG3)</li>
-          <li><strong>3.3</strong> – Securely dispose of data (IG1, IG2, IG3)</li>
-          <li><strong>3.4</strong> – Configure access controls to data (IG1, IG2, IG3)</li>
-          <li><strong>3.5</strong> – Encrypt sensitive data at rest (IG2, IG3)</li>
-          <li><strong>3.6</strong> – Encrypt sensitive data in transit (IG2, IG3)</li>
-          <li><strong>3.7</strong> – Establish and maintain a data classification scheme (IG2, IG3)</li>
-          <li><strong>3.8</strong> – Document data flows (IG2, IG3)</li>
-          <li><strong>3.9</strong> – Protect data integrity via hashing or controls (IG2, IG3)</li>
-          <li><strong>3.10</strong> – Apply data access logging and monitoring (IG3)</li>
-          <li><strong>3.11</strong> – Implement DLP controls (IG3)</li>
-          <li><strong>3.12</strong> – Use approved cryptographic protocols (IG3)</li>
-          <li><strong>3.13</strong> – Validate cryptographic configurations (IG3)</li>
-          <li><strong>3.14</strong> – Monitor for unauthorized sensitive data storage (IG3)</li>
-        </ul>
-      </div>
-    </section>
-  </div>
+      /*================================================
+        Semantic Structure & Accessibility
+      =================================================*/
+      header,
+      nav,
+      main,
+      footer {
+        display: block;
+      }
+      
+      /*================================================
+        Header & Navigation (Off-canvas) 
+      =================================================*/
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(20, 20, 20, 0.95);
+        backdrop-filter: blur(8px);
+        padding: 12px 16px;
+        z-index: 200;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      header h1 {
+        font-family: var(--heading-font);
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+      }
 
-  <div class="footer">
-    Compiled with ❤️ by Aesha · Center for Internet Security Controls · 2025
-  </div>
-
-  <script>
-    document.querySelectorAll('.toggle-button').forEach(button => {
-      button.addEventListener('click', () => {
-        const target = button.nextElementSibling;
-        if (target.style.display === 'none') {
-          target.style.display = 'block';
-          button.textContent = 'Hide Details';
-        } else {
-          target.style.display = 'none';
-          button.textContent = 'Show Details';
+      /* Hamburger Menu Button */
+      .menu-btn {
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        color: var(--accent-color);
+        cursor: pointer;
+      }
+      /* Ensure button is keyboard accessible */
+      .menu-btn:focus {
+        outline: 2px solid var(--accent-color);
+      }
+      
+      /* Off-canvas Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        right: -260px;
+        width: 240px;
+        height: 100%;
+        background: rgba(20, 20, 20, 0.98);
+        backdrop-filter: blur(8px);
+        padding: 80px 20px;
+        transition: right 0.3s ease;
+        z-index: 150;
+      }
+      
+      nav.active {
+        right: 0;
+      }
+      
+      nav ul {
+        list-style: none;
+      }
+      
+      nav li {
+        margin-bottom: 16px;
+      }
+      
+      nav a {
+        font-size: 1rem;
+        font-weight: 500;
+        display: block;
+        padding: 8px;
+        border-radius: 4px;
+      }
+      
+      nav a:hover, nav a:focus {
+        background: rgba(0, 255, 255, 0.15);
+      }
+      
+      /*================================================
+        Main Content Layout
+      =================================================*/
+      main {
+        padding: 80px 16px 40px; /* accommodate fixed header */
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      section {
+        margin-bottom: 40px;
+      }
+      
+      h2 {
+        font-family: var(--heading-font);
+        font-size: 1.8rem;
+        margin: 24px 0 10px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--border-color);
+      }
+      
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+      
+      p {
+        margin-bottom: 12px;
+      }
+      
+      /*================================================
+        Reusable Card Component with Glassmorphism
+      =================================================*/
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+        backdrop-filter: blur(6px);
+        box-shadow: 0 4px 8px rgba(0, 255, 255, 0.1);
+        transition: box-shadow 0.3s;
+      }
+      .card:hover {
+        box-shadow: 0 6px 12px rgba(0, 255, 255, 0.2);
+      }
+      
+      /*================================================
+        Modular Interactive Collapsible Components
+      =================================================*/
+      .collapsible {
+        background: rgba(30, 30, 30, 0.95);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 10px 14px;
+        margin: 10px 0;
+        font-size: 1rem;
+        text-align: left;
+        cursor: pointer;
+        transition: background 0.3s;
+        position: relative;
+      }
+      .collapsible:hover, .collapsible:focus {
+        background: rgba(40, 40, 40, 0.95);
+      }
+      /* ARIA role "button" for accessibility is inherent to <button> elements; 
+         if using divs, ensure role="button" and tabindex="0". Here, we use <button>. */
+      .collapsible::after {
+        content: '▼';
+        position: absolute;
+        right: 14px;
+        transition: transform 0.3s;
+      }
+      .collapsible.active::after {
+        transform: rotate(180deg);
+      }
+      .content {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        padding: 0 14px;
+        margin-bottom: 10px;
+      }
+      .content ul {
+        list-style: disc;
+        margin-left: 20px;
+        margin-top: 8px;
+      }
+      
+      /*================================================
+        Table for Acronyms & Additional Resources
+      =================================================*/
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0;
+        font-size: 0.9rem;
+      }
+      th, td {
+        padding: 10px;
+        border: 1px solid var(--border-color);
+      }
+      th {
+        background: rgba(30, 30, 30, 0.95);
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background: rgba(20, 20, 20, 0.95);
+      }
+      
+      /*================================================
+        Footer Styling
+      =================================================*/
+      footer {
+        padding: 20px;
+        text-align: center;
+        background: rgba(20, 20, 20, 0.95);
+        backdrop-filter: blur(6px);
+        border-top: 1px solid var(--border-color);
+        margin-top: 40px;
+      }
+      
+      /*================================================
+        Responsive & Fluid Layout using Flex & Grid
+      =================================================*/
+      @media (min-width: 768px) {
+        main {
+          padding: 100px 32px 60px;
         }
+        header h1 {
+          font-size: 2rem;
+        }
+        nav {
+          width: 260px;
+          right: -260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with Site Title and Navigation Toggle -->
+    <header>
+      <h1>CIS Controls v8</h1>
+      <!-- Accessible hamburger menu button -->
+      <button class="menu-btn" aria-label="Toggle navigation" aria-controls="sideNav" aria-expanded="false">&#9776;</button>
+    </header>
+    
+    <!-- Off-canvas Navigation -->
+    <nav id="sideNav" aria-label="Main Navigation">
+      <ul>
+        <!-- Each nav link should be descriptive -->
+        <li><a href="#control1">Control 1</a></li>
+        <li><a href="#control2">Control 2</a></li>
+        <li><a href="#control3">Control 3</a></li>
+        <li><a href="#control4">Control 4</a></li>
+        <li><a href="#control5">Control 5</a></li>
+        <li><a href="#control6">Control 6</a></li>
+        <li><a href="#control7">Control 7</a></li>
+        <li><a href="#control8">Control 8</a></li>
+        <li><a href="#control9">Control 9</a></li>
+        <li><a href="#control10">Control 10</a></li>
+        <li><a href="#control11">Control 11</a></li>
+        <li><a href="#control12">Control 12</a></li>
+        <li><a href="#control13">Control 13</a></li>
+        <li><a href="#control14">Control 14</a></li>
+        <li><a href="#control15">Control 15</a></li>
+        <li><a href="#control16">Control 16</a></li>
+        <li><a href="#control17">Control 17</a></li>
+        <li><a href="#control18">Control 18</a></li>
+        <li><a href="#acronyms">Acronyms</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Main Content Area -->
+    <main>
+      <!-- Each Control is wrapped in a semantic article/section -->
+      
+      <!-- Control 1 -->
+      <article id="control1">
+        <header>
+          <h2>Control 1: Inventory and Control of Enterprise Assets</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 😎</h3>
+          <p>Know every device on your network – from laptops to IoT gadgets. Keeping an up-to-date inventory stops uninvited devices from crashing your VIP party.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Deploy automated discovery and network scanning tools.</li>
+              <li>Monitor DHCP logs for real-time updates.</li>
+              <li>Aggregate data from endpoints, cloud portals, and manual records.</li>
+              <li>See the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Cloud Companion Guide</a> for cloud specifics.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Maintain a detailed, continuously updated asset inventory.</li>
+              <li>Identify and isolate unauthorized devices.</li>
+              <li>Use both active and passive discovery techniques.</li>
+              <li>Review the inventory regularly.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🎉</button>
+          <div class="content">
+            <ul>
+              <li>Imagine your network as an exclusive party – only invited devices get in, and any shady uninvited gadget gets shown the door! 🕺🎊</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 2 -->
+      <article id="control2">
+        <header>
+          <h2>Control 2: Inventory and Control of Software Assets</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 📱</h3>
+          <p>Keep strict control over the software running on your devices. Only authorized, supported apps are allowed, reducing vulnerability risks.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Utilize automated software inventory tools that leverage SCAP.</li>
+              <li>Implement allowlisting for applications, libraries, and scripts.</li>
+              <li>Regularly verify patch levels and support statuses.</li>
+              <li>Refer to the <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-126r3.pdf" target="_blank" rel="noopener">NIST SCAP Guidelines</a>.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Create and maintain a comprehensive software inventory.</li>
+              <li>Ensure only authorized and supported software is active.</li>
+              <li>Remove or block unauthorized applications.</li>
+              <li>Implement allowlisting for executables and scripts.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🎮</button>
+          <div class="content">
+            <ul>
+              <li>Think of your software inventory as a neat fridge – only the freshest apps stay, and anything spoiled gets tossed out! 🍕📱</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 3 -->
+      <article id="control3">
+        <header>
+          <h2>Control 3: Data Protection</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🔐</h3>
+          <p>Safeguard your valuable data by managing it through its entire lifecycle. Classify, encrypt, and securely dispose of information so that only the right eyes can see your treasure.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Establish a data management framework with labels (Sensitive, Confidential, Public).</li>
+              <li>Deploy encryption for data at rest, in transit, and on removable media.</li>
+              <li>Utilize DLP tools to monitor data flows.</li>
+              <li>Consult the <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf" target="_blank" rel="noopener">NIST Media Sanitization Guide</a> and relevant FIPS standards.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Document and inventory your key data assets.</li>
+              <li>Enforce strict access control and retention policies.</li>
+              <li>Encrypt and securely dispose of sensitive data.</li>
+              <li>Segment your network according to data sensitivity.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🏴‍☠️</button>
+          <div class="content">
+            <ul>
+              <li>Imagine your data as priceless pirate treasure – lock it with secret codes so only your trusted crew can plunder it! ☠️💰</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 4 -->
+      <article id="control4">
+        <header>
+          <h2>Control 4: Secure Configuration of Enterprise Assets and Software</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🚀</h3>
+          <p>Tighten up default settings by using security baselines and continuous configuration management – get your systems prepped like a spaceship ready for launch!</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Adopt security baselines such as the <a href="http://www.cisecurity.org/cis-benchmarks/" target="_blank" rel="noopener">CIS Benchmarks</a>.</li>
+              <li>Automate configuration management using modern tools and scripts.</li>
+              <li>Utilize CIS-CAT and the <a href="https://nvd.nist.gov/ncp/repository" target="_blank" rel="noopener">NIST Checklist Repository</a> for monitoring.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Implement secure configuration processes for all devices and software.</li>
+              <li>Enforce automatic session locking, firewall management, and disable default accounts.</li>
+              <li>Document deviations and obtain required approvals.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 👽</button>
+          <div class="content">
+            <ul>
+              <li>Imagine setting up your own spaceship – every system must be tuned perfectly so no alien hacker can infiltrate your craft! 👾🛸</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 5 -->
+      <article id="control5">
+        <header>
+          <h2>Control 5: Account Management</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🔑</h3>
+          <p>Manage user, admin, and service accounts with strict policies and strong authentication so only the right peeps can access your digital domain.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Keep an up-to-date inventory of all accounts.</li>
+              <li>Implement unique password policies and MFA.</li>
+              <li>Centralize account management with directory services (<a href="https://pages.nist.gov/800-63-3/" target="_blank" rel="noopener">NIST Digital Identity Guidelines</a>).</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Audit account permissions regularly and disable dormant accounts.</li>
+              <li>Separate administrative accounts from regular ones.</li>
+              <li>Monitor privileged access meticulously.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🎉</button>
+          <div class="content">
+            <ul>
+              <li>Imagine sorting your exclusive group chat – only VIPs get into the secret channel, while uninvited lurkers are booted out! 😜📲</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 6 -->
+      <article id="control6">
+        <header>
+          <h2>Control 6: Access Control Management</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🕶️</h3>
+          <p>Enforce least privilege by ensuring every account accesses only what it truly needs – think of it as having a digital bouncer keeping the riffraff out.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Implement role-based access control with centralized directory services.</li>
+              <li>Enforce MFA for remote and administrative access.</li>
+              <li>Automate provisioning and de-provisioning to minimize errors.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Establish clear processes for granting and revoking access.</li>
+              <li>Review and adjust role-based privileges regularly.</li>
+              <li>Centralize access control and enforce strong authentication.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🍾</button>
+          <div class="content">
+            <ul>
+              <li>Picture a bouncer at a swanky club – only the coolest authorized members get in while the freeloaders are left at the door! 😎🍸</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 7 -->
+      <article id="control7">
+        <header>
+          <h2>Control 7: Continuous Vulnerability Management</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🩺</h3>
+          <p>Continuously scan your systems for vulnerabilities and integrate findings into your patch management workflow so nothing slips through the cracks.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Schedule regular vulnerability scans using automated tools.</li>
+              <li>Integrate scan results into your change management process.</li>
+              <li>Prioritize remediation actions based on risk.</li>
+              <li>Check out the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Controls website</a> for more insights.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Maintain an updated workflow for remediation.</li>
+              <li>Continuously monitor for new vulnerabilities.</li>
+              <li>Review scan findings and update defenses as necessary.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 😅</button>
+          <div class="content">
+            <ul>
+              <li>Imagine regular health check-ups for your network – catch issues early before they become emergencies! 🩹💊</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 8 -->
+      <article id="control8">
+        <header>
+          <h2>Control 8: Audit Log Management</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 📖</h3>
+          <p>Collect and review audit logs to detect suspicious activity. Think of it as a digital diary that helps you uncover and react to anomalies.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Deploy centralized logging solutions and SIEM tools.</li>
+              <li>Automate log collection and analysis.</li>
+              <li>Set retention policies that adhere to compliance standards.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Store logs centrally with secure access controls.</li>
+              <li>Regularly review logs for anomalies.</li>
+              <li>Retain logs according to industry best practices.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🕵️‍♀️</button>
+          <div class="content">
+            <ul>
+              <li>Imagine your logs as your secret diary – if something odd happens, you can always look back and decipher the clues! 📓🔍</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 9 -->
+      <article id="control9">
+        <header>
+          <h2>Control 9: Email and Web Browser Protections</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 💻</h3>
+          <p>Strengthen your email and browser defenses like a dynamic duo – protect against phishing, malicious links, and drive-by attacks.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Implement secure email gateways and anti-spam filters.</li>
+              <li>Harden browser configurations; use sandboxing and isolation techniques.</li>
+              <li>Educate users on recognizing phishing attempts.</li>
+              <li>Refer to the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Email/Web Guide</a> for more tips.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Enforce email filtering and safe browsing practices.</li>
+              <li>Configure browsers to block malicious content.</li>
+              <li>Provide regular training to raise threat awareness.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🦸‍♀️</button>
+          <div class="content">
+            <ul>
+              <li>Picture your email and browser as a superhero duo – always on guard to save your day from cyber villains! 🦸‍♂️💥</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 10 -->
+      <article id="control10">
+        <header>
+          <h2>Control 10: Malware Defenses</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🏰</h3>
+          <p>Defend your devices with multi-layered malware protection that stops unwanted intruders in their tracks.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Install and maintain up-to-date anti-malware and EDR solutions.</li>
+              <li>Utilize allowlisting and behavior monitoring to catch anomalies.</li>
+              <li>Supplement automated defenses with periodic manual reviews.</li>
+              <li>Learn more at the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Resources</a>.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Deploy anti-malware across all endpoints.</li>
+              <li>Automate detection and remediation workflows.</li>
+              <li>Establish protocols to quickly address malware threats.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🎯</button>
+          <div class="content">
+            <ul>
+              <li>Imagine your device as a fortress – no malware gets past your impenetrable defenses! 🏰🛡️</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 11 -->
+      <article id="control11">
+        <header>
+          <h2>Control 11: Data Recovery</h2>
+        </header>
+        <section class="card">
+          <h3>Summary ⏪</h3>
+          <p>Be ready to bounce back quickly from any incident with robust backup and recovery strategies – your ultimate digital insurance.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Schedule automated backups using offsite or cloud storage.</li>
+              <li>Regularly test and refine your recovery plan.</li>
+              <li>Follow best practices recommended by NIST and CIS.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Back up all critical data regularly.</li>
+              <li>Encrypt backups and secure access to them.</li>
+              <li>Conduct recovery drills periodically.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🎬</button>
+          <div class="content">
+            <ul>
+              <li>Think of data recovery as your secret "undo" button – when things go wrong, just hit rewind and fix it! 🔄🎥</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 12 -->
+      <article id="control12">
+        <header>
+          <h2>Control 12: Network Infrastructure Management</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🚦</h3>
+          <p>Keep your network devices secure and optimized with up-to-date configurations, timely patch management, and smart segmentation.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Maintain an updated inventory of all network devices.</li>
+              <li>Apply secure configuration baselines to routers, switches, and firewalls.</li>
+              <li>Integrate patch management and configuration reviews into your workflow.</li>
+              <li>See the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Guides</a> for more details.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Enforce secure management practices for your network infrastructure.</li>
+              <li>Segment network traffic to reduce risk exposure.</li>
+              <li>Audit configurations periodically.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🏎️</button>
+          <div class="content">
+            <ul>
+              <li>Imagine tuning a high-performance car – every component must work in harmony for a smooth ride on the info superhighway! 🏎️💨</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 13 -->
+      <article id="control13">
+        <header>
+          <h2>Control 13: Network Monitoring and Defense</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🕵️</h3>
+          <p>Continuously monitor network activity using advanced detection tools to spot and neutralize threats before they cause harm.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Deploy IDS/IPS and integrate them with SIEM systems.</li>
+              <li>Automate anomaly detection and alert triggering.</li>
+              <li>Regularly analyze network logs and performance metrics.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Continuously monitor traffic for early threat detection.</li>
+              <li>Set up automated alert procedures.</li>
+              <li>Review logs and refine defensive strategies regularly.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🕶️</button>
+          <div class="content">
+            <ul>
+              <li>Picture yourself as a secret agent – always on the lookout for any suspicious activity with your cool spy gadgets! 🕵️‍♂️🔎</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 14 -->
+      <article id="control14">
+        <header>
+          <h2>Control 14: Security Awareness and Skills Training</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 📚</h3>
+          <p>Empower your team with interactive and engaging training sessions so they can level up their cyber skills and fend off attacks like pros.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Conduct regular security awareness sessions and phishing simulations.</li>
+              <li>Use interactive e-learning modules and assessments.</li>
+              <li>Keep training content current with emerging threat trends (<a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS resources</a>).</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Mandate periodic security training for all staff.</li>
+              <li>Run simulated exercises and reward engagement.</li>
+              <li>Evaluate training effectiveness through feedback.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🏆</button>
+          <div class="content">
+            <ul>
+              <li>Think of training as a fun game – each challenge levels up your cyber skills and earns you extra XP! 🎮✨</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 15 -->
+      <article id="control15">
+        <header>
+          <h2>Control 15: Service Provider Management</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 💌</h3>
+          <p>Manage your vendors like a pro – only partner with those that meet your rigorous security standards to ensure smooth, secure operations.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Conduct thorough security assessments of service providers.</li>
+              <li>Establish clear contractual security requirements and SLAs.</li>
+              <li>Review provider performance and compliance regularly.</li>
+              <li>See the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Controls website</a> for more info.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Set up SLAs with clear security metrics.</li>
+              <li>Conduct routine vendor risk assessments.</li>
+              <li>Continuously monitor third-party compliance.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 💖</button>
+          <div class="content">
+            <ul>
+              <li>Imagine dating only the best – you stick with vendors that pass your security compatibility test! 💘📞</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 16 -->
+      <article id="control16">
+        <header>
+          <h2>Control 16: Application Software Security</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🍽️</h3>
+          <p>Embed security into your software development process with secure coding practices, continuous testing, and vulnerability management – like a gourmet chef using only the finest ingredients.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Adopt secure coding standards and conduct regular code reviews.</li>
+              <li>Integrate static and dynamic analysis tools into your CI/CD pipelines.</li>
+              <li>Follow OWASP guidelines – visit <a href="https://owasp.org/" target="_blank" rel="noopener">OWASP</a> for more info.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Conduct vulnerability assessments and penetration tests on applications.</li>
+              <li>Enforce secure software development frameworks.</li>
+              <li>Implement continuous monitoring and patching for application vulnerabilities.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🍕</button>
+          <div class="content">
+            <ul>
+              <li>Imagine your code as a secret recipe – only use the finest ingredients to craft a masterpiece! 👩‍🍳✨</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 17 -->
+      <article id="control17">
+        <header>
+          <h2>Control 17: Incident Response Management</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🚨</h3>
+          <p>Be prepared for digital emergencies with a robust incident response plan that lets you detect, contain, and recover at lightning speed.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Develop and maintain an incident response plan integrated with your overall security strategy.</li>
+              <li>Conduct regular drills and tabletop exercises.</li>
+              <li>Coordinate with legal, PR, and communication teams for a unified response.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Establish a dedicated incident response team with clearly defined roles.</li>
+              <li>Document every incident and update your processes accordingly.</li>
+              <li>Utilize automation for rapid detection and containment.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🦸‍♂️</button>
+          <div class="content">
+            <ul>
+              <li>Imagine an epic rescue mission – when disaster strikes, your team leaps into action like a squad of superheroes! 🦸‍♀️⚡</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Control 18 -->
+      <article id="control18">
+        <header>
+          <h2>Control 18: Penetration Testing</h2>
+        </header>
+        <section class="card">
+          <h3>Summary 🥊</h3>
+          <p>Simulate real-world cyberattacks to uncover vulnerabilities before the baddies do – a healthy sparring match for your security.</p>
+        </section>
+        <section>
+          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
+          <div class="content">
+            <ul>
+              <li>Schedule regular internal and external penetration tests.</li>
+              <li>Use a mix of automated scanning and manual testing.</li>
+              <li>Engage with reputable third-party testers for unbiased assessments.</li>
+              <li>See the <a href="https://www.penteststandard.org/" target="_blank" rel="noopener">Penetration Testing Execution Standard (PTES)</a> for more info.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
+          <div class="content">
+            <ul>
+              <li>Document all findings and remediate vulnerabilities promptly.</li>
+              <li>Maintain a regular testing schedule.</li>
+              <li>Conduct follow-up tests post-remediation.</li>
+            </ul>
+          </div>
+          <button class="collapsible" aria-expanded="false">Fun Example 🥳</button>
+          <div class="content">
+            <ul>
+              <li>Imagine a friendly sparring match where experts test your defenses – you level up your security game with every round! 🎯🥊</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      
+      <!-- Acronyms Section -->
+      <section id="acronyms">
+        <header>
+          <h2>Acronyms and Abbreviations</h2>
+        </header>
+        <table>
+          <thead>
+            <tr>
+              <th>Acronym</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>AAA</td><td>Authentication, Authorization, and Auditing</td></tr>
+            <tr><td>ACL</td><td>Access Control List</td></tr>
+            <tr><td>AD</td><td>Active Directory</td></tr>
+            <tr><td>API</td><td>Application Programming Interface</td></tr>
+            <tr><td>BEC</td><td>Business Email Compromise</td></tr>
+            <tr><td>C2</td><td>Command and Control</td></tr>
+            <tr><td>CCE</td><td>Common Configuration Enumeration</td></tr>
+            <tr><td>CDM</td><td>Community Defense Model</td></tr>
+            <tr><td>CIA</td><td>Confidentiality, Integrity, and Availability</td></tr>
+            <tr><td>CIS</td><td>Center for Internet Security</td></tr>
+            <tr><td>CIS-CAT</td><td>CIS Configuration Assessment Tool</td></tr>
+            <tr><td>COTS</td><td>Commercial off-the-Shelf</td></tr>
+            <tr><td>CPE</td><td>Common Platform Enumeration</td></tr>
+            <tr><td>CSA</td><td>Cloud Security Alliance</td></tr>
+            <tr><td>CSP</td><td>Cloud Service Provider</td></tr>
+            <tr><td>CVE</td><td>Common Vulnerabilities and Exposures</td></tr>
+            <tr><td>CVSS</td><td>Common Vulnerability Scoring System</td></tr>
+            <tr><td>DBIR</td><td>Data Breach Investigations Report</td></tr>
+            <tr><td>DHCP</td><td>Dynamic Host Configuration Protocol</td></tr>
+            <tr><td>DKIM</td><td>DomainKeys Identified Mail</td></tr>
+            <tr><td>DLP</td><td>Data Loss Prevention</td></tr>
+            <tr><td>DMARC</td><td>Domain-based Message Authentication, Reporting, and Conformance</td></tr>
+            <tr><td>DMS</td><td>Database Management System</td></tr>
+            <tr><td>DNS</td><td>Domain Name System</td></tr>
+            <tr><td>DPI</td><td>Deep Packet Inspection</td></tr>
+            <tr><td>EDR</td><td>Endpoint Detection and Response</td></tr>
+            <tr><td>EOL</td><td>End of Life</td></tr>
+            <tr><td>FISMA</td><td>Federal Information Security Modernization Act</td></tr>
+            <tr><td>GRC</td><td>Governance Risk and Compliance</td></tr>
+            <tr><td>HIPAA</td><td>Health Insurance Portability and Accountability Act</td></tr>
+            <tr><td>HTTP</td><td>Hypertext Transfer Protocol</td></tr>
+            <tr><td>HTTPS</td><td>Hypertext Transfer Protocol Secure</td></tr>
+            <tr><td>IaaS</td><td>Infrastructure as a Service</td></tr>
+            <tr><td>IAM</td><td>Identity and Access Management</td></tr>
+            <tr><td>IDS</td><td>Intrusion Detection System</td></tr>
+            <tr><td>IoT</td><td>Internet of Things</td></tr>
+            <tr><td>IPS</td><td>Intrusion Prevention System</td></tr>
+            <tr><td>ISO</td><td>International Organization for Standardization</td></tr>
+            <tr><td>MDM</td><td>Mobile Device Management</td></tr>
+            <tr><td>MFA</td><td>Multi-Factor Authentication</td></tr>
+            <tr><td>MITRE</td><td>MITRE ATT&amp;CK Framework</td></tr>
+            <tr><td>NIST</td><td>National Institute of Standards and Technology</td></tr>
+            <tr><td>OS</td><td>Operating System</td></tr>
+            <tr><td>OWASP</td><td>Open Web Application Security Project</td></tr>
+            <tr><td>PaaS</td><td>Platform as a Service</td></tr>
+            <tr><td>PAM</td><td>Privileged Access Management</td></tr>
+            <tr><td>PCI</td><td>Payment Card Industry</td></tr>
+            <tr><td>SaaS</td><td>Software as a Service</td></tr>
+            <tr><td>SCAP</td><td>Security Content Automation Protocol</td></tr>
+            <tr><td>SIEM</td><td>Security Information and Event Management</td></tr>
+            <tr><td>SSH</td><td>Secure Shell</td></tr>
+            <tr><td>SSO</td><td>Single Sign-On</td></tr>
+            <tr><td>TLS</td><td>Transport Layer Security</td></tr>
+            <tr><td>VPN</td><td>Virtual Private Network</td></tr>
+            <tr><td>WPA2</td><td>Wi-Fi Protected Access 2</td></tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- Additional Resources Section -->
+      <section id="resources">
+        <header>
+          <h2>Additional Resources</h2>
+        </header>
+        <section class="card">
+          <ul>
+            <li><a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Critical Security Controls v8</a></li>
+            <li><a href="https://nvlpubs.nist.gov/" target="_blank" rel="noopener">NIST Publications</a></li>
+            <li><a href="https://owasp.org/" target="_blank" rel="noopener">OWASP</a></li>
+            <li><a href="https://pages.nist.gov/800-63-3/" target="_blank" rel="noopener">NIST Digital Identity Guidelines</a></li>
+          </ul>
+        </section>
+      </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Aesha's Cyber Glam. All rights reserved. 😘💻</p>
+    </footer>
+    
+    <!--================================================
+         JavaScript for Interactivity & Accessibility
+    =================================================-->
+    <script>
+      // Toggle Off-Canvas Navigation
+      const menuBtn = document.querySelector('.menu-btn');
+      const sideNav = document.getElementById('sideNav');
+      
+      menuBtn.addEventListener('click', () => {
+        const expanded = menuBtn.getAttribute('aria-expanded') === "true";
+        menuBtn.setAttribute('aria-expanded', !expanded);
+        sideNav.classList.toggle('active');
       });
-    });
-  </script>
-</body>
+      
+      // Collapsible Section Toggle with ARIA Updates
+      const collapsibleButtons = document.querySelectorAll('.collapsible');
+      
+      collapsibleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const expanded = this.getAttribute('aria-expanded') === "true";
+          this.setAttribute('aria-expanded', !expanded);
+          this.classList.toggle('active');
+          const content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      });
+      
+      // Smooth Scrolling for In-Page Links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+          // Close the nav after clicking a link
+          sideNav.classList.remove('active');
+          menuBtn.setAttribute('aria-expanded', "false");
+        });
+      });
+    </script>
+  </body>
 </html>
