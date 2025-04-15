@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIS Controls v8 Reference Summary</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
+      --text-color: #e0e0e0;
+      --accent: #00ffc3;
+      --badge-bg: #00bfa5;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: var(--accent);
+    }
+    h1 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3em;
+    }
+    section {
+      background: var(--card-bg);
+      border: 1px solid #2e2e2e;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      box-shadow: 0 0 20px rgba(0,255,195,0.1);
+      transition: transform 0.2s ease;
+    }
+    section:hover {
+      transform: scale(1.01);
+    }
+    .control-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .control-title span {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+    .badge {
+      background: var(--badge-bg);
+      color: #000;
+      padding: 0.25em 0.6em;
+      border-radius: 0.5em;
+      font-size: 0.8em;
+    }
+    .details {
+      margin-top: 1em;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9em;
+      color: #888;
+    }
+    .toggle-button {
+      background: #333;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.4em 0.8em;
+      cursor: pointer;
+      font-size: 0.85em;
+      margin-top: 0.8em;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+    .toggle-button:hover {
+      background: var(--accent);
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>CIS Controls v8 – Comprehensive Reference Guide</h1>
+
+  <div id="controls">
+
+    <section>
+      <div class="control-title">
+        <span>Control 01: Inventory and Control of Enterprise Assets</span>
+        <span class="badge">Safeguards: 5</span>
+      </div>
+      <div class="details">
+        <p><strong>Why it's critical:</strong> You can't protect what you don’t know exists. Attackers routinely exploit unmanaged or unknown devices, which are often misconfigured or unpatched. Managed control of assets is essential for incident response, monitoring, and system recovery.</p>
+        <p><strong>Key guidance:</strong> Establish detailed asset inventories across physical, virtual, and cloud environments. Use tools like vulnerability scanners, DHCP logs, and passive discovery to dynamically maintain visibility. Ensure unauthorized assets are addressed regularly.</p>
+        <h4>🧰 Procedures and Tools</h4>
+        <ul>
+          <li>Run <strong>active discovery tools</strong> like <a href="https://nmap.org/" target="_blank">Nmap</a> or <a href="https://www.tenable.com/products/nessus" target="_blank">Nessus</a> daily to identify devices</li>
+          <li>Analyze <strong>DHCP logs</strong> and <strong>authentication logs</strong> to catch newly connected or unauthorized assets</li>
+          <li>Use endpoint management or inventory tools like <a href="https://www.manageengine.com/products/desktop-central/" target="_blank">ManageEngine</a> or <a href="https://www.lansweeper.com/" target="_blank">Lansweeper</a></li>
+          <li>Correlate logs from <strong>MDM, AD, VPN, SSO, IDS</strong>, and <strong>DPI</strong> for full coverage</li>
+          <li>Check out CIS’s <a href="https://www.cisecurity.org/controls/v8" target="_blank">Cloud/Mobile/IoT Companion Guides</a> for asset-specific best practices</li>
+        </ul>
+        <h4>🛡️ Safeguards</h4>
+        <ul>
+          <li><strong>1.1</strong> – Maintain detailed inventory with owner, IP, MAC, and approval status (IG1, IG2, IG3)</li>
+          <li><strong>1.2</strong> – Respond weekly to unauthorized assets (IG1, IG2, IG3)</li>
+          <li><strong>1.3</strong> – Run active discovery tools daily (IG2, IG3)</li>
+          <li><strong>1.4</strong> – Use DHCP logs to auto-update inventory (IG2, IG3)</li>
+          <li><strong>1.5</strong> – Use passive discovery tools at least weekly (IG3)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="control-title">
+        <span>Control 02: Inventory and Control of Software Assets</span>
+        <span class="badge">Safeguards: 7</span>
+      </div>
+      <div class="details">
+        <p><strong>Why it's critical:</strong> Vulnerable or malicious software is a common attack vector. Without an accurate inventory and control process, organizations risk running outdated, unauthorized, or malicious applications. These can be exploited to gain access, move laterally, or execute ransomware and data exfiltration.</p>
+        <p><strong>Key guidance:</strong> Maintain a continuously updated software inventory. Use automated allowlisting, restrict unauthorized installations, and monitor all software activity. Harden systems against software-based attacks using behavioral analysis and approved baseline images.</p>
+        <h4>🧰 Procedures and Tools</h4>
+        <ul>
+          <li>Use tools like <a href="https://osquery.io/" target="_blank">osquery</a> or <a href="https://www.microsoft.com/en-us/windows/applocker" target="_blank">AppLocker</a> to monitor and enforce software inventories</li>
+          <li>Implement software allowlisting with <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/wdac-overview" target="_blank">WDAC</a> or <a href="https://docs.hashicorp.com/nomad/" target="_blank">HashiCorp Nomad</a></li>
+          <li>Review logs using <a href="https://www.elastic.co/" target="_blank">Elastic</a> or <a href="https://www.splunk.com/" target="_blank">Splunk</a> to detect unauthorized software usage</li>
+          <li>Schedule weekly audits against CIS Benchmarks and image baselines</li>
+          <li>Integrate MDM/UEM for software push & removal (e.g. <a href="https://www.jamf.com/" target="_blank">Jamf</a>, <a href="https://www.ivanti.com/products/endpoint-manager" target="_blank">Ivanti</a>)</li>
+        </ul>
+        <h4>🛡️ Safeguards</h4>
+        <ul>
+          <li><strong>2.1</strong> – Maintain software inventory (IG1, IG2, IG3)</li>
+          <li><strong>2.2</strong> – Ensure only supported software is used (IG1, IG2, IG3)</li>
+          <li><strong>2.3</strong> – Address unauthorized software weekly (IG1, IG2, IG3)</li>
+          <li><strong>2.4</strong> – Utilize software allowlisting for executable code (IG2, IG3)</li>
+          <li><strong>2.5</strong> – Track software use by organization-defined criteria (IG2, IG3)</li>
+          <li><strong>2.6</strong> – Implement application behavior monitoring (IG3)</li>
+          <li><strong>2.7</strong> – Use automated tools to maintain software inventory (IG3)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="control-title">
+        <span>Control 03: Data Protection</span>
+        <span class="badge">Safeguards: 14</span>
+      </div>
+      <div class="details">
+        <p><strong>Why it's critical:</strong> Data is the crown jewel of your organization. It exists across cloud platforms, endpoints, SaaS apps, and partner systems. Without proper classification, encryption, and secure handling, sensitive data can be exfiltrated, ransomed, or accidentally leaked.</p>
+        <p><strong>Key guidance:</strong> Classify data by sensitivity and apply least-privilege access. Enforce encryption at rest and in transit, and secure disposal of physical and digital media. DLP tools and usage audits are your besties here.</p>
+        <h4>🧰 Procedures and Tools</h4>
+        <ul>
+          <li>Use <a href="https://www.veracrypt.fr/" target="_blank">VeraCrypt</a> or <a href="https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview" target="_blank">BitLocker</a> for full disk and file-level encryption</li>
+          <li>Classify data using <a href="https://www.microsoft.com/en-us/security/business/information-protection/microsoft-purview" target="_blank">Microsoft Purview</a> or <a href="https://www.varonis.com/" target="_blank">Varonis</a></li>
+          <li>Monitor sensitive data movement with DLP tools like <a href="https://www.symantec.com/products/data-loss-prevention" target="_blank">Symantec DLP</a> or <a href="https://www.forcepoint.com/product/data-loss-prevention" target="_blank">Forcepoint DLP</a></li>
+          <li>Securely wipe data with <a href="https://dban.org/" target="_blank">DBAN</a>, <a href="https://www.bleachbit.org/" target="_blank">BleachBit</a>, or encrypted delete functions</li>
+          <li>Encrypt file transfers with <a href="https://www.openssh.com/" target="_blank">OpenSSH</a>, <a href="https://gnupg.org/" target="_blank">GnuPG</a>, or secure managed file transfer (MFT) solutions</li>
+        </ul>
+        <h4>🛡️ Safeguards</h4>
+        <ul>
+          <li><strong>3.1</strong> – Establish and maintain a data management process (IG1, IG2, IG3)</li>
+          <li><strong>3.2</strong> – Address data retention requirements (IG1, IG2, IG3)</li>
+          <li><strong>3.3</strong> – Securely dispose of data (IG1, IG2, IG3)</li>
+          <li><strong>3.4</strong> – Configure access controls to data (IG1, IG2, IG3)</li>
+          <li><strong>3.5</strong> – Encrypt sensitive data at rest (IG2, IG3)</li>
+          <li><strong>3.6</strong> – Encrypt sensitive data in transit (IG2, IG3)</li>
+          <li><strong>3.7</strong> – Establish and maintain a data classification scheme (IG2, IG3)</li>
+          <li><strong>3.8</strong> – Document data flows (IG2, IG3)</li>
+          <li><strong>3.9</strong> – Protect data integrity via hashing or controls (IG2, IG3)</li>
+          <li><strong>3.10</strong> – Apply data access logging and monitoring (IG3)</li>
+          <li><strong>3.11</strong> – Implement DLP controls (IG3)</li>
+          <li><strong>3.12</strong> – Use approved cryptographic protocols (IG3)</li>
+          <li><strong>3.13</strong> – Validate cryptographic configurations (IG3)</li>
+          <li><strong>3.14</strong> – Monitor for unauthorized sensitive data storage (IG3)</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">
+    Compiled with ❤️ by Aesha · Center for Internet Security Controls · 2025
+  </div>
+
+  <script>
+    document.querySelectorAll('.toggle-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.nextElementSibling;
+        if (target.style.display === 'none') {
+          target.style.display = 'block';
+          button.textContent = 'Hide Details';
+        } else {
+          target.style.display = 'none';
+          button.textContent = 'Show Details';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
