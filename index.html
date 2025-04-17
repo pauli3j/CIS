@@ -317,32 +317,78 @@
           <h2>Control 1: Inventory and Control of Enterprise Assets</h2>
         </header>
         <section class="card">
-          <h3>Summary 😎</h3>
-          <p>Know every device on your network – from laptops to IoT gadgets. Keeping an up-to-date inventory stops uninvited devices from crashing your VIP party.</p>
+          <h3>Summary ��</h3>
+          <p>Actively manage (inventory, track, and correct) all enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/Internet of Things (IoT) devices; and servers) connected to the infrastructure physically, virtually, remotely, and those within cloud environments, to accurately know the totality of assets that need to be monitored and protected within the enterprise.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Enterprises cannot defend what they do not know they have</li>
+              <li>Proper asset management helps identify critical data and systems</li>
+              <li>External attackers continuously scan for unprotected assets</li>
+              <li>New assets without secure configuration can be exploited</li>
+              <li>Unidentified assets may have weak security configurations</li>
+              <li>Additional connecting assets (demo systems, test systems, guest networks) need identification</li>
+              <li>Dynamic nature of portable devices makes inventory challenging</li>
+              <li>Cloud environments and virtual machines add complexity to tracking</li>
+              <li>Complete inventory supports incident response investigations</li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Deploy automated discovery and network scanning tools.</li>
-              <li>Monitor DHCP logs for real-time updates.</li>
-              <li>Aggregate data from endpoints, cloud portals, and manual records.</li>
-              <li>See the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Cloud Companion Guide</a> for cloud specifics.</li>
+              <li>Requires both technical and procedural actions</li>
+              <li>Links to business governance through data/asset owners</li>
+              <li>Can use enterprise products or security tools for inventory</li>
+              <li>Multiple data sources needed for accurate inventory:
+                <ul>
+                  <li>Regular network scanning</li>
+                  <li>Cloud portal data</li>
+                  <li>Active Directory logs</li>
+                  <li>SSO and MFA systems</li>
+                  <li>VPN logs</li>
+                  <li>IDS/DPI systems</li>
+                  <li>MDM tools</li>
+                  <li>Vulnerability scanning results</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Maintain a detailed, continuously updated asset inventory.</li>
-              <li>Identify and isolate unauthorized devices.</li>
-              <li>Use both active and passive discovery techniques.</li>
-              <li>Review the inventory regularly.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🎉</button>
-          <div class="content">
-            <ul>
-              <li>Imagine your network as an exclusive party – only invited devices get in, and any shady uninvited gadget gets shown the door! 🕺🎊</li>
+              <li><strong>1.1 Establish and Maintain Detailed Enterprise Asset Inventory</strong>
+                <ul>
+                  <li>Include network address, hardware name, owner, department</li>
+                  <li>Cover physical, virtual, remote, and cloud assets</li>
+                  <li>Update bi-annually or more frequently</li>
+                </ul>
+              </li>
+              <li><strong>1.2 Address Unauthorized Assets</strong>
+                <ul>
+                  <li>Process to address unauthorized assets weekly</li>
+                  <li>Options: remove, deny remote access, or quarantine</li>
+                </ul>
+              </li>
+              <li><strong>1.3 Utilize an Active Discovery Tool</strong>
+                <ul>
+                  <li>Daily or more frequent execution</li>
+                  <li>Identify connected assets</li>
+                </ul>
+              </li>
+              <li><strong>1.4 Use DHCP Logging to Update Asset Inventory</strong>
+                <ul>
+                  <li>Weekly or more frequent updates</li>
+                  <li>Use logs from all DHCP servers</li>
+                </ul>
+              </li>
+              <li><strong>1.5 Use a Passive Asset Discovery Tool</strong>
+                <ul>
+                  <li>Weekly or more frequent scans</li>
+                  <li>Update inventory based on findings</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -354,32 +400,92 @@
           <h2>Control 2: Inventory and Control of Software Assets</h2>
         </header>
         <section class="card">
-          <h3>Summary 📱</h3>
-          <p>Keep strict control over the software running on your devices. Only authorized, supported apps are allowed, reducing vulnerability risks.</p>
+          <h3>Summary ��</h3>
+          <p>Actively manage (inventory, track, and correct) all software (operating systems and applications) on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Complete software inventory is critical for preventing attacks</li>
+              <li>Attackers scan for vulnerable versions of software to exploit</li>
+              <li>Without inventory, enterprises cannot determine vulnerable software or licensing violations</li>
+              <li>Software inventory helps guard against known attacks until patches are released</li>
+              <li>Can help mitigate zero-day exploits through temporary measures</li>
+              <li>Helps identify unnecessary security risks from unused software</li>
+              <li>Critical to inventory, understand, assess, and manage all software</li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Utilize automated software inventory tools that leverage SCAP.</li>
-              <li>Implement allowlisting for applications, libraries, and scripts.</li>
-              <li>Regularly verify patch levels and support statuses.</li>
-              <li>Refer to the <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-126r3.pdf" target="_blank" rel="noopener">NIST SCAP Guidelines</a>.</li>
+              <li>Implement allowlisting using:
+                <ul>
+                  <li>Commercial allowlisting tools</li>
+                  <li>Anti-malware suite features</li>
+                  <li>Operating system built-in tools</li>
+                </ul>
+              </li>
+              <li>Use standardized application names (Common Platform Enumeration)</li>
+              <li>Leverage Security Content Automation Protocol (SCAP)</li>
+              <li>Modern endpoint security suites often include:
+                <ul>
+                  <li>Anti-malware</li>
+                  <li>Anti-spyware</li>
+                  <li>Personal firewall</li>
+                  <li>Host-based IDS/IPS</li>
+                  <li>Application allowlisting</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Create and maintain a comprehensive software inventory.</li>
-              <li>Ensure only authorized and supported software is active.</li>
-              <li>Remove or block unauthorized applications.</li>
-              <li>Implement allowlisting for executables and scripts.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🎮</button>
-          <div class="content">
-            <ul>
-              <li>Think of your software inventory as a neat fridge – only the freshest apps stay, and anything spoiled gets tossed out! 🍕📱</li>
+              <li><strong>2.1 Establish and Maintain a Software Inventory</strong>
+                <ul>
+                  <li>Document title, publisher, install date, business purpose</li>
+                  <li>Include URL, app store, versions, deployment mechanism</li>
+                  <li>Update bi-annually or more frequently</li>
+                </ul>
+              </li>
+              <li><strong>2.2 Ensure Authorized Software is Currently Supported</strong>
+                <ul>
+                  <li>Monthly review of software support status</li>
+                  <li>Document exceptions for necessary unsupported software</li>
+                </ul>
+              </li>
+              <li><strong>2.3 Address Unauthorized Software</strong>
+                <ul>
+                  <li>Remove or document exceptions</li>
+                  <li>Monthly review cycle</li>
+                </ul>
+              </li>
+              <li><strong>2.4 Utilize Automated Software Inventory Tools</strong>
+                <ul>
+                  <li>Automate discovery and documentation</li>
+                  <li>Enterprise-wide implementation</li>
+                </ul>
+              </li>
+              <li><strong>2.5 Allowlist Authorized Software</strong>
+                <ul>
+                  <li>Use technical controls to restrict execution</li>
+                  <li>Bi-annual reassessment</li>
+                </ul>
+              </li>
+              <li><strong>2.6 Allowlist Authorized Libraries</strong>
+                <ul>
+                  <li>Control loading of software libraries</li>
+                  <li>Block unauthorized libraries</li>
+                </ul>
+              </li>
+              <li><strong>2.7 Allowlist Authorized Scripts</strong>
+                <ul>
+                  <li>Use digital signatures and version control</li>
+                  <li>Block unauthorized scripts</li>
+                  <li>Bi-annual reassessment</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -391,32 +497,141 @@
           <h2>Control 3: Data Protection</h2>
         </header>
         <section class="card">
-          <h3>Summary 🔐</h3>
-          <p>Safeguard your valuable data by managing it through its entire lifecycle. Classify, encrypt, and securely dispose of information so that only the right eyes can see your treasure.</p>
+          <h3>Summary ��</h3>
+          <p>Develop processes and technical controls to identify, classify, securely handle, retain, and dispose of data.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Data is no longer contained within enterprise borders:
+                <ul>
+                  <li>Cloud storage</li>
+                  <li>Remote work devices</li>
+                  <li>Partner sharing</li>
+                  <li>Online services</li>
+                </ul>
+              </li>
+              <li>Privacy rules are complex for multi-national enterprises</li>
+              <li>Data exfiltration may go unnoticed without monitoring</li>
+              <li>Threats include:
+                <ul>
+                  <li>Physical theft of devices</li>
+                  <li>Network attacks</li>
+                  <li>Service provider breaches</li>
+                  <li>SCADA system compromises</li>
+                </ul>
+              </li>
+              <li>Most data loss occurs from poor management and user error</li>
+              <li>Encryption is crucial for data protection and compliance</li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Establish a data management framework with labels (Sensitive, Confidential, Public).</li>
-              <li>Deploy encryption for data at rest, in transit, and on removable media.</li>
-              <li>Utilize DLP tools to monitor data flows.</li>
-              <li>Consult the <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf" target="_blank" rel="noopener">NIST Media Sanitization Guide</a> and relevant FIPS standards.</li>
+              <li>Develop comprehensive data management process including:
+                <ul>
+                  <li>Data management framework</li>
+                  <li>Data classification guidelines</li>
+                  <li>Protection requirements</li>
+                  <li>Handling procedures</li>
+                  <li>Retention policies</li>
+                  <li>Disposal procedures</li>
+                </ul>
+              </li>
+              <li>Establish data breach process integrated with:
+                <ul>
+                  <li>Incident response plan</li>
+                  <li>Compliance requirements</li>
+                  <li>Communication plans</li>
+                </ul>
+              </li>
+              <li>Create data classification scheme (e.g., "Sensitive," "Confidential," "Public")</li>
+              <li>Develop data inventory mapping software access levels</li>
+              <li>Implement network segmentation based on data sensitivity</li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Document and inventory your key data assets.</li>
-              <li>Enforce strict access control and retention policies.</li>
-              <li>Encrypt and securely dispose of sensitive data.</li>
-              <li>Segment your network according to data sensitivity.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🏴‍☠️</button>
-          <div class="content">
-            <ul>
-              <li>Imagine your data as priceless pirate treasure – lock it with secret codes so only your trusted crew can plunder it! ☠️💰</li>
+              <li><strong>3.1 Establish and Maintain a Data Management Process</strong>
+                <ul>
+                  <li>Address data sensitivity, ownership, handling</li>
+                  <li>Define retention limits and disposal requirements</li>
+                  <li>Annual review and updates</li>
+                </ul>
+              </li>
+              <li><strong>3.2 Establish and Maintain a Data Inventory</strong>
+                <ul>
+                  <li>Focus on sensitive data at minimum</li>
+                  <li>Annual review and updates</li>
+                </ul>
+              </li>
+              <li><strong>3.3 Configure Data Access Control Lists</strong>
+                <ul>
+                  <li>Based on need-to-know</li>
+                  <li>Apply to files, databases, and applications</li>
+                </ul>
+              </li>
+              <li><strong>3.4 Enforce Data Retention</strong>
+                <ul>
+                  <li>Define minimum and maximum timelines</li>
+                  <li>Follow enterprise data management process</li>
+                </ul>
+              </li>
+              <li><strong>3.5 Securely Dispose of Data</strong>
+                <ul>
+                  <li>Follow enterprise disposal process</li>
+                  <li>Match disposal method to data sensitivity</li>
+                </ul>
+              </li>
+              <li><strong>3.6 Encrypt Data on End-User Devices</strong>
+                <ul>
+                  <li>Focus on sensitive data</li>
+                  <li>Use tools like BitLocker, FileVault, dm-crypt</li>
+                </ul>
+              </li>
+              <li><strong>3.7 Establish and Maintain a Data Classification Scheme</strong>
+                <ul>
+                  <li>Define classification labels</li>
+                  <li>Annual review and updates</li>
+                </ul>
+              </li>
+              <li><strong>3.8 Document Data Flows</strong>
+                <ul>
+                  <li>Include service provider flows</li>
+                  <li>Annual review and updates</li>
+                </ul>
+              </li>
+              <li><strong>3.9 Encrypt Data on Removable Media</strong></li>
+              <li><strong>3.10 Encrypt Sensitive Data in Transit</strong>
+                <ul>
+                  <li>Use TLS, OpenSSH, etc.</li>
+                </ul>
+              </li>
+              <li><strong>3.11 Encrypt Sensitive Data at Rest</strong>
+                <ul>
+                  <li>Server-side encryption minimum</li>
+                  <li>Consider client-side encryption</li>
+                </ul>
+              </li>
+              <li><strong>3.12 Segment Data Processing and Storage Based on Sensitivity</strong>
+                <ul>
+                  <li>Separate processing environments by sensitivity</li>
+                </ul>
+              </li>
+              <li><strong>3.13 Deploy a Data Loss Prevention Solution</strong>
+                <ul>
+                  <li>Use automated DLP tools</li>
+                  <li>Cover stored, processed, and transmitted data</li>
+                </ul>
+              </li>
+              <li><strong>3.14 Log Sensitive Data Access</strong>
+                <ul>
+                  <li>Track modifications and disposal</li>
+                  <li>Monitor access patterns</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -428,30 +643,134 @@
           <h2>Control 4: Secure Configuration of Enterprise Assets and Software</h2>
         </header>
         <section class="card">
-          <h3>Summary 🚀</h3>
-          <p>Tighten up default settings by using security baselines and continuous configuration management – get your systems prepped like a spaceship ready for launch!</p>
+          <h3>Summary ��</h3>
+          <p>Establish and maintain the secure configuration of enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/IoT devices; and servers) and software (operating systems and applications).</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Default configurations prioritize ease-of-deployment over security:
+                <ul>
+                  <li>Basic controls often disabled</li>
+                  <li>Open services and ports</li>
+                  <li>Default accounts/passwords</li>
+                  <li>Pre-configured DNS settings</li>
+                  <li>Older vulnerable protocols</li>
+                  <li>Pre-installed unnecessary software</li>
+                </ul>
+              </li>
+              <li>Configuration updates need ongoing management throughout asset lifecycle</li>
+              <li>Changes must be tracked and approved through workflow process</li>
+              <li>Critical for on-premises, remote devices, and cloud environments</li>
+              <li>Service providers often use insecure default configurations</li>
+              <li>Configurations can degrade as software is updated or patched</li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Adopt security baselines such as the <a href="http://www.cisecurity.org/cis-benchmarks/" target="_blank" rel="noopener">CIS Benchmarks</a>.</li>
-              <li>Automate configuration management using modern tools and scripts.</li>
-              <li>Utilize CIS-CAT and the <a href="https://nvd.nist.gov/ncp/repository" target="_blank" rel="noopener">NIST Checklist Repository</a> for monitoring.</li>
+              <li>Start with publicly developed security baselines:
+                <ul>
+                  <li>CIS Benchmarks™</li>
+                  <li>NIST National Checklist Program</li>
+                </ul>
+              </li>
+              <li>Adjust baselines for enterprise requirements</li>
+              <li>Document deviations and rationale</li>
+              <li>Steps for secure baseline image:
+                <ul>
+                  <li>Determine data risk classification</li>
+                  <li>Create security configuration script</li>
+                  <li>Install base OS</li>
+                  <li>Apply OS patches</li>
+                  <li>Install applications</li>
+                  <li>Apply application updates</li>
+                  <li>Install local customization scripts</li>
+                  <li>Run security script</li>
+                  <li>Record/score system settings</li>
+                  <li>Perform security QA test</li>
+                  <li>Save base image securely</li>
+                </ul>
+              </li>
+              <li>Use configuration management tools like CIS-CAT</li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Implement secure configuration processes for all devices and software.</li>
-              <li>Enforce automatic session locking, firewall management, and disable default accounts.</li>
-              <li>Document deviations and obtain required approvals.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 👽</button>
-          <div class="content">
-            <ul>
-              <li>Imagine setting up your own spaceship – every system must be tuned perfectly so no alien hacker can infiltrate your craft! 👾🛸</li>
+              <li><strong>4.1 Establish and Maintain a Secure Configuration Process</strong>
+                <ul>
+                  <li>Cover all enterprise assets and software</li>
+                  <li>Annual review and updates</li>
+                </ul>
+              </li>
+              <li><strong>4.2 Establish and Maintain a Secure Configuration Process for Network Infrastructure</strong>
+                <ul>
+                  <li>Network-specific configurations</li>
+                  <li>Annual review and updates</li>
+                </ul>
+              </li>
+              <li><strong>4.3 Configure Automatic Session Locking</strong>
+                <ul>
+                  <li>15 minutes max for general systems</li>
+                  <li>2 minutes max for mobile devices</li>
+                </ul>
+              </li>
+              <li><strong>4.4 Implement and Manage a Firewall on Servers</strong>
+                <ul>
+                  <li>Virtual, OS, or third-party firewall</li>
+                </ul>
+              </li>
+              <li><strong>4.5 Implement and Manage a Firewall on End-User Devices</strong>
+                <ul>
+                  <li>Default-deny rule</li>
+                  <li>Allow only necessary services</li>
+                </ul>
+              </li>
+              <li><strong>4.6 Securely Manage Enterprise Assets and Software</strong>
+                <ul>
+                  <li>Use version-controlled-infrastructure-as-code</li>
+                  <li>Secure administrative interfaces</li>
+                  <li>Avoid insecure protocols</li>
+                </ul>
+              </li>
+              <li><strong>4.7 Manage Default Accounts</strong>
+                <ul>
+                  <li>Disable or make unusable</li>
+                  <li>Cover root, admin, vendor accounts</li>
+                </ul>
+              </li>
+              <li><strong>4.8 Uninstall or Disable Unnecessary Services</strong>
+                <ul>
+                  <li>Remove unused services</li>
+                  <li>Disable unnecessary functions</li>
+                </ul>
+              </li>
+              <li><strong>4.9 Configure Trusted DNS Servers</strong>
+                <ul>
+                  <li>Use enterprise-controlled DNS</li>
+                  <li>Or reputable external DNS</li>
+                </ul>
+              </li>
+              <li><strong>4.10 Enforce Automatic Device Lockout</strong>
+                <ul>
+                  <li>20 attempts max for laptops</li>
+                  <li>10 attempts max for mobile devices</li>
+                </ul>
+              </li>
+              <li><strong>4.11 Enforce Remote Wipe Capability</strong>
+                <ul>
+                  <li>For lost/stolen devices</li>
+                  <li>When individual leaves enterprise</li>
+                </ul>
+              </li>
+              <li><strong>4.12 Separate Enterprise Workspaces on Mobile Devices</strong>
+                <ul>
+                  <li>Use configuration profiles</li>
+                  <li>Separate enterprise and personal data</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -463,30 +782,113 @@
           <h2>Control 5: Account Management</h2>
         </header>
         <section class="card">
-          <h3>Summary 🔑</h3>
-          <p>Manage user, admin, and service accounts with strict policies and strong authentication so only the right peeps can access your digital domain.</p>
+          <h3>Summary ��</h3>
+          <p>Use processes and tools to assign and manage authorization to credentials for user accounts, including administrator accounts, as well as service accounts, to enterprise assets and software.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Easier for attackers to use valid credentials than "hacking"</li>
+              <li>Multiple ways to obtain access:
+                <ul>
+                  <li>Weak passwords</li>
+                  <li>Lingering accounts after user departure</li>
+                  <li>Dormant test accounts</li>
+                  <li>Shared accounts with unchanged passwords</li>
+                  <li>Service accounts with embedded credentials</li>
+                  <li>Password reuse from compromised accounts</li>
+                  <li>Social engineering</li>
+                  <li>Malware capturing credentials</li>
+                </ul>
+              </li>
+              <li>Administrative accounts are prime targets:
+                <ul>
+                  <li>Allow adding other accounts</li>
+                  <li>Can make system changes</li>
+                  <li>Higher risk of system compromise</li>
+                </ul>
+              </li>
+              <li>Service accounts require special attention:
+                <ul>
+                  <li>Often shared among teams</li>
+                  <li>May be unknown until audits</li>
+                  <li>Critical for operations</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Keep an up-to-date inventory of all accounts.</li>
-              <li>Implement unique password policies and MFA.</li>
-              <li>Centralize account management with directory services (<a href="https://pages.nist.gov/800-63-3/" target="_blank" rel="noopener">NIST Digital Identity Guidelines</a>).</li>
+              <li>Treat credentials as tracked assets</li>
+              <li>Implement appropriate password policies</li>
+              <li>Regular account maintenance:
+                <ul>
+                  <li>Disable dormant accounts</li>
+                  <li>Remove unnecessary accounts</li>
+                  <li>Periodic audits of active accounts</li>
+                  <li>Track new accounts since last review</li>
+                </ul>
+              </li>
+              <li>Special handling for privileged accounts:
+                <ul>
+                  <li>Separate administrative accounts</li>
+                  <li>Limited use for sensitive tasks only</li>
+                  <li>Regular monitoring of activities</li>
+                </ul>
+              </li>
+              <li>Authentication best practices:
+                <ul>
+                  <li>Implement SSO where possible</li>
+                  <li>Use password managers</li>
+                  <li>Enable MFA for remote access</li>
+                  <li>Automatic session timeout</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Audit account permissions regularly and disable dormant accounts.</li>
-              <li>Separate administrative accounts from regular ones.</li>
-              <li>Monitor privileged access meticulously.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🎉</button>
-          <div class="content">
-            <ul>
-              <li>Imagine sorting your exclusive group chat – only VIPs get into the secret channel, while uninvited lurkers are booted out! 😜📲</li>
+              <li><strong>5.1 Establish and Maintain an Inventory of Accounts</strong>
+                <ul>
+                  <li>Include user and administrator accounts</li>
+                  <li>Record name, username, start/stop dates, department</li>
+                  <li>Quarterly validation minimum</li>
+                </ul>
+              </li>
+              <li><strong>5.2 Use Unique Passwords</strong>
+                <ul>
+                  <li>8+ characters with MFA</li>
+                  <li>14+ characters without MFA</li>
+                </ul>
+              </li>
+              <li><strong>5.3 Disable Dormant Accounts</strong>
+                <ul>
+                  <li>45 days inactivity threshold</li>
+                  <li>Delete or disable accounts</li>
+                </ul>
+              </li>
+              <li><strong>5.4 Restrict Administrator Privileges</strong>
+                <ul>
+                  <li>Dedicated admin accounts</li>
+                  <li>Separate accounts for regular activities</li>
+                </ul>
+              </li>
+              <li><strong>5.5 Establish and Maintain an Inventory of Service Accounts</strong>
+                <ul>
+                  <li>Document department owner</li>
+                  <li>Include review date and purpose</li>
+                  <li>Quarterly validation minimum</li>
+                </ul>
+              </li>
+              <li><strong>5.6 Centralize Account Management</strong>
+                <ul>
+                  <li>Use directory services</li>
+                  <li>Implement identity services</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -499,29 +901,125 @@
         </header>
         <section class="card">
           <h3>Summary 🕶️</h3>
-          <p>Enforce least privilege by ensuring every account accesses only what it truly needs – think of it as having a digital bouncer keeping the riffraff out.</p>
+          <p>Use processes and tools to create, assign, manage, and revoke access credentials and privileges for user, administrator, and service accounts for enterprise assets and software.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Focuses on managing access levels for accounts</li>
+              <li>Ensures users only have appropriate access:
+                <ul>
+                  <li>Based on role requirements</li>
+                  <li>Following least privilege principle</li>
+                  <li>Protecting sensitive data</li>
+                </ul>
+              </li>
+              <li>Higher risk activities require additional protection:
+                <ul>
+                  <li>Access from untrusted networks</li>
+                  <li>Administrator functions</li>
+                  <li>Account management capabilities</li>
+                  <li>System configuration changes</li>
+                </ul>
+              </li>
+              <li>Common access control issues:
+                <ul>
+                  <li>Excessive access rights</li>
+                  <li>Lingering access from role changes</li>
+                  <li>Unnecessary local admin privileges</li>
+                  <li>Improper role-based access</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Implement role-based access control with centralized directory services.</li>
-              <li>Enforce MFA for remote and administrative access.</li>
-              <li>Automate provisioning and de-provisioning to minimize errors.</li>
+              <li>Implement role-based access control:
+                <ul>
+                  <li>Based on enterprise role</li>
+                  <li>Following need-to-know principle</li>
+                  <li>Consider privacy requirements</li>
+                  <li>Enforce separation of duties</li>
+                </ul>
+              </li>
+              <li>Strong authentication requirements:
+                <ul>
+                  <li>Universal MFA for privileged accounts</li>
+                  <li>Secure smartphone MFA applications</li>
+                  <li>Number-generator over SMS/push notifications</li>
+                </ul>
+              </li>
+              <li>Privileged access management:
+                <ul>
+                  <li>Use PAM tools</li>
+                  <li>One-time passwords</li>
+                  <li>"Jump-box" implementation</li>
+                  <li>Out-of-band administration</li>
+                </ul>
+              </li>
+              <li>Access lifecycle management:
+                <ul>
+                  <li>Consistent de-provisioning</li>
+                  <li>Include contractors in process</li>
+                  <li>Track service account access</li>
+                  <li>Regular access reviews</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Establish clear processes for granting and revoking access.</li>
-              <li>Review and adjust role-based privileges regularly.</li>
-              <li>Centralize access control and enforce strong authentication.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🍾</button>
-          <div class="content">
-            <ul>
-              <li>Picture a bouncer at a swanky club – only the coolest authorized members get in while the freeloaders are left at the door! 😎🍸</li>
+              <li><strong>6.1 Establish an Access Granting Process</strong>
+                <ul>
+                  <li>Automated process preferred</li>
+                  <li>Cover new hires and role changes</li>
+                </ul>
+              </li>
+              <li><strong>6.2 Establish an Access Revoking Process</strong>
+                <ul>
+                  <li>Immediate account disabling</li>
+                  <li>Preserve audit trails</li>
+                </ul>
+              </li>
+              <li><strong>6.3 Require MFA for Externally-Exposed Applications</strong>
+                <ul>
+                  <li>All external applications</li>
+                  <li>Support through directory/SSO</li>
+                </ul>
+              </li>
+              <li><strong>6.4 Require MFA for Remote Network Access</strong>
+                <ul>
+                  <li>All remote access requires MFA</li>
+                </ul>
+              </li>
+              <li><strong>6.5 Require MFA for Administrative Access</strong>
+                <ul>
+                  <li>All admin accounts</li>
+                  <li>On-site and third-party providers</li>
+                </ul>
+              </li>
+              <li><strong>6.6 Establish and Maintain an Inventory of Authentication and Authorization Systems</strong>
+                <ul>
+                  <li>Include on-site and remote systems</li>
+                  <li>Annual review minimum</li>
+                </ul>
+              </li>
+              <li><strong>6.7 Centralize Access Control</strong>
+                <ul>
+                  <li>Use directory services</li>
+                  <li>Implement SSO where possible</li>
+                </ul>
+              </li>
+              <li><strong>6.8 Define and Maintain Role-Based Access Control</strong>
+                <ul>
+                  <li>Document necessary access rights</li>
+                  <li>Annual review minimum</li>
+                  <li>Validate all privileges</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -533,31 +1031,122 @@
           <h2>Control 7: Continuous Vulnerability Management</h2>
         </header>
         <section class="card">
-          <h3>Summary 🩺</h3>
-          <p>Continuously scan your systems for vulnerabilities and integrate findings into your patch management workflow so nothing slips through the cracks.</p>
+          <h3>Summary ��</h3>
+          <p>Develop a plan to continuously assess and track vulnerabilities on all enterprise assets within the enterprise's infrastructure, in order to remediate, and minimize, the window of opportunity for attackers. Monitor public and private industry sources for new threat and vulnerability information.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Defenders face constant challenges from attackers seeking vulnerabilities</li>
+              <li>Time-critical nature of vulnerability management:
+                <ul>
+                  <li>Attackers can exploit vulnerabilities quickly</li>
+                  <li>Gap between vulnerability discovery and patching</li>
+                  <li>Need to prioritize based on impact and exploit ease</li>
+                </ul>
+              </li>
+              <li>Zero-day threats:
+                <ul>
+                  <li>Unknown vulnerabilities may already be exploited</li>
+                  <li>Vulnerabilities might be known in closed communities</li>
+                  <li>Some vulnerabilities cannot be immediately remediated</li>
+                </ul>
+              </li>
+              <li>Enterprise-wide challenges:
+                <ul>
+                  <li>Scaling remediation across infrastructure</li>
+                  <li>Balancing priorities with business needs</li>
+                  <li>Maintaining business operations during fixes</li>
+                </ul>
+              </li>
+              <li>High risk of compromise without assessment and remediation</li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Schedule regular vulnerability scans using automated tools.</li>
-              <li>Integrate scan results into your change management process.</li>
-              <li>Prioritize remediation actions based on risk.</li>
-              <li>Check out the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Controls website</a> for more insights.</li>
+              <li>Use standardized vulnerability scanning tools:
+                <ul>
+                  <li>Support industry-standard classifications</li>
+                  <li>CVE, CCE, OVAL compatibility</li>
+                  <li>CPE, CVSS scoring support</li>
+                  <li>XCCDF compliance</li>
+                </ul>
+              </li>
+              <li>Scanning best practices:
+                <ul>
+                  <li>Increase frequency for diverse assets</li>
+                  <li>Use authenticated scans</li>
+                  <li>Evaluate security settings</li>
+                  <li>Track configuration changes</li>
+                </ul>
+              </li>
+              <li>Remediation management:
+                <ul>
+                  <li>Link scanners to ticketing systems</li>
+                  <li>Track remediation progress</li>
+                  <li>Monitor fix timelines</li>
+                  <li>Report to senior management</li>
+                </ul>
+              </li>
+              <li>Prioritization factors:
+                <ul>
+                  <li>CVSS base scores</li>
+                  <li>Threat actor likelihood</li>
+                  <li>Potential business impact</li>
+                  <li>Current threat intelligence</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Maintain an updated workflow for remediation.</li>
-              <li>Continuously monitor for new vulnerabilities.</li>
-              <li>Review scan findings and update defenses as necessary.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 😅</button>
-          <div class="content">
-            <ul>
-              <li>Imagine regular health check-ups for your network – catch issues early before they become emergencies! 🩹💊</li>
+              <li><strong>7.1 Establish and Maintain a Vulnerability Management Process</strong>
+                <ul>
+                  <li>Document procedures</li>
+                  <li>Annual review and updates</li>
+                </ul>
+              </li>
+              <li><strong>7.2 Establish and Maintain a Remediation Process</strong>
+                <ul>
+                  <li>Risk-based strategy</li>
+                  <li>Monthly review minimum</li>
+                </ul>
+              </li>
+              <li><strong>7.3 Perform Automated Operating System Patch Management</strong>
+                <ul>
+                  <li>Monthly minimum frequency</li>
+                  <li>Automated deployment</li>
+                </ul>
+              </li>
+              <li><strong>7.4 Perform Automated Application Patch Management</strong>
+                <ul>
+                  <li>Monthly minimum frequency</li>
+                  <li>Cover all applications</li>
+                </ul>
+              </li>
+              <li><strong>7.5 Perform Automated Vulnerability Scans of Internal Enterprise Assets</strong>
+                <ul>
+                  <li>Quarterly minimum frequency</li>
+                  <li>Both authenticated and unauthenticated scans</li>
+                  <li>Use SCAP-compliant tools</li>
+                </ul>
+              </li>
+              <li><strong>7.6 Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets</strong>
+                <ul>
+                  <li>Monthly minimum frequency</li>
+                  <li>Use SCAP-compliant tools</li>
+                </ul>
+              </li>
+              <li><strong>7.7 Remediate Detected Vulnerabilities</strong>
+                <ul>
+                  <li>Monthly minimum frequency</li>
+                  <li>Follow remediation process</li>
+                  <li>Use automated tools</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -570,29 +1159,157 @@
         </header>
         <section class="card">
           <h3>Summary 📖</h3>
-          <p>Collect and review audit logs to detect suspicious activity. Think of it as a digital diary that helps you uncover and react to anomalies.</p>
+          <p>Collect, alert, review, and retain audit logs of events that could help detect, understand, or recover from an attack.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Critical for attack detection and investigation:
+                <ul>
+                  <li>Often the only evidence of successful attacks</li>
+                  <li>Attackers know logs are rarely analyzed</li>
+                  <li>May control systems for months undetected</li>
+                </ul>
+              </li>
+              <li>Two main types of logs:
+                <ul>
+                  <li>System logs (process events, native to systems)</li>
+                  <li>Audit logs (user-level events, require setup)</li>
+                </ul>
+              </li>
+              <li>Essential for incident response:
+                <ul>
+                  <li>Understanding attack extent</li>
+                  <li>Determining attack timeline</li>
+                  <li>Identifying accessed information</li>
+                  <li>Detecting data exfiltration</li>
+                </ul>
+              </li>
+              <li>Long-term retention importance:
+                <ul>
+                  <li>Support follow-up investigations</li>
+                  <li>Detect long-term undetected attacks</li>
+                  <li>Meet compliance requirements</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Deploy centralized logging solutions and SIEM tools.</li>
-              <li>Automate log collection and analysis.</li>
-              <li>Set retention policies that adhere to compliance standards.</li>
+              <li>Enable comprehensive logging:
+                <ul>
+                  <li>Activate native logging capabilities</li>
+                  <li>Configure verbose logging where beneficial</li>
+                  <li>Send logs to centralized servers</li>
+                </ul>
+              </li>
+              <li>Key logging sources:
+                <ul>
+                  <li>Firewalls and proxies</li>
+                  <li>Remote access systems</li>
+                  <li>VPN connections</li>
+                  <li>Access control attempts</li>
+                </ul>
+              </li>
+              <li>Log management practices:
+                <ul>
+                  <li>Regular log reviews</li>
+                  <li>Compare against asset inventory</li>
+                  <li>Verify logging from all assets</li>
+                  <li>Secure log storage</li>
+                </ul>
+              </li>
+              <li>Retention considerations:
+                <ul>
+                  <li>Legal requirements</li>
+                  <li>Industry standards</li>
+                  <li>Investigation needs</li>
+                  <li>Storage capacity</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Store logs centrally with secure access controls.</li>
-              <li>Regularly review logs for anomalies.</li>
-              <li>Retain logs according to industry best practices.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🕵️‍♀️</button>
-          <div class="content">
-            <ul>
-              <li>Imagine your logs as your secret diary – if something odd happens, you can always look back and decipher the clues! 📓🔍</li>
+              <li><strong>8.1 Establish and Maintain an Audit Log Management Process</strong>
+                <ul>
+                  <li>Define logging requirements</li>
+                  <li>Cover collection, review, retention</li>
+                  <li>Annual review and updates</li>
+                </ul>
+              </li>
+              <li><strong>8.2 Collect Audit Logs</strong>
+                <ul>
+                  <li>Enable logging across assets</li>
+                  <li>Follow management process</li>
+                </ul>
+              </li>
+              <li><strong>8.3 Ensure Adequate Audit Log Storage</strong>
+                <ul>
+                  <li>Maintain sufficient storage</li>
+                  <li>Meet retention requirements</li>
+                </ul>
+              </li>
+              <li><strong>8.4 Standardize Time Synchronization</strong>
+                <ul>
+                  <li>Configure at least two time sources</li>
+                  <li>Synchronize across assets</li>
+                </ul>
+              </li>
+              <li><strong>8.5 Collect Detailed Audit Logs</strong>
+                <ul>
+                  <li>Include event source, date, username</li>
+                  <li>Record timestamps, addresses</li>
+                  <li>Capture forensic details</li>
+                </ul>
+              </li>
+              <li><strong>8.6 Collect DNS Query Audit Logs</strong>
+                <ul>
+                  <li>Where supported</li>
+                  <li>Track DNS activity</li>
+                </ul>
+              </li>
+              <li><strong>8.7 Collect URL Request Audit Logs</strong>
+                <ul>
+                  <li>Where supported</li>
+                  <li>Monitor web activity</li>
+                </ul>
+              </li>
+              <li><strong>8.8 Collect Command-Line Audit Logs</strong>
+                <ul>
+                  <li>PowerShell, BASH logs</li>
+                  <li>Remote admin terminals</li>
+                </ul>
+              </li>
+              <li><strong>8.9 Centralize Audit Logs</strong>
+                <ul>
+                  <li>Consolidate log collection</li>
+                  <li>Centralize retention</li>
+                </ul>
+              </li>
+              <li><strong>8.10 Retain Audit Logs</strong>
+                <ul>
+                  <li>Minimum 90 days retention</li>
+                  <li>Across all assets</li>
+                </ul>
+              </li>
+              <li><strong>8.11 Conduct Audit Log Reviews</strong>
+                <ul>
+                  <li>Weekly minimum frequency</li>
+                  <li>Look for anomalies</li>
+                  <li>Detect potential threats</li>
+                </ul>
+              </li>
+              <li><strong>8.12 Collect Service Provider Logs</strong>
+                <ul>
+                  <li>Authentication events</li>
+                  <li>Data handling events</li>
+                  <li>User management</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -605,30 +1322,133 @@
         </header>
         <section class="card">
           <h3>Summary 💻</h3>
-          <p>Strengthen your email and browser defenses like a dynamic duo – protect against phishing, malicious links, and drive-by attacks.</p>
+          <p>Improve protections and detections of threats from email and web vectors, as these are opportunities for attackers to manipulate human behavior through direct engagement.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Common entry points for attackers:
+                <ul>
+                  <li>Direct user interaction</li>
+                  <li>Social engineering opportunities</li>
+                  <li>Credential disclosure risks</li>
+                  <li>Sensitive data exposure</li>
+                </ul>
+              </li>
+              <li>Web browser vulnerabilities:
+                <ul>
+                  <li>Exploit of vulnerable browsers</li>
+                  <li>Third-party plugin risks</li>
+                  <li>Operating system hooks</li>
+                  <li>Malicious extensions</li>
+                </ul>
+              </li>
+              <li>Email-based threats:
+                <ul>
+                  <li>Phishing attacks</li>
+                  <li>Business Email Compromise</li>
+                  <li>Malware distribution</li>
+                  <li>Social engineering tactics</li>
+                </ul>
+              </li>
+              <li>Modern challenges:
+                <ul>
+                  <li>Web-based email adoption</li>
+                  <li>Mobile email access</li>
+                  <li>Limited security controls</li>
+                  <li>Reduced embedded protections</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Implement secure email gateways and anti-spam filters.</li>
-              <li>Harden browser configurations; use sandboxing and isolation techniques.</li>
-              <li>Educate users on recognizing phishing attempts.</li>
-              <li>Refer to the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Email/Web Guide</a> for more tips.</li>
+              <li>Web browser security:
+                <ul>
+                  <li>Enable built-in protections</li>
+                  <li>Use phishing/malware databases</li>
+                  <li>Configure pop-up blockers</li>
+                  <li>Control plugin installation</li>
+                  <li>DNS filtering implementation</li>
+                </ul>
+              </li>
+              <li>Email security measures:
+                <ul>
+                  <li>Spam filtering</li>
+                  <li>Malware scanning</li>
+                  <li>DMARC implementation</li>
+                  <li>Attachment restrictions</li>
+                  <li>Encryption tools</li>
+                </ul>
+              </li>
+              <li>User training:
+                <ul>
+                  <li>Phishing awareness</li>
+                  <li>Reporting procedures</li>
+                  <li>Security best practices</li>
+                  <li>Regular testing</li>
+                </ul>
+              </li>
+              <li>Technical controls:
+                <ul>
+                  <li>URL filtering</li>
+                  <li>Content scanning</li>
+                  <li>Attachment analysis</li>
+                  <li>Sandbox testing</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Enforce email filtering and safe browsing practices.</li>
-              <li>Configure browsers to block malicious content.</li>
-              <li>Provide regular training to raise threat awareness.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🦸‍♀️</button>
-          <div class="content">
-            <ul>
-              <li>Picture your email and browser as a superhero duo – always on guard to save your day from cyber villains! 🦸‍♂️💥</li>
+              <li><strong>9.1 Ensure Use of Only Fully Supported Browsers and Email Clients</strong>
+                <ul>
+                  <li>Latest versions only</li>
+                  <li>Vendor-supported versions</li>
+                </ul>
+              </li>
+              <li><strong>9.2 Use DNS Filtering Services</strong>
+                <ul>
+                  <li>Block malicious domains</li>
+                  <li>All enterprise assets</li>
+                </ul>
+              </li>
+              <li><strong>9.3 Maintain and Enforce Network-Based URL Filters</strong>
+                <ul>
+                  <li>Category-based filtering</li>
+                  <li>Reputation-based filtering</li>
+                  <li>Block list implementation</li>
+                </ul>
+              </li>
+              <li><strong>9.4 Restrict Unnecessary or Unauthorized Browser and Email Client Extensions</strong>
+                <ul>
+                  <li>Uninstall/disable unauthorized</li>
+                  <li>Control plugin usage</li>
+                </ul>
+              </li>
+              <li><strong>9.5 Implement DMARC</strong>
+                <ul>
+                  <li>SPF implementation</li>
+                  <li>DKIM standards</li>
+                  <li>Email authentication</li>
+                </ul>
+              </li>
+              <li><strong>9.6 Block Unnecessary File Types</strong>
+                <ul>
+                  <li>Email gateway filtering</li>
+                  <li>Attachment restrictions</li>
+                </ul>
+              </li>
+              <li><strong>9.7 Deploy and Maintain Email Server Anti-Malware Protections</strong>
+                <ul>
+                  <li>Attachment scanning</li>
+                  <li>Sandbox analysis</li>
+                  <li>Continuous protection</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -641,30 +1461,134 @@
         </header>
         <section class="card">
           <h3>Summary 🏰</h3>
-          <p>Defend your devices with multi-layered malware protection that stops unwanted intruders in their tracks.</p>
+          <p>Prevent or control the installation, spread, and execution of malicious applications, code, or scripts on enterprise assets.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Malware characteristics:
+                <ul>
+                  <li>Integral part of internet threats</li>
+                  <li>Multiple malicious purposes</li>
+                  <li>Credential capture capabilities</li>
+                  <li>Data theft functionality</li>
+                  <li>Network reconnaissance</li>
+                  <li>Data encryption/destruction</li>
+                </ul>
+              </li>
+              <li>Entry points:
+                <ul>
+                  <li>Enterprise vulnerabilities</li>
+                  <li>Email attachments</li>
+                  <li>Malicious webpages</li>
+                  <li>Cloud services</li>
+                  <li>Mobile devices</li>
+                  <li>Removable media</li>
+                </ul>
+              </li>
+              <li>User behavior risks:
+                <ul>
+                  <li>Clicking malicious links</li>
+                  <li>Opening suspicious attachments</li>
+                  <li>Installing unauthorized software</li>
+                  <li>Using unsafe removable media</li>
+                </ul>
+              </li>
+              <li>Modern malware challenges:
+                <ul>
+                  <li>Ever-evolving and adaptive</li>
+                  <li>Machine learning techniques</li>
+                  <li>Designed to avoid detection</li>
+                  <li>Can disable defenses</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Install and maintain up-to-date anti-malware and EDR solutions.</li>
-              <li>Utilize allowlisting and behavior monitoring to catch anomalies.</li>
-              <li>Supplement automated defenses with periodic manual reviews.</li>
-              <li>Learn more at the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Resources</a>.</li>
+              <li>Malware protection components:
+                <ul>
+                  <li>Traditional endpoint prevention</li>
+                  <li>Detection suites</li>
+                  <li>Automated vendor updates</li>
+                  <li>Centralized management</li>
+                </ul>
+              </li>
+              <li>Detection methods:
+                <ul>
+                  <li>Signature-based detection</li>
+                  <li>Behavioral monitoring</li>
+                  <li>Heuristic analysis</li>
+                  <li>Machine learning</li>
+                </ul>
+              </li>
+              <li>Logging and monitoring:
+                <ul>
+                  <li>Centralized collection</li>
+                  <li>Alert generation</li>
+                  <li>Incident response support</li>
+                  <li>IOC tracking</li>
+                </ul>
+              </li>
+              <li>Living-off-the-land defense:
+                <ul>
+                  <li>Monitor native tools</li>
+                  <li>Track system features</li>
+                  <li>Log suspicious usage</li>
+                  <li>Behavior analysis</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Deploy anti-malware across all endpoints.</li>
-              <li>Automate detection and remediation workflows.</li>
-              <li>Establish protocols to quickly address malware threats.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🎯</button>
-          <div class="content">
-            <ul>
-              <li>Imagine your device as a fortress – no malware gets past your impenetrable defenses! 🏰🛡️</li>
+              <li><strong>10.1 Deploy and Maintain Anti-Malware Software</strong>
+                <ul>
+                  <li>All enterprise assets</li>
+                  <li>Continuous protection</li>
+                </ul>
+              </li>
+              <li><strong>10.2 Configure Automatic Anti-Malware Signature Updates</strong>
+                <ul>
+                  <li>Regular updates</li>
+                  <li>All enterprise assets</li>
+                </ul>
+              </li>
+              <li><strong>10.3 Disable Autorun and Autoplay for Removable Media</strong>
+                <ul>
+                  <li>Prevent auto-execute</li>
+                  <li>Control removable media</li>
+                </ul>
+              </li>
+              <li><strong>10.4 Configure Automatic Anti-Malware Scanning of Removable Media</strong>
+                <ul>
+                  <li>Scan on connection</li>
+                  <li>Before access allowed</li>
+                </ul>
+              </li>
+              <li><strong>10.5 Enable Anti-Exploitation Features</strong>
+                <ul>
+                  <li>DEP implementation</li>
+                  <li>WDEG features</li>
+                  <li>SIP and Gatekeeper</li>
+                </ul>
+              </li>
+              <li><strong>10.6 Centrally Manage Anti-Malware Software</strong>
+                <ul>
+                  <li>Enterprise-wide management</li>
+                  <li>Consistent policies</li>
+                </ul>
+              </li>
+              <li><strong>10.7 Use Behavior-Based Anti-Malware Software</strong>
+                <ul>
+                  <li>Advanced detection</li>
+                  <li>Behavioral analysis</li>
+                  <li>Machine learning capabilities</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -677,29 +1601,123 @@
         </header>
         <section class="card">
           <h3>Summary ⏪</h3>
-          <p>Be ready to bounce back quickly from any incident with robust backup and recovery strategies – your ultimate digital insurance.</p>
+          <p>Establish and maintain data recovery practices sufficient to restore in-scope enterprise assets to a pre-incident and trusted state.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Data availability importance:
+                <ul>
+                  <li>Critical for business decisions</li>
+                  <li>Sometimes more vital than confidentiality</li>
+                  <li>Impact of unavailable/untrusted data</li>
+                </ul>
+              </li>
+              <li>System compromise impacts:
+                <ul>
+                  <li>Configuration changes</li>
+                  <li>Unauthorized accounts</li>
+                  <li>Software/script modifications</li>
+                  <li>Malicious code insertion</li>
+                </ul>
+              </li>
+              <li>Recovery challenges:
+                <ul>
+                  <li>Identifying malicious changes</li>
+                  <li>Detecting corrupted applications</li>
+                  <li>Restoring trusted state</li>
+                  <li>Verifying system integrity</li>
+                </ul>
+              </li>
+              <li>Ransomware considerations:
+                <ul>
+                  <li>Exponential rise in attacks</li>
+                  <li>Data encryption threats</li>
+                  <li>Extortion techniques</li>
+                  <li>Data exfiltration risks</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Schedule automated backups using offsite or cloud storage.</li>
-              <li>Regularly test and refine your recovery plan.</li>
-              <li>Follow best practices recommended by NIST and CIS.</li>
+              <li>Backup procedures:
+                <ul>
+                  <li>Based on data value</li>
+                  <li>Consider sensitivity levels</li>
+                  <li>Define retention requirements</li>
+                  <li>Determine backup frequency</li>
+                </ul>
+              </li>
+              <li>Testing requirements:
+                <ul>
+                  <li>Quarterly minimum testing</li>
+                  <li>Random backup sampling</li>
+                  <li>Test bed environment</li>
+                  <li>Verification procedures</li>
+                </ul>
+              </li>
+              <li>Recovery verification:
+                <ul>
+                  <li>Operating system integrity</li>
+                  <li>Application functionality</li>
+                  <li>Data completeness</li>
+                  <li>System usability</li>
+                </ul>
+              </li>
+              <li>Malware considerations:
+                <ul>
+                  <li>Use pre-infection backups</li>
+                  <li>Verify backup integrity</li>
+                  <li>Isolate restored systems</li>
+                  <li>Monitor for reinfection</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Back up all critical data regularly.</li>
-              <li>Encrypt backups and secure access to them.</li>
-              <li>Conduct recovery drills periodically.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🎬</button>
-          <div class="content">
-            <ul>
-              <li>Think of data recovery as your secret "undo" button – when things go wrong, just hit rewind and fix it! 🔄🎥</li>
+              <li><strong>11.1 Establish and Maintain a Data Recovery Process</strong>
+                <ul>
+                  <li>Define recovery scope</li>
+                  <li>Set recovery priorities</li>
+                  <li>Ensure backup security</li>
+                  <li>Annual review minimum</li>
+                </ul>
+              </li>
+              <li><strong>11.2 Perform Automated Backups</strong>
+                <ul>
+                  <li>Weekly minimum frequency</li>
+                  <li>Based on data sensitivity</li>
+                  <li>Automated execution</li>
+                </ul>
+              </li>
+              <li><strong>11.3 Protect Recovery Data</strong>
+                <ul>
+                  <li>Match original security controls</li>
+                  <li>Implement encryption</li>
+                  <li>Ensure data separation</li>
+                </ul>
+              </li>
+              <li><strong>11.4 Establish and Maintain an Isolated Instance of Recovery Data</strong>
+                <ul>
+                  <li>Offline backups</li>
+                  <li>Cloud-based copies</li>
+                  <li>Off-site storage</li>
+                  <li>Version control</li>
+                </ul>
+              </li>
+              <li><strong>11.5 Test Data Recovery</strong>
+                <ul>
+                  <li>Quarterly testing</li>
+                  <li>Sample verification</li>
+                  <li>Recovery validation</li>
+                  <li>Process improvement</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -712,30 +1730,143 @@
         </header>
         <section class="card">
           <h3>Summary 🚦</h3>
-          <p>Keep your network devices secure and optimized with up-to-date configurations, timely patch management, and smart segmentation.</p>
+          <p>Establish, implement, and actively manage (track, report, correct) network devices, in order to prevent attackers from exploiting vulnerable network services and access points.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Network security fundamentals:
+                <ul>
+                  <li>Essential defense layer</li>
+                  <li>Security architecture importance</li>
+                  <li>Default configuration risks</li>
+                  <li>Vulnerability management</li>
+                </ul>
+              </li>
+              <li>Default configuration risks:
+                <ul>
+                  <li>Open services and ports</li>
+                  <li>Default accounts/passwords</li>
+                  <li>Legacy protocol support</li>
+                  <li>Unnecessary software</li>
+                </ul>
+              </li>
+              <li>Network evolution challenges:
+                <ul>
+                  <li>Constant architecture changes</li>
+                  <li>Configuration drift</li>
+                  <li>Business exception requests</li>
+                  <li>Security vs. functionality</li>
+                </ul>
+              </li>
+              <li>Infrastructure management needs:
+                <ul>
+                  <li>Updated documentation</li>
+                  <li>Regular reassessment</li>
+                  <li>Change tracking</li>
+                  <li>Risk analysis</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Maintain an updated inventory of all network devices.</li>
-              <li>Apply secure configuration baselines to routers, switches, and firewalls.</li>
-              <li>Integrate patch management and configuration reviews into your workflow.</li>
-              <li>See the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Guides</a> for more details.</li>
+              <li>Documentation requirements:
+                <ul>
+                  <li>Network architecture diagrams</li>
+                  <li>Security architecture plans</li>
+                  <li>Infrastructure inventory</li>
+                  <li>Configuration standards</li>
+                </ul>
+              </li>
+              <li>Management practices:
+                <ul>
+                  <li>Version control</li>
+                  <li>Change management</li>
+                  <li>Compliance monitoring</li>
+                  <li>Regular updates</li>
+                </ul>
+              </li>
+              <li>Security considerations:
+                <ul>
+                  <li>Access control</li>
+                  <li>Secure protocols</li>
+                  <li>Authentication methods</li>
+                  <li>Monitoring systems</li>
+                </ul>
+              </li>
+              <li>Infrastructure administration:
+                <ul>
+                  <li>Dedicated devices</li>
+                  <li>Out-of-band management</li>
+                  <li>Strong authentication</li>
+                  <li>Secure protocols</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Enforce secure management practices for your network infrastructure.</li>
-              <li>Segment network traffic to reduce risk exposure.</li>
-              <li>Audit configurations periodically.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🏎️</button>
-          <div class="content">
-            <ul>
-              <li>Imagine tuning a high-performance car – every component must work in harmony for a smooth ride on the info superhighway! 🏎️💨</li>
+              <li><strong>12.1 Ensure Network Infrastructure is Up-to-Date</strong>
+                <ul>
+                  <li>Latest stable releases</li>
+                  <li>Supported NaaS offerings</li>
+                  <li>Monthly review minimum</li>
+                </ul>
+              </li>
+              <li><strong>12.2 Establish and Maintain a Secure Network Architecture</strong>
+                <ul>
+                  <li>Network segmentation</li>
+                  <li>Least privilege access</li>
+                  <li>High availability design</li>
+                </ul>
+              </li>
+              <li><strong>12.3 Securely Manage Network Infrastructure</strong>
+                <ul>
+                  <li>Infrastructure-as-code</li>
+                  <li>Secure protocols (SSH/HTTPS)</li>
+                  <li>Version control</li>
+                </ul>
+              </li>
+              <li><strong>12.4 Establish and Maintain Architecture Diagram(s)</strong>
+                <ul>
+                  <li>Network documentation</li>
+                  <li>System documentation</li>
+                  <li>Annual updates</li>
+                </ul>
+              </li>
+              <li><strong>12.5 Centralize Network Authentication, Authorization, and Auditing (AAA)</strong>
+                <ul>
+                  <li>Unified access control</li>
+                  <li>Centralized management</li>
+                  <li>Comprehensive logging</li>
+                </ul>
+              </li>
+              <li><strong>12.6 Use Secure Network Management and Communication Protocols</strong>
+                <ul>
+                  <li>802.1X implementation</li>
+                  <li>WPA2 Enterprise or better</li>
+                  <li>Secure management protocols</li>
+                </ul>
+              </li>
+              <li><strong>12.7 Ensure Remote Devices Utilize a VPN</strong>
+                <ul>
+                  <li>Enterprise VPN requirement</li>
+                  <li>AAA integration</li>
+                  <li>Authentication enforcement</li>
+                </ul>
+              </li>
+              <li><strong>12.8 Establish and Maintain Dedicated Computing Resources for All Administrative Work</strong>
+                <ul>
+                  <li>Physical/logical separation</li>
+                  <li>Network segmentation</li>
+                  <li>Internet restriction</li>
+                  <li>Administrative isolation</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -748,29 +1879,163 @@
         </header>
         <section class="card">
           <h3>Summary 🕵️</h3>
-          <p>Continuously monitor network activity using advanced detection tools to spot and neutralize threats before they cause harm.</p>
+          <p>Operate processes and tooling to establish and maintain comprehensive network monitoring and defense against security threats across the enterprise's network infrastructure and user base.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Network defense challenges:
+                <ul>
+                  <li>Evolving adversary tactics</li>
+                  <li>Shared exploit information</li>
+                  <li>Security control bypasses</li>
+                  <li>Tool misconfigurations</li>
+                </ul>
+              </li>
+              <li>Monitoring requirements:
+                <ul>
+                  <li>Continuous process</li>
+                  <li>Alert response capability</li>
+                  <li>Human analysis needed</li>
+                  <li>Multiple threat vectors</li>
+                </ul>
+              </li>
+              <li>Detection importance:
+                <ul>
+                  <li>Reduce compromise duration</li>
+                  <li>Minimize attack impact</li>
+                  <li>Prevent data loss</li>
+                  <li>Enable quick response</li>
+                </ul>
+              </li>
+              <li>Situational awareness benefits:
+                <ul>
+                  <li>TTP identification</li>
+                  <li>IOC cataloging</li>
+                  <li>Proactive defense</li>
+                  <li>Faster recovery</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Deploy IDS/IPS and integrate them with SIEM systems.</li>
-              <li>Automate anomaly detection and alert triggering.</li>
-              <li>Regularly analyze network logs and performance metrics.</li>
+              <li>Implementation approach:
+                <ul>
+                  <li>Understand critical functions</li>
+                  <li>Map network architecture</li>
+                  <li>Document data flows</li>
+                  <li>Identify key assets</li>
+                </ul>
+              </li>
+              <li>Security operations:
+                <ul>
+                  <li>Trained team</li>
+                  <li>Organized processes</li>
+                  <li>Incident detection</li>
+                  <li>Response procedures</li>
+                </ul>
+              </li>
+              <li>Monitoring scope:
+                <ul>
+                  <li>Network activity</li>
+                  <li>Asset behavior</li>
+                  <li>User credentials</li>
+                  <li>Data access</li>
+                </ul>
+              </li>
+              <li>Service options:
+                <ul>
+                  <li>Internal capabilities</li>
+                  <li>Managed services</li>
+                  <li>Hybrid approaches</li>
+                  <li>Consultancy support</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Continuously monitor traffic for early threat detection.</li>
-              <li>Set up automated alert procedures.</li>
-              <li>Review logs and refine defensive strategies regularly.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🕶️</button>
-          <div class="content">
-            <ul>
-              <li>Picture yourself as a secret agent – always on the lookout for any suspicious activity with your cool spy gadgets! 🕵️‍♂️🔎</li>
+              <li><strong>13.1 Centralize Security Event Alerting</strong>
+                <ul>
+                  <li>Consolidated view</li>
+                  <li>Real-time alerting</li>
+                  <li>Correlation capability</li>
+                </ul>
+              </li>
+              <li><strong>13.2 Deploy a Host-Based Intrusion Detection Solution</strong>
+                <ul>
+                  <li>Critical assets coverage</li>
+                  <li>Behavioral monitoring</li>
+                  <li>Alert generation</li>
+                </ul>
+              </li>
+              <li><strong>13.3 Deploy a Network Intrusion Detection Solution</strong>
+                <ul>
+                  <li>Traffic analysis</li>
+                  <li>Signature detection</li>
+                  <li>Anomaly identification</li>
+                </ul>
+              </li>
+              <li><strong>13.4 Perform Traffic Filtering Between Network Segments</strong>
+                <ul>
+                  <li>Network segregation</li>
+                  <li>Access control</li>
+                  <li>Policy enforcement</li>
+                </ul>
+              </li>
+              <li><strong>13.5 Manage Access Control for Remote Assets</strong>
+                <ul>
+                  <li>Remote access control</li>
+                  <li>Authentication requirements</li>
+                  <li>Connection monitoring</li>
+                </ul>
+              </li>
+              <li><strong>13.6 Collect Network Traffic Flow Data</strong>
+                <ul>
+                  <li>Flow monitoring</li>
+                  <li>Traffic analysis</li>
+                  <li>Pattern detection</li>
+                </ul>
+              </li>
+              <li><strong>13.7 Deploy Network-Based Intrusion Prevention</strong>
+                <ul>
+                  <li>Active prevention</li>
+                  <li>Threat blocking</li>
+                  <li>Attack mitigation</li>
+                </ul>
+              </li>
+              <li><strong>13.8 Deploy Network-Based Sandbox</strong>
+                <ul>
+                  <li>Malware analysis</li>
+                  <li>Behavior testing</li>
+                  <li>Safe detonation</li>
+                </ul>
+              </li>
+              <li><strong>13.9 Deploy Port-Level Access Control</strong>
+                <ul>
+                  <li>802.1x implementation</li>
+                  <li>Port security</li>
+                  <li>Access restriction</li>
+                </ul>
+              </li>
+              <li><strong>13.10 Perform Application Layer Filtering</strong>
+                <ul>
+                  <li>Deep packet inspection</li>
+                  <li>Protocol validation</li>
+                  <li>Content filtering</li>
+                </ul>
+              </li>
+              <li><strong>13.11 Tune Security Event Alerting Thresholds</strong>
+                <ul>
+                  <li>Alert optimization</li>
+                  <li>False positive reduction</li>
+                  <li>Regular review</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -783,29 +2048,151 @@
         </header>
         <section class="card">
           <h3>Summary 📚</h3>
-          <p>Empower your team with interactive and engaging training sessions so they can level up their cyber skills and fend off attacks like pros.</p>
+          <p>Establish and maintain a security awareness program to influence behavior among the workforce to be security conscious and properly skilled to reduce cybersecurity risks to the enterprise.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Human factor importance:
+                <ul>
+                  <li>Users are primary targets</li>
+                  <li>Social engineering risks</li>
+                  <li>Behavioral vulnerabilities</li>
+                  <li>Security culture impact</li>
+                </ul>
+              </li>
+              <li>Training objectives:
+                <ul>
+                  <li>Threat awareness</li>
+                  <li>Security best practices</li>
+                  <li>Policy compliance</li>
+                  <li>Incident reporting</li>
+                </ul>
+              </li>
+              <li>Risk mitigation:
+                <ul>
+                  <li>Reduce human errors</li>
+                  <li>Improve threat detection</li>
+                  <li>Enhance response time</li>
+                  <li>Strengthen defense</li>
+                </ul>
+              </li>
+              <li>Program benefits:
+                <ul>
+                  <li>Security culture development</li>
+                  <li>Compliance support</li>
+                  <li>Incident prevention</li>
+                  <li>Risk reduction</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Conduct regular security awareness sessions and phishing simulations.</li>
-              <li>Use interactive e-learning modules and assessments.</li>
-              <li>Keep training content current with emerging threat trends (<a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS resources</a>).</li>
+              <li>Training components:
+                <ul>
+                  <li>Regular awareness sessions</li>
+                  <li>Phishing simulations</li>
+                  <li>Interactive modules</li>
+                  <li>Skills assessment</li>
+                </ul>
+              </li>
+              <li>Content areas:
+                <ul>
+                  <li>Password security</li>
+                  <li>Email safety</li>
+                  <li>Social engineering</li>
+                  <li>Data protection</li>
+                  <li>Mobile security</li>
+                  <li>Remote work safety</li>
+                </ul>
+              </li>
+              <li>Delivery methods:
+                <ul>
+                  <li>Online training</li>
+                  <li>In-person sessions</li>
+                  <li>Newsletters</li>
+                  <li>Awareness campaigns</li>
+                </ul>
+              </li>
+              <li>Measurement:
+                <ul>
+                  <li>Completion tracking</li>
+                  <li>Knowledge assessment</li>
+                  <li>Behavior monitoring</li>
+                  <li>Effectiveness metrics</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Mandate periodic security training for all staff.</li>
-              <li>Run simulated exercises and reward engagement.</li>
-              <li>Evaluate training effectiveness through feedback.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🏆</button>
-          <div class="content">
-            <ul>
-              <li>Think of training as a fun game – each challenge levels up your cyber skills and earns you extra XP! 🎮✨</li>
+              <li><strong>14.1 Establish and Maintain a Security Awareness Program</strong>
+                <ul>
+                  <li>Regular updates</li>
+                  <li>Comprehensive coverage</li>
+                  <li>Documented process</li>
+                </ul>
+              </li>
+              <li><strong>14.2 Train Workforce Members to Recognize Social Engineering Attacks</strong>
+                <ul>
+                  <li>Phishing awareness</li>
+                  <li>Common tactics</li>
+                  <li>Response procedures</li>
+                </ul>
+              </li>
+              <li><strong>14.3 Train Workforce Members on Authentication Best Practices</strong>
+                <ul>
+                  <li>Password security</li>
+                  <li>MFA usage</li>
+                  <li>Account protection</li>
+                </ul>
+              </li>
+              <li><strong>14.4 Train Workforce on Data Handling Best Practices</strong>
+                <ul>
+                  <li>Classification guidelines</li>
+                  <li>Protection measures</li>
+                  <li>Sharing protocols</li>
+                </ul>
+              </li>
+              <li><strong>14.5 Train Workforce Members on Causes of Unintentional Data Exposure</strong>
+                <ul>
+                  <li>Common mistakes</li>
+                  <li>Prevention methods</li>
+                  <li>Risk awareness</li>
+                </ul>
+              </li>
+              <li><strong>14.6 Train Workforce Members on Security Event Reporting</strong>
+                <ul>
+                  <li>Incident recognition</li>
+                  <li>Reporting procedures</li>
+                  <li>Response protocols</li>
+                </ul>
+              </li>
+              <li><strong>14.7 Train Workforce on How to Identify and Report Security Incidents</strong>
+                <ul>
+                  <li>Incident indicators</li>
+                  <li>Escalation paths</li>
+                  <li>Documentation requirements</li>
+                </ul>
+              </li>
+              <li><strong>14.8 Train Workforce on Sensitive Data Access</strong>
+                <ul>
+                  <li>Access controls</li>
+                  <li>Handling procedures</li>
+                  <li>Security measures</li>
+                </ul>
+              </li>
+              <li><strong>14.9 Conduct Role-Specific Security Training</strong>
+                <ul>
+                  <li>Targeted content</li>
+                  <li>Job-specific risks</li>
+                  <li>Specialized procedures</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -818,30 +2205,142 @@
         </header>
         <section class="card">
           <h3>Summary 💌</h3>
-          <p>Manage your vendors like a pro – only partner with those that meet your rigorous security standards to ensure smooth, secure operations.</p>
+          <p>Develop and implement processes to evaluate and manage the security risks associated with service providers and third parties throughout their relationship with the enterprise.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Third-party risks:
+                <ul>
+                  <li>Extended attack surface</li>
+                  <li>Data access concerns</li>
+                  <li>Security control variations</li>
+                  <li>Compliance implications</li>
+                </ul>
+              </li>
+              <li>Provider relationships:
+                <ul>
+                  <li>Complex integrations</li>
+                  <li>Shared responsibilities</li>
+                  <li>Service dependencies</li>
+                  <li>Contract management</li>
+                </ul>
+              </li>
+              <li>Security considerations:
+                <ul>
+                  <li>Data protection requirements</li>
+                  <li>Access control needs</li>
+                  <li>Incident response coordination</li>
+                  <li>Compliance obligations</li>
+                </ul>
+              </li>
+              <li>Risk management:
+                <ul>
+                  <li>Vendor assessment</li>
+                  <li>Continuous monitoring</li>
+                  <li>Performance metrics</li>
+                  <li>Security standards</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Conduct thorough security assessments of service providers.</li>
-              <li>Establish clear contractual security requirements and SLAs.</li>
-              <li>Review provider performance and compliance regularly.</li>
-              <li>See the <a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Controls website</a> for more info.</li>
+              <li>Assessment process:
+                <ul>
+                  <li>Security questionnaires</li>
+                  <li>Documentation review</li>
+                  <li>On-site audits</li>
+                  <li>Compliance verification</li>
+                </ul>
+              </li>
+              <li>Contract requirements:
+                <ul>
+                  <li>Security controls</li>
+                  <li>Service levels</li>
+                  <li>Incident reporting</li>
+                  <li>Compliance standards</li>
+                </ul>
+              </li>
+              <li>Monitoring methods:
+                <ul>
+                  <li>Performance tracking</li>
+                  <li>Security metrics</li>
+                  <li>Incident reviews</li>
+                  <li>Compliance reports</li>
+                </ul>
+              </li>
+              <li>Risk mitigation:
+                <ul>
+                  <li>Security requirements</li>
+                  <li>Control validation</li>
+                  <li>Regular assessments</li>
+                  <li>Corrective actions</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Set up SLAs with clear security metrics.</li>
-              <li>Conduct routine vendor risk assessments.</li>
-              <li>Continuously monitor third-party compliance.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 💖</button>
-          <div class="content">
-            <ul>
-              <li>Imagine dating only the best – you stick with vendors that pass your security compatibility test! 💘📞</li>
+              <li><strong>15.1 Establish and Maintain an Inventory of Service Providers</strong>
+                <ul>
+                  <li>Complete listing</li>
+                  <li>Service details</li>
+                  <li>Risk classifications</li>
+                  <li>Regular updates</li>
+                </ul>
+              </li>
+              <li><strong>15.2 Establish and Maintain a Service Provider Management Policy</strong>
+                <ul>
+                  <li>Security requirements</li>
+                  <li>Assessment criteria</li>
+                  <li>Monitoring procedures</li>
+                  <li>Annual review</li>
+                </ul>
+              </li>
+              <li><strong>15.3 Classify Service Providers</strong>
+                <ul>
+                  <li>Risk levels</li>
+                  <li>Data sensitivity</li>
+                  <li>Service criticality</li>
+                  <li>Access scope</li>
+                </ul>
+              </li>
+              <li><strong>15.4 Ensure Service Provider Contracts Include Security Requirements</strong>
+                <ul>
+                  <li>Control specifications</li>
+                  <li>Compliance obligations</li>
+                  <li>Incident reporting</li>
+                  <li>Right to audit</li>
+                </ul>
+              </li>
+              <li><strong>15.5 Assess Service Providers</strong>
+                <ul>
+                  <li>Initial evaluation</li>
+                  <li>Periodic reviews</li>
+                  <li>Control validation</li>
+                  <li>Compliance checks</li>
+                </ul>
+              </li>
+              <li><strong>15.6 Monitor Service Providers</strong>
+                <ul>
+                  <li>Ongoing assessment</li>
+                  <li>Performance tracking</li>
+                  <li>Security metrics</li>
+                  <li>Compliance status</li>
+                </ul>
+              </li>
+              <li><strong>15.7 Securely Decommission Service Providers</strong>
+                <ul>
+                  <li>Access termination</li>
+                  <li>Data return/destruction</li>
+                  <li>Asset recovery</li>
+                  <li>Documentation updates</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -854,29 +2353,183 @@
         </header>
         <section class="card">
           <h3>Summary 🍽️</h3>
-          <p>Embed security into your software development process with secure coding practices, continuous testing, and vulnerability management – like a gourmet chef using only the finest ingredients.</p>
+          <p>Manage the security life cycle of all in-house developed and acquired software to prevent, detect, and remediate security weaknesses before they can impact the enterprise.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Application security risks:
+                <ul>
+                  <li>Direct attack vector</li>
+                  <li>Data exposure risks</li>
+                  <li>Business process impacts</li>
+                  <li>System compromise potential</li>
+                </ul>
+              </li>
+              <li>Development challenges:
+                <ul>
+                  <li>Complex dependencies</li>
+                  <li>Legacy code issues</li>
+                  <li>Third-party components</li>
+                  <li>Rapid deployment needs</li>
+                </ul>
+              </li>
+              <li>Security integration:
+                <ul>
+                  <li>SDLC requirements</li>
+                  <li>DevSecOps practices</li>
+                  <li>Testing frameworks</li>
+                  <li>Continuous monitoring</li>
+                </ul>
+              </li>
+              <li>Risk management:
+                <ul>
+                  <li>Vulnerability assessment</li>
+                  <li>Code review processes</li>
+                  <li>Security testing</li>
+                  <li>Incident response</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Adopt secure coding standards and conduct regular code reviews.</li>
-              <li>Integrate static and dynamic analysis tools into your CI/CD pipelines.</li>
-              <li>Follow OWASP guidelines – visit <a href="https://owasp.org/" target="_blank" rel="noopener">OWASP</a> for more info.</li>
+              <li>Development practices:
+                <ul>
+                  <li>Secure coding standards</li>
+                  <li>Code analysis tools</li>
+                  <li>Security testing</li>
+                  <li>Version control</li>
+                </ul>
+              </li>
+              <li>Testing methods:
+                <ul>
+                  <li>Static analysis</li>
+                  <li>Dynamic testing</li>
+                  <li>Penetration testing</li>
+                  <li>Vulnerability scanning</li>
+                </ul>
+              </li>
+              <li>Security controls:
+                <ul>
+                  <li>Input validation</li>
+                  <li>Authentication</li>
+                  <li>Authorization</li>
+                  <li>Encryption</li>
+                  <li>Logging</li>
+                </ul>
+              </li>
+              <li>Monitoring and response:
+                <ul>
+                  <li>Runtime protection</li>
+                  <li>Incident detection</li>
+                  <li>Patch management</li>
+                  <li>Emergency response</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Conduct vulnerability assessments and penetration tests on applications.</li>
-              <li>Enforce secure software development frameworks.</li>
-              <li>Implement continuous monitoring and patching for application vulnerabilities.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🍕</button>
-          <div class="content">
-            <ul>
-              <li>Imagine your code as a secret recipe – only use the finest ingredients to craft a masterpiece! 👩‍🍳✨</li>
+              <li><strong>16.1 Establish and Maintain a Secure Application Development Process</strong>
+                <ul>
+                  <li>SDLC integration</li>
+                  <li>Security requirements</li>
+                  <li>Development standards</li>
+                  <li>Regular updates</li>
+                </ul>
+              </li>
+              <li><strong>16.2 Establish and Maintain a Process to Accept and Address Software Vulnerabilities</strong>
+                <ul>
+                  <li>Vulnerability tracking</li>
+                  <li>Risk assessment</li>
+                  <li>Remediation process</li>
+                  <li>Stakeholder communication</li>
+                </ul>
+              </li>
+              <li><strong>16.3 Perform Root Cause Analysis on Security Vulnerabilities</strong>
+                <ul>
+                  <li>Incident analysis</li>
+                  <li>Pattern identification</li>
+                  <li>Process improvement</li>
+                  <li>Knowledge sharing</li>
+                </ul>
+              </li>
+              <li><strong>16.4 Establish and Manage an Inventory of Third-Party Software Components</strong>
+                <ul>
+                  <li>Component tracking</li>
+                  <li>Version management</li>
+                  <li>License compliance</li>
+                  <li>Security updates</li>
+                </ul>
+              </li>
+              <li><strong>16.5 Use Up-to-Date and Trusted Third-Party Software Components</strong>
+                <ul>
+                  <li>Version control</li>
+                  <li>Security patches</li>
+                  <li>Vendor assessment</li>
+                  <li>Component validation</li>
+                </ul>
+              </li>
+              <li><strong>16.6 Establish and Maintain a Severity Rating System and Process for Application Vulnerabilities</strong>
+                <ul>
+                  <li>Risk classification</li>
+                  <li>Priority assignment</li>
+                  <li>Response timelines</li>
+                  <li>Resource allocation</li>
+                </ul>
+              </li>
+              <li><strong>16.7 Use Standard Hardening Configuration Templates for Application Infrastructure</strong>
+                <ul>
+                  <li>Baseline configurations</li>
+                  <li>Security controls</li>
+                  <li>Deployment standards</li>
+                  <li>Regular updates</li>
+                </ul>
+              </li>
+              <li><strong>16.8 Separate Production and Non-Production Systems</strong>
+                <ul>
+                  <li>Environment isolation</li>
+                  <li>Access control</li>
+                  <li>Data segregation</li>
+                  <li>Change management</li>
+                </ul>
+              </li>
+              <li><strong>16.9 Train Developers in Application Security Concepts and Secure Coding</strong>
+                <ul>
+                  <li>Security awareness</li>
+                  <li>Best practices</li>
+                  <li>Threat modeling</li>
+                  <li>Secure coding</li>
+                </ul>
+              </li>
+              <li><strong>16.10 Apply Secure Design Principles in Application Architectures</strong>
+                <ul>
+                  <li>Defense in depth</li>
+                  <li>Least privilege</li>
+                  <li>Secure defaults</li>
+                  <li>Fail securely</li>
+                </ul>
+              </li>
+              <li><strong>16.11 Leverage Vetted Modules or Services for Application Security Components</strong>
+                <ul>
+                  <li>Trusted components</li>
+                  <li>Security functions</li>
+                  <li>Regular assessment</li>
+                  <li>Version control</li>
+                </ul>
+              </li>
+              <li><strong>16.12 Implement Code-Level Security Checks</strong>
+                <ul>
+                  <li>Static analysis</li>
+                  <li>Code review</li>
+                  <li>Security testing</li>
+                  <li>Vulnerability scanning</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -889,29 +2542,158 @@
         </header>
         <section class="card">
           <h3>Summary 🚨</h3>
-          <p>Be prepared for digital emergencies with a robust incident response plan that lets you detect, contain, and recover at lightning speed.</p>
+          <p>Establish a program to develop and maintain an incident response capability (e.g., policies, plans, procedures, defined roles, training, and communications) to prepare, detect, and quickly respond to an attack.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Response readiness:
+                <ul>
+                  <li>Minimize incident impact</li>
+                  <li>Reduce recovery time</li>
+                  <li>Maintain operations</li>
+                  <li>Protect reputation</li>
+                </ul>
+              </li>
+              <li>Program components:
+                <ul>
+                  <li>Incident planning</li>
+                  <li>Response procedures</li>
+                  <li>Team coordination</li>
+                  <li>Communication protocols</li>
+                </ul>
+              </li>
+              <li>Organizational benefits:
+                <ul>
+                  <li>Faster detection</li>
+                  <li>Efficient response</li>
+                  <li>Better recovery</li>
+                  <li>Lessons learned</li>
+                </ul>
+              </li>
+              <li>Critical capabilities:
+                <ul>
+                  <li>Detection systems</li>
+                  <li>Analysis tools</li>
+                  <li>Response teams</li>
+                  <li>Recovery processes</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Develop and maintain an incident response plan integrated with your overall security strategy.</li>
-              <li>Conduct regular drills and tabletop exercises.</li>
-              <li>Coordinate with legal, PR, and communication teams for a unified response.</li>
+              <li>Program development:
+                <ul>
+                  <li>Policy creation</li>
+                  <li>Plan documentation</li>
+                  <li>Role definition</li>
+                  <li>Process establishment</li>
+                </ul>
+              </li>
+              <li>Team preparation:
+                <ul>
+                  <li>Regular training</li>
+                  <li>Tabletop exercises</li>
+                  <li>Skill development</li>
+                  <li>Tool familiarity</li>
+                </ul>
+              </li>
+              <li>Response capabilities:
+                <ul>
+                  <li>Incident detection</li>
+                  <li>Threat analysis</li>
+                  <li>Containment strategies</li>
+                  <li>Recovery procedures</li>
+                </ul>
+              </li>
+              <li>Program maintenance:
+                <ul>
+                  <li>Regular updates</li>
+                  <li>Lessons incorporation</li>
+                  <li>Process improvement</li>
+                  <li>Tool evaluation</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Establish a dedicated incident response team with clearly defined roles.</li>
-              <li>Document every incident and update your processes accordingly.</li>
-              <li>Utilize automation for rapid detection and containment.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🦸‍♂️</button>
-          <div class="content">
-            <ul>
-              <li>Imagine an epic rescue mission – when disaster strikes, your team leaps into action like a squad of superheroes! 🦸‍♀️⚡</li>
+              <li><strong>17.1 Designate Personnel to Manage Incident Handling</strong>
+                <ul>
+                  <li>Team structure</li>
+                  <li>Role assignments</li>
+                  <li>Responsibility definition</li>
+                  <li>Authority levels</li>
+                </ul>
+              </li>
+              <li><strong>17.2 Establish and Maintain Contact Information for Reporting Security Incidents</strong>
+                <ul>
+                  <li>Contact database</li>
+                  <li>Regular updates</li>
+                  <li>Communication channels</li>
+                  <li>Escalation paths</li>
+                </ul>
+              </li>
+              <li><strong>17.3 Establish and Maintain an Enterprise Process for Reporting Incidents</strong>
+                <ul>
+                  <li>Reporting procedures</li>
+                  <li>Documentation requirements</li>
+                  <li>Notification protocols</li>
+                  <li>Follow-up processes</li>
+                </ul>
+              </li>
+              <li><strong>17.4 Establish and Maintain an Incident Response Process</strong>
+                <ul>
+                  <li>Response procedures</li>
+                  <li>Containment strategies</li>
+                  <li>Recovery plans</li>
+                  <li>Communication protocols</li>
+                </ul>
+              </li>
+              <li><strong>17.5 Assign Key Roles and Responsibilities</strong>
+                <ul>
+                  <li>Team assignments</li>
+                  <li>Clear responsibilities</li>
+                  <li>Authority levels</li>
+                  <li>Backup personnel</li>
+                </ul>
+              </li>
+              <li><strong>17.6 Define Mechanisms for Communicating During Incident Response</strong>
+                <ul>
+                  <li>Communication tools</li>
+                  <li>Contact procedures</li>
+                  <li>Secure channels</li>
+                  <li>Backup methods</li>
+                </ul>
+              </li>
+              <li><strong>17.7 Conduct Routine Incident Response Exercises</strong>
+                <ul>
+                  <li>Tabletop exercises</li>
+                  <li>Technical drills</li>
+                  <li>Scenario testing</li>
+                  <li>Team training</li>
+                </ul>
+              </li>
+              <li><strong>17.8 Conduct Post-Incident Reviews</strong>
+                <ul>
+                  <li>Incident analysis</li>
+                  <li>Response evaluation</li>
+                  <li>Process improvement</li>
+                  <li>Lessons learned</li>
+                </ul>
+              </li>
+              <li><strong>17.9 Establish and Maintain Security Incident Thresholds</strong>
+                <ul>
+                  <li>Severity levels</li>
+                  <li>Response triggers</li>
+                  <li>Escalation criteria</li>
+                  <li>Review periods</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -924,30 +2706,158 @@
         </header>
         <section class="card">
           <h3>Summary 🥊</h3>
-          <p>Simulate real-world cyberattacks to uncover vulnerabilities before the baddies do – a healthy sparring match for your security.</p>
+          <p>Test the effectiveness and resiliency of enterprise assets through identifying and exploiting weaknesses in controls (people, processes, and technology), and simulating the objectives and actions of an attacker.</p>
         </section>
         <section>
+          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
+          <div class="content">
+            <ul>
+              <li>Testing benefits:
+                <ul>
+                  <li>Validate security controls</li>
+                  <li>Identify vulnerabilities</li>
+                  <li>Assess real-world risks</li>
+                  <li>Measure defense effectiveness</li>
+                </ul>
+              </li>
+              <li>Attack simulation:
+                <ul>
+                  <li>Realistic scenarios</li>
+                  <li>Attacker perspective</li>
+                  <li>Exploitation attempts</li>
+                  <li>Defense evaluation</li>
+                </ul>
+              </li>
+              <li>Risk assessment:
+                <ul>
+                  <li>Control effectiveness</li>
+                  <li>Vulnerability impact</li>
+                  <li>Remediation priorities</li>
+                  <li>Security gaps</li>
+                </ul>
+              </li>
+              <li>Program value:
+                <ul>
+                  <li>Proactive defense</li>
+                  <li>Compliance support</li>
+                  <li>Security validation</li>
+                  <li>Process improvement</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
           <div class="content">
             <ul>
-              <li>Schedule regular internal and external penetration tests.</li>
-              <li>Use a mix of automated scanning and manual testing.</li>
-              <li>Engage with reputable third-party testers for unbiased assessments.</li>
-              <li>See the <a href="https://www.penteststandard.org/" target="_blank" rel="noopener">Penetration Testing Execution Standard (PTES)</a> for more info.</li>
+              <li>Testing methodology:
+                <ul>
+                  <li>Scope definition</li>
+                  <li>Rules of engagement</li>
+                  <li>Testing approach</li>
+                  <li>Documentation requirements</li>
+                </ul>
+              </li>
+              <li>Test types:
+                <ul>
+                  <li>External testing</li>
+                  <li>Internal testing</li>
+                  <li>Application testing</li>
+                  <li>Social engineering</li>
+                </ul>
+              </li>
+              <li>Testing components:
+                <ul>
+                  <li>Reconnaissance</li>
+                  <li>Vulnerability scanning</li>
+                  <li>Exploitation attempts</li>
+                  <li>Post-exploitation</li>
+                </ul>
+              </li>
+              <li>Results management:
+                <ul>
+                  <li>Finding documentation</li>
+                  <li>Risk assessment</li>
+                  <li>Remediation planning</li>
+                  <li>Report generation</li>
+                </ul>
+              </li>
             </ul>
           </div>
           <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
           <div class="content">
             <ul>
-              <li>Document all findings and remediate vulnerabilities promptly.</li>
-              <li>Maintain a regular testing schedule.</li>
-              <li>Conduct follow-up tests post-remediation.</li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Fun Example 🥳</button>
-          <div class="content">
-            <ul>
-              <li>Imagine a friendly sparring match where experts test your defenses – you level up your security game with every round! 🎯🥊</li>
+              <li><strong>18.1 Establish and Maintain a Penetration Testing Program</strong>
+                <ul>
+                  <li>Program objectives</li>
+                  <li>Testing frequency</li>
+                  <li>Scope definition</li>
+                  <li>Methodology selection</li>
+                </ul>
+              </li>
+              <li><strong>18.2 Perform Periodic External Penetration Tests</strong>
+                <ul>
+                  <li>External perspective</li>
+                  <li>Regular schedule</li>
+                  <li>Comprehensive testing</li>
+                  <li>Results analysis</li>
+                </ul>
+              </li>
+              <li><strong>18.3 Remediate Penetration Test Findings</strong>
+                <ul>
+                  <li>Prioritized fixes</li>
+                  <li>Timely remediation</li>
+                  <li>Validation testing</li>
+                  <li>Progress tracking</li>
+                </ul>
+              </li>
+              <li><strong>18.4 Validate Security Measures</strong>
+                <ul>
+                  <li>Control testing</li>
+                  <li>Effectiveness measurement</li>
+                  <li>Configuration validation</li>
+                  <li>Security assessment</li>
+                </ul>
+              </li>
+              <li><strong>18.5 Perform Periodic Internal Penetration Tests</strong>
+                <ul>
+                  <li>Internal perspective</li>
+                  <li>Network testing</li>
+                  <li>System assessment</li>
+                  <li>Access validation</li>
+                </ul>
+              </li>
+              <li><strong>18.6 Perform Component Testing</strong>
+                <ul>
+                  <li>Individual systems</li>
+                  <li>Application testing</li>
+                  <li>Network devices</li>
+                  <li>Security controls</li>
+                </ul>
+              </li>
+              <li><strong>18.7 Use Social Engineering Techniques</strong>
+                <ul>
+                  <li>Phishing simulations</li>
+                  <li>Physical testing</li>
+                  <li>Phone-based attacks</li>
+                  <li>Awareness assessment</li>
+                </ul>
+              </li>
+              <li><strong>18.8 Ensure Penetration Testers are Qualified</strong>
+                <ul>
+                  <li>Skill verification</li>
+                  <li>Certification requirements</li>
+                  <li>Experience validation</li>
+                  <li>Background checks</li>
+                </ul>
+              </li>
+              <li><strong>18.9 Maintain Penetration Testing Results</strong>
+                <ul>
+                  <li>Documentation storage</li>
+                  <li>Finding tracking</li>
+                  <li>Trend analysis</li>
+                  <li>Historical records</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </section>
@@ -1043,7 +2953,7 @@
     
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 Aesha's Cyber Glam. All rights reserved. 😘💻</p>
+      <p>&copy; Jetlock INC.</p>
     </footer>
     
     <!--================================================
