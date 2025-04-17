@@ -8,6 +8,241 @@
     <!-- Google Fonts for quirky, modern headings -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
     <style>
+      :root {
+        /* Color palette */
+        --bg-color: #000000;
+        --surface-color: #0a0a0a;
+        --surface-hover-color: #1a1a1a;
+        --text-color: #00ff00;
+        --text-dim: #00cc00;
+        --text-bright: #00ff66;
+        --accent-color: #00ff99;
+        --link-color: #00ffcc;
+        --border-color: #004400;
+        
+        /* Typography */
+        --font-mono: 'Courier New', Courier, monospace;
+        --font-sans: 'Share Tech Mono', monospace;
+        
+        /* Effects */
+        --glow-effect: 0 0 5px var(--text-color),
+                      0 0 10px var(--text-color),
+                      0 0 15px var(--accent-color);
+        --scan-line: linear-gradient(
+          to bottom,
+          transparent 50%,
+          rgba(0, 255, 0, 0.02) 50%
+        );
+      }
+
+      /* Global Styles */
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: var(--font-mono);
+        line-height: 1.6;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--scan-line);
+        background-size: 100% 2px;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.3;
+      }
+
+      /* Typography */
+      h1, h2, h3, h4, h5, h6 {
+        color: var(--text-bright);
+        font-family: var(--font-sans);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: var(--glow-effect);
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      a:hover {
+        color: var(--accent-color);
+        text-shadow: var(--glow-effect);
+      }
+
+      /* Cards */
+      .card {
+        background: var(--surface-color);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: var(--accent-color);
+        animation: scan-line 2s linear infinite;
+      }
+
+      .card:hover {
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        border-color: var(--accent-color);
+      }
+
+      /* Navigation */
+      .side-nav {
+        background: var(--surface-color);
+        border-right: 1px solid var(--border-color);
+        box-shadow: 2px 0 10px rgba(0, 255, 0, 0.1);
+      }
+
+      .menu-btn {
+        background: var(--surface-color);
+        border: 1px solid var(--border-color);
+      }
+
+      .menu-btn span {
+        background: var(--text-color);
+        box-shadow: 0 0 5px var(--text-color);
+      }
+
+      /* Badges and Tags */
+      .badge {
+        background: var(--surface-color);
+        border: 1px solid var(--border-color);
+        color: var(--text-dim);
+        padding: 0.25rem 0.75rem;
+        border-radius: 2px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Animations */
+      @keyframes scan-line {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--surface-color);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--text-dim);
+      }
+
+      /* Tables */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1rem 0;
+      }
+
+      th, td {
+        border: 1px solid var(--border-color);
+        padding: 0.75rem;
+        text-align: left;
+      }
+
+      th {
+        background: var(--surface-color);
+        color: var(--text-bright);
+      }
+
+      /* Code blocks */
+      pre, code {
+        background: var(--surface-color);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        padding: 0.2em 0.4em;
+        font-family: var(--font-mono);
+        color: var(--text-bright);
+      }
+
+      pre {
+        padding: 1rem;
+        overflow-x: auto;
+      }
+
+      /* Lists */
+      ul, ol {
+        padding-left: 1.5rem;
+      }
+
+      li {
+        margin: 0.5rem 0;
+      }
+
+      li::marker {
+        color: var(--accent-color);
+      }
+
+      /* Buttons */
+      button {
+        background: var(--surface-color);
+        color: var(--text-color);
+        border: 1px solid var(--border-color);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-family: var(--font-mono);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background: var(--surface-hover-color);
+        border-color: var(--accent-color);
+        box-shadow: var(--glow-effect);
+      }
+
+      /* Add a font import for Share Tech Mono */
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
       /*================================================
         Modern CSS Variables & Theme
       =================================================*/
@@ -620,21 +855,23 @@
         top: 1rem;
         left: 1rem;
         z-index: 1001;
+        width: 40px;
+        height: 40px;
         background: var(--surface-color);
-        border: none;
-        padding: 0.5rem;
+        border: 1px solid var(--border-color);
         border-radius: 4px;
+        padding: 8px;
         cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 40px;
-        height: 40px;
-        transition: background-color 0.3s ease;
+        align-items: center;
       }
 
       .menu-btn:hover {
         background: var(--surface-hover-color);
+        border-color: var(--accent-color);
+        box-shadow: var(--glow-effect);
       }
 
       .menu-btn span {
@@ -642,10 +879,11 @@
         width: 24px;
         height: 2px;
         background: var(--text-color);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        box-shadow: 0 0 5px var(--text-color);
       }
 
-      .menu-btn.active span:nth-child(1) {
+      .menu-btn.active span:first-child {
         transform: translateY(8px) rotate(45deg);
       }
 
@@ -653,66 +891,36 @@
         opacity: 0;
       }
 
-      .menu-btn.active span:nth-child(3) {
+      .menu-btn.active span:last-child {
         transform: translateY(-8px) rotate(-45deg);
       }
 
       .side-nav {
         position: fixed;
         top: 0;
-        left: -100%;  /* Start completely off-screen */
+        left: -280px; /* Hide off-screen when inactive */
         width: 280px;
         height: 100vh;
         background: var(--surface-color);
-        box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+        border-right: 1px solid var(--border-color);
+        box-shadow: 2px 0 10px rgba(0, 255, 0, 0.1);
+        padding: 4rem 1rem 1rem;
+        overflow-y: auto;
         transition: transform 0.3s ease-in-out;
         z-index: 1000;
-        overflow-y: auto;
-        padding: 1rem;
       }
 
       .side-nav.active {
-        transform: translateX(100%); /* Move into view when active */
+        transform: translateX(280px);
       }
 
-      .side-nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .side-nav li {
-        margin-bottom: var(--spacing-xs);
-      }
-
-      .side-nav a {
-        display: block;
-        padding: var(--spacing-sm) var(--spacing-md);
-        color: var(--text-primary);
-        text-decoration: none;
-        border-radius: var(--border-radius);
-        transition: all var(--transition-fast);
-      }
-
-      .side-nav a:hover {
-        background: var(--surface-color-hover);
-        transform: translateX(var(--spacing-xs));
-      }
-
-      /* Adjust main content to account for fixed header */
-      main {
-        margin-top: calc(var(--spacing-xl) * 2);
-        padding: var(--spacing-md);
-      }
-
-      /* Overlay when nav is open */
       .nav-overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.7);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
@@ -724,26 +932,36 @@
         visibility: visible;
       }
 
-      @media (min-width: 1200px) {
-        .side-nav {
-          right: -350px;
-          width: 350px;
-        }
-
-        .side-nav.active {
-          transform: translateX(-350px);
-        }
+      /* Navigation Links */
+      .side-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
       }
 
-      @media (max-width: 640px) {
-        .side-nav {
-          right: -100%;
-          width: 100%;
-        }
+      .side-nav li {
+        margin: 0.5rem 0;
+      }
 
-        .side-nav.active {
-          transform: translateX(-100%);
-        }
+      .side-nav a {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+      }
+
+      .side-nav a:hover {
+        background: var(--surface-hover-color);
+        color: var(--text-bright);
+        text-shadow: var(--glow-effect);
+      }
+
+      /* Adjust main content to account for fixed header */
+      main {
+        margin-top: calc(var(--spacing-xl) * 2);
+        padding: var(--spacing-md);
       }
     </style>
   </head>
@@ -751,37 +969,23 @@
     <!-- Header with Site Title and Navigation Toggle -->
     <header class="site-header">
       <h1>CIS Controls v8</h1>
-      <button class="menu-btn" aria-label="Toggle navigation" aria-controls="sideNav" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
+      <div class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
     
     <!-- Navigation Overlay -->
     <div class="nav-overlay"></div>
 
     <!-- Off-canvas Navigation -->
-    <nav id="sideNav" class="side-nav" aria-label="Main Navigation">
+    <nav class="side-nav">
       <ul>
-        <!-- Each nav link should be descriptive -->
-        <li><a href="#control1">Control 1</a></li>
-        <li><a href="#control2">Control 2</a></li>
-        <li><a href="#control3">Control 3</a></li>
-        <li><a href="#control4">Control 4</a></li>
-        <li><a href="#control5">Control 5</a></li>
-        <li><a href="#control6">Control 6</a></li>
-        <li><a href="#control7">Control 7</a></li>
-        <li><a href="#control8">Control 8</a></li>
-        <li><a href="#control9">Control 9</a></li>
-        <li><a href="#control10">Control 10</a></li>
-        <li><a href="#control11">Control 11</a></li>
-        <li><a href="#control12">Control 12</a></li>
-        <li><a href="#control13">Control 13</a></li>
-        <li><a href="#control14">Control 14</a></li>
-        <li><a href="#control15">Control 15</a></li>
-        <li><a href="#control16">Control 16</a></li>
-        <li><a href="#control17">Control 17</a></li>
-        <li><a href="#control18">Control 18</a></li>
-        <li><a href="#acronyms">Acronyms</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#controls">Controls</a></li>
+        <li><a href="#safeguards">Safeguards</a></li>
+        <li><a href="#implementation">Implementation</a></li>
         <li><a href="#resources">Resources</a></li>
       </ul>
     </nav>
@@ -4959,17 +5163,17 @@
     <script>
       // Navigation Toggle
       const menuBtn = document.querySelector('.menu-btn');
-      const sideNav = document.getElementById('sideNav');
+      const sideNav = document.querySelector('.side-nav');
       const navOverlay = document.querySelector('.nav-overlay');
       const body = document.body;
 
       function toggleNav() {
-        const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
-        menuBtn.setAttribute('aria-expanded', !expanded);
+        const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', !isExpanded);
         menuBtn.classList.toggle('active');
         sideNav.classList.toggle('active');
         navOverlay.classList.toggle('active');
-        body.style.overflow = expanded ? '' : 'hidden';
+        body.style.overflow = isExpanded ? '' : 'hidden';
       }
 
       menuBtn.addEventListener('click', toggleNav);
@@ -4995,7 +5199,7 @@
         }
       });
 
-      // Prevent body scroll when nav is open on mobile
+      // Prevent body scroll when nav is open
       function preventScroll(e) {
         if (sideNav.classList.contains('active')) {
           e.preventDefault();
