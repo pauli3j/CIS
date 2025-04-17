@@ -592,18 +592,196 @@
           --text-tertiary: hsl(220, 15%, 45%);
         }
       }
+
+      /* Header and Navigation Styles */
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(var(--surface-color), 0.95);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border-color);
+        padding: var(--spacing-md);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .site-header h1 {
+        margin: 0;
+        font-size: var(--text-xl);
+      }
+
+      .menu-btn {
+        position: fixed;
+        top: var(--spacing-md);
+        right: var(--spacing-md);
+        z-index: 1001;
+        background: var(--surface-color);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        padding: var(--spacing-sm);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        transition: all var(--transition-fast);
+      }
+
+      .menu-btn:hover {
+        background: var(--surface-color-hover);
+      }
+
+      .menu-btn .hamburger {
+        position: relative;
+        width: 24px;
+        height: 2px;
+        background: var(--text-primary);
+        transition: all var(--transition-fast);
+      }
+
+      .menu-btn .hamburger::before,
+      .menu-btn .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        background: var(--text-primary);
+        transition: all var(--transition-fast);
+      }
+
+      .menu-btn .hamburger::before {
+        top: -6px;
+      }
+
+      .menu-btn .hamburger::after {
+        bottom: -6px;
+      }
+
+      .menu-btn.active .hamburger {
+        transform: rotate(45deg);
+      }
+
+      .menu-btn.active .hamburger::before {
+        top: 0;
+        transform: rotate(0);
+        opacity: 0;
+      }
+
+      .menu-btn.active .hamburger::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+      }
+
+      .side-nav {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: var(--surface-color);
+        border-left: 1px solid var(--border-color);
+        padding: calc(var(--spacing-xl) * 2) var(--spacing-md) var(--spacing-md);
+        overflow-y: auto;
+        transition: transform var(--transition-normal);
+        z-index: 1000;
+      }
+
+      .side-nav.active {
+        transform: translateX(-300px);
+      }
+
+      .side-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .side-nav li {
+        margin-bottom: var(--spacing-xs);
+      }
+
+      .side-nav a {
+        display: block;
+        padding: var(--spacing-sm) var(--spacing-md);
+        color: var(--text-primary);
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        transition: all var(--transition-fast);
+      }
+
+      .side-nav a:hover {
+        background: var(--surface-color-hover);
+        transform: translateX(var(--spacing-xs));
+      }
+
+      /* Adjust main content to account for fixed header */
+      main {
+        margin-top: calc(var(--spacing-xl) * 2);
+        padding: var(--spacing-md);
+      }
+
+      /* Overlay when nav is open */
+      .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+        z-index: 999;
+      }
+
+      .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      @media (min-width: 1200px) {
+        .side-nav {
+          right: -350px;
+          width: 350px;
+        }
+
+        .side-nav.active {
+          transform: translateX(-350px);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .side-nav {
+          right: -100%;
+          width: 100%;
+        }
+
+        .side-nav.active {
+          transform: translateX(-100%);
+        }
+      }
     </style>
   </head>
   <body>
     <!-- Header with Site Title and Navigation Toggle -->
-    <header>
+    <header class="site-header">
       <h1>CIS Controls v8</h1>
-      <!-- Accessible hamburger menu button -->
-      <button class="menu-btn" aria-label="Toggle navigation" aria-controls="sideNav" aria-expanded="false">&#9776;</button>
+      <button class="menu-btn" aria-label="Toggle navigation" aria-controls="sideNav" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
     </header>
     
+    <!-- Navigation Overlay -->
+    <div class="nav-overlay"></div>
+
     <!-- Off-canvas Navigation -->
-    <nav id="sideNav" aria-label="Main Navigation">
+    <nav id="sideNav" class="side-nav" aria-label="Main Navigation">
       <ul>
         <!-- Each nav link should be descriptive -->
         <li><a href="#control1">Control 1</a></li>
@@ -4592,22 +4770,13 @@
               </div>
             </nav>
           </div>
-
-          <div class="footer-section">
-            <h3>Vibe Coded by Paulie J.</h3>
-            <h5><a href="https://www.cisecurity.org/controls/cis-controls-navigator" target="_blank" rel="noopener">Inspired by CIS </a></h5>
-            <div class="newsletter-signup">
-              <h4>Subscribe to Updates</h4>
-              <p>Stay informed about CIS Controls updates and cybersecurity best practices.</p>
-              <a href="https://www.cisecurity.org/newsletter" target="_blank" rel="noopener" class="subscribe-button">Subscribe Now</a>
-            </div>
-          </div>
         </div>
 
         <div class="footer-bottom">
           <div class="footer-meta">
+            <h3>Vibe Coded by Paulie J.</h3>
             <nav class="meta-links">
-              <a href="https://github.com/pauli3j" target="_blank" rel="noopener">Github</a>
+              Check out my <a href="https://github.com/pauli3j" target="_blank" rel="noopener">Github</a>
             </nav>
           </div>
         </div>
@@ -4809,82 +4978,53 @@
          JavaScript for Interactivity & Accessibility
     =================================================-->
     <script>
-      // Toggle Off-Canvas Navigation
+      // Navigation Toggle
       const menuBtn = document.querySelector('.menu-btn');
       const sideNav = document.getElementById('sideNav');
-      
-      menuBtn.addEventListener('click', () => {
-        const expanded = menuBtn.getAttribute('aria-expanded') === "true";
+      const navOverlay = document.querySelector('.nav-overlay');
+      const body = document.body;
+
+      function toggleNav() {
+        const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
         menuBtn.setAttribute('aria-expanded', !expanded);
+        menuBtn.classList.toggle('active');
         sideNav.classList.toggle('active');
-      });
-      
-      // Collapsible Section Toggle with ARIA Updates
-      const collapsibleButtons = document.querySelectorAll('.collapsible');
-      
-      collapsibleButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          const expanded = this.getAttribute('aria-expanded') === "true";
-          this.setAttribute('aria-expanded', !expanded);
-          this.classList.toggle('active');
-          const content = this.nextElementSibling;
-          if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-          } else {
-            content.style.maxHeight = content.scrollHeight + "px";
+        navOverlay.classList.toggle('active');
+        body.style.overflow = expanded ? '' : 'hidden';
+      }
+
+      menuBtn.addEventListener('click', toggleNav);
+      navOverlay.addEventListener('click', toggleNav);
+
+      // Close nav when clicking a link
+      sideNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          toggleNav();
+          // Smooth scroll to section
+          const targetId = link.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
           }
         });
       });
-      
-      // Smooth Scrolling for In-Page Links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+
+      // Close nav on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sideNav.classList.contains('active')) {
+          toggleNav();
+        }
+      });
+
+      // Prevent body scroll when nav is open on mobile
+      function preventScroll(e) {
+        if (sideNav.classList.contains('active')) {
           e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-          // Close the nav after clicking a link
-          sideNav.classList.remove('active');
-          menuBtn.setAttribute('aria-expanded', "false");
-        });
-      });
+        }
+      }
 
-      // Add scroll progress indicator
-      const scrollProgress = document.createElement('div');
-      scrollProgress.className = 'scroll-progress';
-      document.body.appendChild(scrollProgress);
-
-      window.addEventListener('scroll', () => {
-        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (window.scrollY / windowHeight) * 100;
-        scrollProgress.style.transform = `scaleX(${scrolled / 100})`;
-      });
-
-      // Enhanced collapsible functionality
-      collapsibleButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          const expanded = this.getAttribute('aria-expanded') === "true";
-          this.setAttribute('aria-expanded', !expanded);
-          this.classList.toggle('active');
-          
-          const content = this.nextElementSibling;
-          content.classList.toggle('active');
-          
-          if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-          } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-          }
-          
-          // Add bounce animation to emojis when section is opened
-          const emojis = content.querySelectorAll('[class*="emoji"]');
-          emojis.forEach(emoji => {
-            emoji.style.animation = 'none';
-            emoji.offsetHeight; // Trigger reflow
-            emoji.style.animation = null;
-          });
-        });
-      });
+      // Apply to touch events for mobile
+      document.addEventListener('touchmove', preventScroll, { passive: false });
 
       // Intersection Observer for fade-in animations
       const observerOptions = {
