@@ -571,17 +571,42 @@
       </article>
       
       <!-- Control 2 -->
-      <article id="control2">
-        <header>
-          <h2>Control 2: Inventory and Control of Software Assets</h2>
-        </header>
-        <section class="card">
-          <h3>Summary ��</h3>
-          <p>Actively manage (inventory, track, and correct) all software (operating systems and applications) on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control2" class="card">
+        <div class="control-header">
+          <span class="control-number">02</span>
+          <div class="control-title">
+            <h2>Inventory and Control of Software Assets</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">7</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Applications</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Identify, Protect, Detect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Actively manage (inventory, track, and correct) all software (operating systems and applications) on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
               <li>Complete software inventory is critical for preventing attacks</li>
               <li>Attackers scan for vulnerable versions of software to exploit</li>
@@ -591,9 +616,10 @@
               <li>Helps identify unnecessary security risks from unused software</li>
               <li>Critical to inventory, understand, assess, and manage all software</li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Implement allowlisting using:
                 <ul>
@@ -614,71 +640,104 @@
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>2.1 Establish and Maintain a Software Inventory</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>2.1 Establish and Maintain a Software Inventory</h4>
                 <ul>
                   <li>Document title, publisher, install date, business purpose</li>
                   <li>Include URL, app store, versions, deployment mechanism</li>
                   <li>Update bi-annually or more frequently</li>
                 </ul>
-              </li>
-              <li><strong>2.2 Ensure Authorized Software is Currently Supported</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>2.2 Ensure Authorized Software is Currently Supported</h4>
                 <ul>
                   <li>Monthly review of software support status</li>
                   <li>Document exceptions for necessary unsupported software</li>
                 </ul>
-              </li>
-              <li><strong>2.3 Address Unauthorized Software</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>2.3 Address Unauthorized Software</h4>
                 <ul>
                   <li>Remove or document exceptions</li>
                   <li>Monthly review cycle</li>
                 </ul>
-              </li>
-              <li><strong>2.4 Utilize Automated Software Inventory Tools</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>2.4 Utilize Automated Software Inventory Tools</h4>
                 <ul>
                   <li>Automate discovery and documentation</li>
                   <li>Enterprise-wide implementation</li>
                 </ul>
-              </li>
-              <li><strong>2.5 Allowlist Authorized Software</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>2.5 Allowlist Authorized Software</h4>
                 <ul>
                   <li>Use technical controls to restrict execution</li>
                   <li>Bi-annual reassessment</li>
                 </ul>
-              </li>
-              <li><strong>2.6 Allowlist Authorized Libraries</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>2.6 Allowlist Authorized Libraries</h4>
                 <ul>
                   <li>Control loading of software libraries</li>
                   <li>Block unauthorized libraries</li>
                 </ul>
-              </li>
-              <li><strong>2.7 Allowlist Authorized Scripts</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>2.7 Allowlist Authorized Scripts</h4>
                 <ul>
                   <li>Use digital signatures and version control</li>
                   <li>Block unauthorized scripts</li>
                   <li>Bi-annual reassessment</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 3 -->
-      <article id="control3">
-        <header>
-          <h2>Control 3: Data Protection</h2>
-        </header>
-        <section class="card">
-          <h3>Summary ��</h3>
-          <p>Develop processes and technical controls to identify, classify, securely handle, retain, and dispose of data.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control3" class="card">
+        <div class="control-header">
+          <span class="control-number">03</span>
+          <div class="control-title">
+            <h2>Data Protection</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">14</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Data</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Identify, Protect, Detect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Develop processes and technical controls to identify, classify, securely handle, retain, and dispose of data.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
               <li>Data is no longer contained within enterprise borders:
                 <ul>
@@ -701,9 +760,10 @@
               <li>Most data loss occurs from poor management and user error</li>
               <li>Encryption is crucial for data protection and compliance</li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Develop comprehensive data management process including:
                 <ul>
@@ -726,91 +786,113 @@
               <li>Develop data inventory mapping software access levels</li>
               <li>Implement network segmentation based on data sensitivity</li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>3.1 Establish and Maintain a Data Management Process</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>3.1 Establish and Maintain a Data Management Process</h4>
                 <ul>
                   <li>Address data sensitivity, ownership, handling</li>
                   <li>Define retention limits and disposal requirements</li>
                   <li>Annual review and updates</li>
                 </ul>
-              </li>
-              <li><strong>3.2 Establish and Maintain a Data Inventory</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.2 Establish and Maintain a Data Inventory</h4>
                 <ul>
                   <li>Focus on sensitive data at minimum</li>
                   <li>Annual review and updates</li>
                 </ul>
-              </li>
-              <li><strong>3.3 Configure Data Access Control Lists</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.3 Configure Data Access Control Lists</h4>
                 <ul>
                   <li>Based on need-to-know</li>
                   <li>Apply to files, databases, and applications</li>
                 </ul>
-              </li>
-              <li><strong>3.4 Enforce Data Retention</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.4 Enforce Data Retention</h4>
                 <ul>
                   <li>Define minimum and maximum timelines</li>
                   <li>Follow enterprise data management process</li>
                 </ul>
-              </li>
-              <li><strong>3.5 Securely Dispose of Data</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.5 Securely Dispose of Data</h4>
                 <ul>
                   <li>Follow enterprise disposal process</li>
                   <li>Match disposal method to data sensitivity</li>
                 </ul>
-              </li>
-              <li><strong>3.6 Encrypt Data on End-User Devices</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.6 Encrypt Data on End-User Devices</h4>
                 <ul>
                   <li>Focus on sensitive data</li>
                   <li>Use tools like BitLocker, FileVault, dm-crypt</li>
                 </ul>
-              </li>
-              <li><strong>3.7 Establish and Maintain a Data Classification Scheme</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.7 Establish and Maintain a Data Classification Scheme</h4>
                 <ul>
                   <li>Define classification labels</li>
                   <li>Annual review and updates</li>
                 </ul>
-              </li>
-              <li><strong>3.8 Document Data Flows</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.8 Document Data Flows</h4>
                 <ul>
                   <li>Include service provider flows</li>
                   <li>Annual review and updates</li>
                 </ul>
-              </li>
-              <li><strong>3.9 Encrypt Data on Removable Media</strong></li>
-              <li><strong>3.10 Encrypt Sensitive Data in Transit</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.9 Encrypt Data on Removable Media</h4>
+                <ul>
+                  <li>Protect all removable media</li>
+                  <li>Ensure encryption before data transfer</li>
+                </ul>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.10 Encrypt Sensitive Data in Transit</h4>
                 <ul>
                   <li>Use TLS, OpenSSH, etc.</li>
+                  <li>Ensure secure transmission protocols</li>
                 </ul>
-              </li>
-              <li><strong>3.11 Encrypt Sensitive Data at Rest</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.11 Encrypt Sensitive Data at Rest</h4>
                 <ul>
                   <li>Server-side encryption minimum</li>
                   <li>Consider client-side encryption</li>
                 </ul>
-              </li>
-              <li><strong>3.12 Segment Data Processing and Storage Based on Sensitivity</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.12 Segment Data Processing and Storage Based on Sensitivity</h4>
                 <ul>
                   <li>Separate processing environments by sensitivity</li>
+                  <li>Maintain data segregation</li>
                 </ul>
-              </li>
-              <li><strong>3.13 Deploy a Data Loss Prevention Solution</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.13 Deploy a Data Loss Prevention Solution</h4>
                 <ul>
                   <li>Use automated DLP tools</li>
                   <li>Cover stored, processed, and transmitted data</li>
                 </ul>
-              </li>
-              <li><strong>3.14 Log Sensitive Data Access</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>3.14 Log Sensitive Data Access</h4>
                 <ul>
                   <li>Track modifications and disposal</li>
                   <li>Monitor access patterns</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 4 -->
