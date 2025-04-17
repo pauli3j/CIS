@@ -140,7 +140,7 @@
         border-bottom: 1px solid var(--border-color);
         padding-bottom: var(--spacing-md);
       }
-
+      
       .control-number {
         font-size: 2.5rem;
         font-weight: 700;
@@ -488,7 +488,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Actively manage (inventory, track, and correct) all enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/Internet of Things (IoT) devices; and servers) connected to the infrastructure physically, virtually, remotely, and those within cloud environments, to accurately know the totality of assets that need to be monitored and protected within the enterprise.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -535,21 +535,21 @@
                   <li>Include network address, hardware name, owner, department</li>
                   <li>Cover physical, virtual, remote, and cloud assets</li>
                   <li>Update bi-annually or more frequently</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>1.2 Address Unauthorized Assets</h4>
                 <ul>
                   <li>Process to address unauthorized assets weekly</li>
                   <li>Options: remove, deny remote access, or quarantine</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>1.3 Utilize an Active Discovery Tool</h4>
-                <ul>
+            <ul>
                   <li>Daily or more frequent execution</li>
                   <li>Identify connected assets</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>1.4 Use DHCP Logging to Update Asset Inventory</h4>
@@ -565,8 +565,8 @@
                   <li>Update inventory based on findings</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -603,7 +603,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Actively manage (inventory, track, and correct) all software (operating systems and applications) on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -651,21 +651,21 @@
                   <li>Document title, publisher, install date, business purpose</li>
                   <li>Include URL, app store, versions, deployment mechanism</li>
                   <li>Update bi-annually or more frequently</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>2.2 Ensure Authorized Software is Currently Supported</h4>
                 <ul>
                   <li>Monthly review of software support status</li>
                   <li>Document exceptions for necessary unsupported software</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>2.3 Address Unauthorized Software</h4>
-                <ul>
+            <ul>
                   <li>Remove or document exceptions</li>
                   <li>Monthly review cycle</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>2.4 Utilize Automated Software Inventory Tools</h4>
@@ -696,8 +696,8 @@
                   <li>Bi-annual reassessment</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -734,7 +734,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Develop processes and technical controls to identify, classify, securely handle, retain, and dispose of data.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -797,21 +797,21 @@
                   <li>Address data sensitivity, ownership, handling</li>
                   <li>Define retention limits and disposal requirements</li>
                   <li>Annual review and updates</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>3.2 Establish and Maintain a Data Inventory</h4>
                 <ul>
                   <li>Focus on sensitive data at minimum</li>
                   <li>Annual review and updates</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>3.3 Configure Data Access Control Lists</h4>
-                <ul>
+            <ul>
                   <li>Based on need-to-know</li>
                   <li>Apply to files, databases, and applications</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>3.4 Enforce Data Retention</h4>
@@ -890,23 +890,48 @@
                   <li>Monitor access patterns</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
       <!-- Control 4 -->
-      <article id="control4">
-        <header>
-          <h2>Control 4: Secure Configuration of Enterprise Assets and Software</h2>
-        </header>
-        <section class="card">
-          <h3>Summary ��</h3>
-          <p>Establish and maintain the secure configuration of enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/IoT devices; and servers) and software (operating systems and applications).</p>
+      <article id="control4" class="card">
+        <div class="control-header">
+          <span class="control-number">04</span>
+          <div class="control-title">
+            <h2>Secure Configuration of Enterprise Assets and Software</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">12</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Applications, Devices, Users</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Protect, Respond</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Establish and maintain the secure configuration of enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/IoT devices; and servers) and software (operating systems and applications).</p>
         </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
               <li>Default configurations prioritize ease-of-deployment over security:
                 <ul>
@@ -924,9 +949,10 @@
               <li>Service providers often use insecure default configurations</li>
               <li>Configurations can degrade as software is updated or patched</li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Start with publicly developed security baselines:
                 <ul>
@@ -934,9 +960,7 @@
                   <li>NIST National Checklist Program</li>
                 </ul>
               </li>
-              <li>Adjust baselines for enterprise requirements</li>
-              <li>Document deviations and rationale</li>
-              <li>Steps for secure baseline image:
+              <li>Steps to build secure baseline image:
                 <ul>
                   <li>Determine data risk classification</li>
                   <li>Create security configuration script</li>
@@ -951,104 +975,160 @@
                   <li>Save base image securely</li>
                 </ul>
               </li>
-              <li>Use configuration management tools like CIS-CAT</li>
+              <li>Use configuration management tools:
+                <ul>
+                  <li>CIS-CAT for measurement</li>
+                  <li>Agent or agentless inspection</li>
+                  <li>Regular configuration checks</li>
+                  <li>Deviation detection</li>
+                </ul>
+              </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>4.1 Establish and Maintain a Secure Configuration Process</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>4.1 Establish and Maintain a Secure Configuration Process</h4>
                 <ul>
                   <li>Cover all enterprise assets and software</li>
                   <li>Annual review and updates</li>
-                </ul>
-              </li>
-              <li><strong>4.2 Establish and Maintain a Secure Configuration Process for Network Infrastructure</strong>
+                  <li>Document all procedures</li>
+            </ul>
+          </div>
+              <div class="safeguard-item">
+                <h4>4.2 Establish and Maintain a Secure Configuration Process for Network Infrastructure</h4>
                 <ul>
                   <li>Network-specific configurations</li>
                   <li>Annual review and updates</li>
-                </ul>
-              </li>
-              <li><strong>4.3 Configure Automatic Session Locking</strong>
-                <ul>
+                  <li>Regular assessment</li>
+            </ul>
+          </div>
+              <div class="safeguard-item">
+                <h4>4.3 Configure Automatic Session Locking</h4>
+            <ul>
                   <li>15 minutes max for general systems</li>
                   <li>2 minutes max for mobile devices</li>
-                </ul>
-              </li>
-              <li><strong>4.4 Implement and Manage a Firewall on Servers</strong>
+                  <li>Enforce across all assets</li>
+            </ul>
+              </div>
+              <div class="safeguard-item">
+                <h4>4.4 Implement and Manage a Firewall on Servers</h4>
                 <ul>
-                  <li>Virtual, OS, or third-party firewall</li>
+                  <li>Virtual firewall options</li>
+                  <li>OS firewall configuration</li>
+                  <li>Third-party firewall agents</li>
                 </ul>
-              </li>
-              <li><strong>4.5 Implement and Manage a Firewall on End-User Devices</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>4.5 Implement and Manage a Firewall on End-User Devices</h4>
                 <ul>
                   <li>Default-deny rule</li>
+                  <li>Port filtering</li>
                   <li>Allow only necessary services</li>
                 </ul>
-              </li>
-              <li><strong>4.6 Securely Manage Enterprise Assets and Software</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>4.6 Securely Manage Enterprise Assets and Software</h4>
                 <ul>
                   <li>Use version-controlled-infrastructure-as-code</li>
                   <li>Secure administrative interfaces</li>
-                  <li>Avoid insecure protocols</li>
+                  <li>Use SSH and HTTPS</li>
                 </ul>
-              </li>
-              <li><strong>4.7 Manage Default Accounts</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>4.7 Manage Default Accounts</h4>
                 <ul>
                   <li>Disable or make unusable</li>
-                  <li>Cover root, admin, vendor accounts</li>
+                  <li>Handle root/admin accounts</li>
+                  <li>Manage vendor accounts</li>
                 </ul>
-              </li>
-              <li><strong>4.8 Uninstall or Disable Unnecessary Services</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>4.8 Uninstall or Disable Unnecessary Services</h4>
                 <ul>
                   <li>Remove unused services</li>
                   <li>Disable unnecessary functions</li>
+                  <li>Regular review of services</li>
                 </ul>
-              </li>
-              <li><strong>4.9 Configure Trusted DNS Servers</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>4.9 Configure Trusted DNS Servers</h4>
                 <ul>
                   <li>Use enterprise-controlled DNS</li>
-                  <li>Or reputable external DNS</li>
+                  <li>Configure reputable external DNS</li>
+                  <li>Regular DNS validation</li>
                 </ul>
-              </li>
-              <li><strong>4.10 Enforce Automatic Device Lockout</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>4.10 Enforce Automatic Device Lockout</h4>
                 <ul>
                   <li>20 attempts max for laptops</li>
                   <li>10 attempts max for mobile devices</li>
+                  <li>Implement device restrictions</li>
                 </ul>
-              </li>
-              <li><strong>4.11 Enforce Remote Wipe Capability</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>4.11 Enforce Remote Wipe Capability</h4>
                 <ul>
-                  <li>For lost/stolen devices</li>
-                  <li>When individual leaves enterprise</li>
+                  <li>Enable for enterprise devices</li>
+                  <li>Configure for lost/stolen scenarios</li>
+                  <li>Test wipe functionality</li>
                 </ul>
-              </li>
-              <li><strong>4.12 Separate Enterprise Workspaces on Mobile Devices</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>4.12 Separate Enterprise Workspaces on Mobile Devices</h4>
                 <ul>
                   <li>Use configuration profiles</li>
-                  <li>Separate enterprise and personal data</li>
+                  <li>Implement work profiles</li>
+                  <li>Separate enterprise/personal data</li>
                 </ul>
-              </li>
-            </ul>
+              </div>
           </div>
         </section>
+        </div>
       </article>
       
       <!-- Control 5 -->
-      <article id="control5">
-        <header>
-          <h2>Control 5: Account Management</h2>
-        </header>
-        <section class="card">
-          <h3>Summary ��</h3>
-          <p>Use processes and tools to assign and manage authorization to credentials for user accounts, including administrator accounts, as well as service accounts, to enterprise assets and software.</p>
+      <article id="control5" class="card">
+        <div class="control-header">
+          <span class="control-number">05</span>
+          <div class="control-title">
+            <h2>Account Management</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">6</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Users</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Identify, Protect, Respond</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Use processes and tools to assign and manage authorization to credentials for user accounts, including administrator accounts, as well as service accounts, to enterprise assets and software.</p>
         </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
-              <li>Easier for attackers to use valid credentials than "hacking"</li>
-              <li>Multiple ways to obtain access:
+              <li>Easier for attackers to use valid credentials than "hacking":
                 <ul>
                   <li>Weak passwords</li>
                   <li>Lingering accounts after user departure</li>
@@ -1074,26 +1154,34 @@
                   <li>Critical for operations</li>
                 </ul>
               </li>
-            </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
-            <ul>
-              <li>Treat credentials as tracked assets</li>
-              <li>Implement appropriate password policies</li>
-              <li>Regular account maintenance:
+              <li>Account logging and monitoring is essential for:
                 <ul>
-                  <li>Disable dormant accounts</li>
-                  <li>Remove unnecessary accounts</li>
-                  <li>Periodic audits of active accounts</li>
-                  <li>Track new accounts since last review</li>
+                  <li>Security operations</li>
+                  <li>Incident detection</li>
+                  <li>Compliance requirements</li>
+                  <li>Access tracking</li>
                 </ul>
               </li>
-              <li>Special handling for privileged accounts:
+            </ul>
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
+            <ul>
+              <li>Credential management:
                 <ul>
-                  <li>Separate administrative accounts</li>
-                  <li>Limited use for sensitive tasks only</li>
-                  <li>Regular monitoring of activities</li>
+                  <li>Track credentials as assets</li>
+                  <li>Implement password policies</li>
+                  <li>Regular password updates</li>
+                  <li>Secure storage methods</li>
+                </ul>
+              </li>
+              <li>Account maintenance:
+                <ul>
+                  <li>Regular account audits</li>
+                  <li>Disable dormant accounts</li>
+                  <li>Remove unnecessary accounts</li>
+                  <li>Track new account creation</li>
                 </ul>
               </li>
               <li>Authentication best practices:
@@ -1104,76 +1192,120 @@
                   <li>Automatic session timeout</li>
                 </ul>
               </li>
+              <li>Administrative access:
+                <ul>
+                  <li>Separate admin accounts</li>
+                  <li>Limited use for sensitive tasks</li>
+                  <li>Regular activity monitoring</li>
+                  <li>Privileged access management</li>
+                </ul>
+              </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>5.1 Establish and Maintain an Inventory of Accounts</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>5.1 Establish and Maintain an Inventory of Accounts</h4>
                 <ul>
                   <li>Include user and administrator accounts</li>
                   <li>Record name, username, start/stop dates, department</li>
                   <li>Quarterly validation minimum</li>
-                </ul>
-              </li>
-              <li><strong>5.2 Use Unique Passwords</strong>
+            </ul>
+          </div>
+              <div class="safeguard-item">
+                <h4>5.2 Use Unique Passwords</h4>
                 <ul>
                   <li>8+ characters with MFA</li>
                   <li>14+ characters without MFA</li>
-                </ul>
-              </li>
-              <li><strong>5.3 Disable Dormant Accounts</strong>
-                <ul>
+                  <li>Enforce complexity requirements</li>
+            </ul>
+          </div>
+              <div class="safeguard-item">
+                <h4>5.3 Disable Dormant Accounts</h4>
+            <ul>
                   <li>45 days inactivity threshold</li>
-                  <li>Delete or disable accounts</li>
-                </ul>
-              </li>
-              <li><strong>5.4 Restrict Administrator Privileges</strong>
+                  <li>Regular account review</li>
+                  <li>Automated monitoring</li>
+            </ul>
+              </div>
+              <div class="safeguard-item">
+                <h4>5.4 Restrict Administrator Privileges</h4>
                 <ul>
                   <li>Dedicated admin accounts</li>
                   <li>Separate accounts for regular activities</li>
+                  <li>Limited administrative access</li>
                 </ul>
-              </li>
-              <li><strong>5.5 Establish and Maintain an Inventory of Service Accounts</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>5.5 Establish and Maintain an Inventory of Service Accounts</h4>
                 <ul>
                   <li>Document department owner</li>
                   <li>Include review date and purpose</li>
                   <li>Quarterly validation minimum</li>
                 </ul>
-              </li>
-              <li><strong>5.6 Centralize Account Management</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>5.6 Centralize Account Management</h4>
                 <ul>
                   <li>Use directory services</li>
                   <li>Implement identity services</li>
+                  <li>Unified access control</li>
                 </ul>
-              </li>
-            </ul>
+              </div>
           </div>
         </section>
+        </div>
       </article>
       
       <!-- Control 6 -->
-      <article id="control6">
-        <header>
-          <h2>Control 6: Access Control Management</h2>
-        </header>
-        <section class="card">
-          <h3>Summary 🕶️</h3>
-          <p>Use processes and tools to create, assign, manage, and revoke access credentials and privileges for user, administrator, and service accounts for enterprise assets and software.</p>
+      <article id="control6" class="card">
+        <div class="control-header">
+          <span class="control-number">06</span>
+          <div class="control-title">
+            <h2>Access Control Management</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">8</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Users, Data</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Protect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Use processes and tools to create, assign, manage, and revoke access credentials and privileges for user, administrator, and service accounts for enterprise assets and software.</p>
         </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
-              <li>Focuses on managing access levels for accounts</li>
-              <li>Ensures users only have appropriate access:
+              <li>Access management fundamentals:
                 <ul>
-                  <li>Based on role requirements</li>
-                  <li>Following least privilege principle</li>
-                  <li>Protecting sensitive data</li>
+                  <li>Ensures appropriate access levels</li>
+                  <li>Follows least privilege principle</li>
+                  <li>Protects sensitive data</li>
+                  <li>Enforces role-based access</li>
                 </ul>
               </li>
-              <li>Higher risk activities require additional protection:
+              <li>High-risk activities requiring protection:
                 <ul>
                   <li>Access from untrusted networks</li>
                   <li>Administrator functions</li>
@@ -1189,12 +1321,21 @@
                   <li>Improper role-based access</li>
                 </ul>
               </li>
+              <li>Critical security requirements:
+                <ul>
+                  <li>Strong authentication methods</li>
+                  <li>Multi-factor authentication</li>
+                  <li>Privileged access management</li>
+                  <li>Regular access reviews</li>
+                </ul>
+              </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
-              <li>Implement role-based access control:
+              <li>Role-based access implementation:
                 <ul>
                   <li>Based on enterprise role</li>
                   <li>Following need-to-know principle</li>
@@ -1202,396 +1343,572 @@
                   <li>Enforce separation of duties</li>
                 </ul>
               </li>
-              <li>Strong authentication requirements:
+              <li>Authentication requirements:
                 <ul>
                   <li>Universal MFA for privileged accounts</li>
                   <li>Secure smartphone MFA applications</li>
-                  <li>Number-generator over SMS/push notifications</li>
+                  <li>Number-generator over SMS/push</li>
+                  <li>Strong password policies</li>
                 </ul>
               </li>
               <li>Privileged access management:
                 <ul>
-                  <li>Use PAM tools</li>
-                  <li>One-time passwords</li>
-                  <li>"Jump-box" implementation</li>
+                  <li>PAM tool implementation</li>
+                  <li>One-time password systems</li>
+                  <li>"Jump-box" architecture</li>
                   <li>Out-of-band administration</li>
                 </ul>
               </li>
               <li>Access lifecycle management:
                 <ul>
                   <li>Consistent de-provisioning</li>
-                  <li>Include contractors in process</li>
-                  <li>Track service account access</li>
+                  <li>Contractor access control</li>
+                  <li>Service account tracking</li>
                   <li>Regular access reviews</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>6.1 Establish an Access Granting Process</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>6.1 Establish an Access Granting Process</h4>
                 <ul>
                   <li>Automated process preferred</li>
                   <li>Cover new hires and role changes</li>
-                </ul>
-              </li>
-              <li><strong>6.2 Establish an Access Revoking Process</strong>
+                  <li>Document approval workflow</li>
+            </ul>
+          </div>
+              <div class="safeguard-item">
+                <h4>6.2 Establish an Access Revoking Process</h4>
                 <ul>
                   <li>Immediate account disabling</li>
                   <li>Preserve audit trails</li>
-                </ul>
-              </li>
-              <li><strong>6.3 Require MFA for Externally-Exposed Applications</strong>
-                <ul>
+                  <li>Automated revocation</li>
+            </ul>
+          </div>
+              <div class="safeguard-item">
+                <h4>6.3 Require MFA for Externally-Exposed Applications</h4>
+            <ul>
                   <li>All external applications</li>
                   <li>Support through directory/SSO</li>
-                </ul>
-              </li>
-              <li><strong>6.4 Require MFA for Remote Network Access</strong>
+                  <li>Regular compliance checks</li>
+            </ul>
+              </div>
+              <div class="safeguard-item">
+                <h4>6.4 Require MFA for Remote Network Access</h4>
                 <ul>
                   <li>All remote access requires MFA</li>
+                  <li>Secure authentication methods</li>
+                  <li>Regular validation</li>
                 </ul>
-              </li>
-              <li><strong>6.5 Require MFA for Administrative Access</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>6.5 Require MFA for Administrative Access</h4>
                 <ul>
                   <li>All admin accounts</li>
                   <li>On-site and third-party providers</li>
+                  <li>Strong authentication methods</li>
                 </ul>
-              </li>
-              <li><strong>6.6 Establish and Maintain an Inventory of Authentication and Authorization Systems</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>6.6 Establish and Maintain an Inventory of Authentication and Authorization Systems</h4>
                 <ul>
                   <li>Include on-site and remote systems</li>
                   <li>Annual review minimum</li>
+                  <li>Regular updates</li>
                 </ul>
-              </li>
-              <li><strong>6.7 Centralize Access Control</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>6.7 Centralize Access Control</h4>
                 <ul>
                   <li>Use directory services</li>
                   <li>Implement SSO where possible</li>
+                  <li>Unified management</li>
                 </ul>
-              </li>
-              <li><strong>6.8 Define and Maintain Role-Based Access Control</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>6.8 Define and Maintain Role-Based Access Control</h4>
                 <ul>
                   <li>Document necessary access rights</li>
                   <li>Annual review minimum</li>
                   <li>Validate all privileges</li>
                 </ul>
-              </li>
-            </ul>
+              </div>
           </div>
         </section>
+        </div>
       </article>
       
       <!-- Control 7 -->
-      <article id="control7">
-        <header>
-          <h2>Control 7: Continuous Vulnerability Management</h2>
-        </header>
-        <section class="card">
-          <h3>Summary ��</h3>
-          <p>Develop a plan to continuously assess and track vulnerabilities on all enterprise assets within the enterprise's infrastructure, in order to remediate, and minimize, the window of opportunity for attackers. Monitor public and private industry sources for new threat and vulnerability information.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control7" class="card">
+        <div class="control-header">
+          <span class="control-number">07</span>
+          <div class="control-title">
+            <h2>Continuous Vulnerability Management</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">7</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Applications</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Identify, Protect, Respond</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Develop a plan to continuously assess and track vulnerabilities on all enterprise assets within the enterprise's infrastructure, in order to remediate, and minimize, the window of opportunity for attackers. Monitor public and private industry sources for new threat and vulnerability information.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
-              <li>Defenders face constant challenges from attackers seeking vulnerabilities</li>
-              <li>Time-critical nature of vulnerability management:
+              <li>Continuous defense challenges:
                 <ul>
-                  <li>Attackers can exploit vulnerabilities quickly</li>
-                  <li>Gap between vulnerability discovery and patching</li>
-                  <li>Need to prioritize based on impact and exploit ease</li>
+                  <li>Constant attacker scanning for vulnerabilities</li>
+                  <li>Time-critical nature of patching</li>
+                  <li>Need for rapid response to new threats</li>
+                  <li>Balance of security and operations</li>
                 </ul>
               </li>
-              <li>Zero-day threats:
+              <li>Vulnerability management timing:
                 <ul>
-                  <li>Unknown vulnerabilities may already be exploited</li>
-                  <li>Vulnerabilities might be known in closed communities</li>
-                  <li>Some vulnerabilities cannot be immediately remediated</li>
+                  <li>Gap between discovery and patching</li>
+                  <li>Attackers exploit known vulnerabilities quickly</li>
+                  <li>Need to prioritize critical fixes</li>
+                  <li>Impact of delayed remediation</li>
+                </ul>
+              </li>
+              <li>Zero-day considerations:
+                <ul>
+                  <li>Unknown vulnerabilities may be exploited</li>
+                  <li>Vulnerabilities known in closed communities</li>
+                  <li>Need for temporary mitigations</li>
+                  <li>Defense-in-depth approach</li>
                 </ul>
               </li>
               <li>Enterprise-wide challenges:
                 <ul>
-                  <li>Scaling remediation across infrastructure</li>
-                  <li>Balancing priorities with business needs</li>
-                  <li>Maintaining business operations during fixes</li>
+                  <li>Scale of remediation efforts</li>
+                  <li>Conflicting business priorities</li>
+                  <li>Resource constraints</li>
+                  <li>Testing requirements</li>
                 </ul>
               </li>
-              <li>High risk of compromise without assessment and remediation</li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
-              <li>Use standardized vulnerability scanning tools:
+              <li>Vulnerability scanning tools:
                 <ul>
-                  <li>Support industry-standard classifications</li>
-                  <li>CVE, CCE, OVAL compatibility</li>
-                  <li>CPE, CVSS scoring support</li>
+                  <li>Industry-standard classifications</li>
+                  <li>CVE compatibility</li>
+                  <li>CCE support</li>
+                  <li>OVAL integration</li>
+                  <li>CPE mapping</li>
+                  <li>CVSS scoring</li>
                   <li>XCCDF compliance</li>
                 </ul>
               </li>
               <li>Scanning best practices:
                 <ul>
-                  <li>Increase frequency for diverse assets</li>
-                  <li>Use authenticated scans</li>
-                  <li>Evaluate security settings</li>
-                  <li>Track configuration changes</li>
+                  <li>Increased frequency for diverse assets</li>
+                  <li>Authenticated scanning capabilities</li>
+                  <li>Security configuration assessment</li>
+                  <li>Change tracking</li>
+                  <li>Regular updates</li>
                 </ul>
               </li>
               <li>Remediation management:
                 <ul>
-                  <li>Link scanners to ticketing systems</li>
-                  <li>Track remediation progress</li>
-                  <li>Monitor fix timelines</li>
-                  <li>Report to senior management</li>
+                  <li>Integration with ticketing systems</li>
+                  <li>Progress tracking</li>
+                  <li>SLA monitoring</li>
+                  <li>Management reporting</li>
+                  <li>Trend analysis</li>
                 </ul>
               </li>
               <li>Prioritization factors:
                 <ul>
                   <li>CVSS base scores</li>
-                  <li>Threat actor likelihood</li>
-                  <li>Potential business impact</li>
-                  <li>Current threat intelligence</li>
+                  <li>Threat intelligence</li>
+                  <li>Asset criticality</li>
+                  <li>Exposure level</li>
+                  <li>Business impact</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>7.1 Establish and Maintain a Vulnerability Management Process</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>7.1 Establish and Maintain a Vulnerability Management Process</h4>
                 <ul>
                   <li>Document procedures</li>
+                  <li>Define roles and responsibilities</li>
                   <li>Annual review and updates</li>
+                  <li>Continuous improvement</li>
                 </ul>
-              </li>
-              <li><strong>7.2 Establish and Maintain a Remediation Process</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>7.2 Establish and Maintain a Remediation Process</h4>
                 <ul>
                   <li>Risk-based strategy</li>
                   <li>Monthly review minimum</li>
+                  <li>Clear SLAs</li>
+                  <li>Verification procedures</li>
                 </ul>
-              </li>
-              <li><strong>7.3 Perform Automated Operating System Patch Management</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>7.3 Perform Automated Operating System Patch Management</h4>
                 <ul>
                   <li>Monthly minimum frequency</li>
                   <li>Automated deployment</li>
+                  <li>Testing procedures</li>
+                  <li>Rollback capability</li>
                 </ul>
-              </li>
-              <li><strong>7.4 Perform Automated Application Patch Management</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>7.4 Perform Automated Application Patch Management</h4>
                 <ul>
                   <li>Monthly minimum frequency</li>
                   <li>Cover all applications</li>
+                  <li>Version control</li>
+                  <li>Dependency management</li>
                 </ul>
-              </li>
-              <li><strong>7.5 Perform Automated Vulnerability Scans of Internal Enterprise Assets</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>7.5 Perform Automated Vulnerability Scans of Internal Enterprise Assets</h4>
                 <ul>
                   <li>Quarterly minimum frequency</li>
-                  <li>Both authenticated and unauthenticated scans</li>
-                  <li>Use SCAP-compliant tools</li>
+                  <li>Authenticated and unauthenticated scans</li>
+                  <li>SCAP-compliant tools</li>
+                  <li>Comprehensive coverage</li>
                 </ul>
-              </li>
-              <li><strong>7.6 Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>7.6 Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets</h4>
                 <ul>
                   <li>Monthly minimum frequency</li>
-                  <li>Use SCAP-compliant tools</li>
+                  <li>SCAP-compliant tools</li>
+                  <li>External perspective</li>
+                  <li>Perimeter security focus</li>
                 </ul>
-              </li>
-              <li><strong>7.7 Remediate Detected Vulnerabilities</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>7.7 Remediate Detected Vulnerabilities</h4>
                 <ul>
                   <li>Monthly minimum frequency</li>
                   <li>Follow remediation process</li>
                   <li>Use automated tools</li>
+                  <li>Validate fixes</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 8 -->
-      <article id="control8">
-        <header>
-          <h2>Control 8: Audit Log Management</h2>
-        </header>
-        <section class="card">
-          <h3>Summary 📖</h3>
-          <p>Collect, alert, review, and retain audit logs of events that could help detect, understand, or recover from an attack.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control8" class="card">
+        <div class="control-header">
+          <span class="control-number">08</span>
+          <div class="control-title">
+            <h2>Audit Log Management</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">12</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Network, Data</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Detect, Protect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Collect, alert, review, and retain audit logs of events that could help detect, understand, or recover from an attack.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
-              <li>Critical for attack detection and investigation:
+              <li>Detection and investigation importance:
                 <ul>
                   <li>Often the only evidence of successful attacks</li>
                   <li>Attackers know logs are rarely analyzed</li>
                   <li>May control systems for months undetected</li>
+                  <li>Critical for forensic analysis</li>
                 </ul>
               </li>
-              <li>Two main types of logs:
+              <li>Types of logging:
                 <ul>
                   <li>System logs (process events, native to systems)</li>
                   <li>Audit logs (user-level events, require setup)</li>
+                  <li>Security logs (access attempts, alerts)</li>
+                  <li>Application logs (software behavior)</li>
                 </ul>
               </li>
-              <li>Essential for incident response:
+              <li>Incident response support:
                 <ul>
                   <li>Understanding attack extent</li>
                   <li>Determining attack timeline</li>
                   <li>Identifying accessed information</li>
                   <li>Detecting data exfiltration</li>
+                  <li>Evidence preservation</li>
                 </ul>
               </li>
-              <li>Long-term retention importance:
+              <li>Long-term value:
                 <ul>
                   <li>Support follow-up investigations</li>
                   <li>Detect long-term undetected attacks</li>
                   <li>Meet compliance requirements</li>
+                  <li>Establish activity baselines</li>
+                  <li>Pattern analysis</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
-              <li>Enable comprehensive logging:
+              <li>Comprehensive logging strategy:
                 <ul>
-                  <li>Activate native logging capabilities</li>
+                  <li>Enable native logging capabilities</li>
                   <li>Configure verbose logging where beneficial</li>
-                  <li>Send logs to centralized servers</li>
+                  <li>Centralized log collection</li>
+                  <li>Log rotation policies</li>
+                  <li>Storage management</li>
                 </ul>
               </li>
-              <li>Key logging sources:
+              <li>Critical log sources:
                 <ul>
-                  <li>Firewalls and proxies</li>
-                  <li>Remote access systems</li>
-                  <li>VPN connections</li>
-                  <li>Access control attempts</li>
+                  <li>Firewalls and security appliances</li>
+                  <li>Network infrastructure devices</li>
+                  <li>Authentication systems</li>
+                  <li>Remote access solutions</li>
+                  <li>Operating systems</li>
+                  <li>Applications and services</li>
                 </ul>
               </li>
               <li>Log management practices:
                 <ul>
                   <li>Regular log reviews</li>
-                  <li>Compare against asset inventory</li>
-                  <li>Verify logging from all assets</li>
-                  <li>Secure log storage</li>
+                  <li>Automated analysis</li>
+                  <li>Alert configuration</li>
+                  <li>Correlation capabilities</li>
+                  <li>Retention policies</li>
                 </ul>
               </li>
-              <li>Retention considerations:
+              <li>Security considerations:
                 <ul>
-                  <li>Legal requirements</li>
-                  <li>Industry standards</li>
-                  <li>Investigation needs</li>
-                  <li>Storage capacity</li>
+                  <li>Log integrity protection</li>
+                  <li>Access control to logs</li>
+                  <li>Secure transmission</li>
+                  <li>Backup procedures</li>
+                  <li>Chain of custody</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>8.1 Establish and Maintain an Audit Log Management Process</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>8.1 Establish and Maintain an Audit Log Management Process</h4>
                 <ul>
                   <li>Define logging requirements</li>
                   <li>Cover collection, review, retention</li>
                   <li>Annual review and updates</li>
+                  <li>Documentation maintenance</li>
                 </ul>
-              </li>
-              <li><strong>8.2 Collect Audit Logs</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.2 Collect Audit Logs</h4>
                 <ul>
                   <li>Enable logging across assets</li>
                   <li>Follow management process</li>
+                  <li>Verify collection</li>
+                  <li>Monitor log status</li>
                 </ul>
-              </li>
-              <li><strong>8.3 Ensure Adequate Audit Log Storage</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.3 Ensure Adequate Audit Log Storage</h4>
                 <ul>
                   <li>Maintain sufficient storage</li>
                   <li>Meet retention requirements</li>
+                  <li>Monitor capacity</li>
+                  <li>Implement archiving</li>
                 </ul>
-              </li>
-              <li><strong>8.4 Standardize Time Synchronization</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.4 Standardize Time Synchronization</h4>
                 <ul>
-                  <li>Configure at least two time sources</li>
+                  <li>Configure multiple time sources</li>
                   <li>Synchronize across assets</li>
+                  <li>Monitor drift</li>
+                  <li>Regular validation</li>
                 </ul>
-              </li>
-              <li><strong>8.5 Collect Detailed Audit Logs</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.5 Collect Detailed Audit Logs</h4>
                 <ul>
                   <li>Include event source, date, username</li>
                   <li>Record timestamps, addresses</li>
                   <li>Capture forensic details</li>
+                  <li>Maintain context</li>
                 </ul>
-              </li>
-              <li><strong>8.6 Collect DNS Query Audit Logs</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.6 Collect DNS Query Audit Logs</h4>
                 <ul>
-                  <li>Where supported</li>
-                  <li>Track DNS activity</li>
+                  <li>Enable DNS logging</li>
+                  <li>Track query patterns</li>
+                  <li>Monitor resolutions</li>
+                  <li>Analyze anomalies</li>
                 </ul>
-              </li>
-              <li><strong>8.7 Collect URL Request Audit Logs</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.7 Collect URL Request Audit Logs</h4>
                 <ul>
-                  <li>Where supported</li>
-                  <li>Monitor web activity</li>
+                  <li>Record web activity</li>
+                  <li>Track access patterns</li>
+                  <li>Monitor file downloads</li>
+                  <li>Identify risky behavior</li>
                 </ul>
-              </li>
-              <li><strong>8.8 Collect Command-Line Audit Logs</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.8 Collect Command-Line Audit Logs</h4>
                 <ul>
-                  <li>PowerShell, BASH logs</li>
-                  <li>Remote admin terminals</li>
+                  <li>Log shell commands</li>
+                  <li>Monitor script execution</li>
+                  <li>Track administrative actions</li>
+                  <li>Record PowerShell usage</li>
                 </ul>
-              </li>
-              <li><strong>8.9 Centralize Audit Logs</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.9 Centralize Audit Logs</h4>
                 <ul>
-                  <li>Consolidate log collection</li>
-                  <li>Centralize retention</li>
+                  <li>Implement central collection</li>
+                  <li>Ensure secure transmission</li>
+                  <li>Verify integrity</li>
+                  <li>Enable correlation</li>
                 </ul>
-              </li>
-              <li><strong>8.10 Retain Audit Logs</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.10 Retain Audit Logs</h4>
                 <ul>
                   <li>Minimum 90 days retention</li>
-                  <li>Across all assets</li>
+                  <li>Implement archiving</li>
+                  <li>Secure storage</li>
+                  <li>Compliance alignment</li>
                 </ul>
-              </li>
-              <li><strong>8.11 Conduct Audit Log Reviews</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.11 Conduct Audit Log Reviews</h4>
                 <ul>
                   <li>Weekly minimum frequency</li>
                   <li>Look for anomalies</li>
-                  <li>Detect potential threats</li>
+                  <li>Document findings</li>
+                  <li>Follow-up actions</li>
                 </ul>
-              </li>
-              <li><strong>8.12 Collect Service Provider Logs</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>8.12 Collect Service Provider Logs</h4>
                 <ul>
                   <li>Authentication events</li>
-                  <li>Data handling events</li>
-                  <li>User management</li>
+                  <li>Data handling activities</li>
+                  <li>Management actions</li>
+                  <li>Security events</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 9 -->
-      <article id="control9">
-        <header>
-          <h2>Control 9: Email and Web Browser Protections</h2>
-        </header>
-        <section class="card">
-          <h3>Summary 💻</h3>
-          <p>Improve protections and detections of threats from email and web vectors, as these are opportunities for attackers to manipulate human behavior through direct engagement.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control9" class="card">
+        <div class="control-header">
+          <span class="control-number">09</span>
+          <div class="control-title">
+            <h2>Email and Web Browser Protections</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">7</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Applications, Network</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Protect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Improve protections and detections of threats from email and web vectors, as these are opportunities for attackers to manipulate human behavior through direct engagement.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
-              <li>Common entry points for attackers:
+              <li>Primary attack vectors:
                 <ul>
-                  <li>Direct user interaction</li>
+                  <li>Direct user interaction points</li>
                   <li>Social engineering opportunities</li>
                   <li>Credential disclosure risks</li>
                   <li>Sensitive data exposure</li>
+                  <li>Malware distribution channels</li>
                 </ul>
               </li>
               <li>Web browser vulnerabilities:
@@ -1600,6 +1917,7 @@
                   <li>Third-party plugin risks</li>
                   <li>Operating system hooks</li>
                   <li>Malicious extensions</li>
+                  <li>Drive-by downloads</li>
                 </ul>
               </li>
               <li>Email-based threats:
@@ -1608,6 +1926,7 @@
                   <li>Business Email Compromise</li>
                   <li>Malware distribution</li>
                   <li>Social engineering tactics</li>
+                  <li>Attachment-based attacks</li>
                 </ul>
               </li>
               <li>Modern challenges:
@@ -1616,12 +1935,14 @@
                   <li>Mobile email access</li>
                   <li>Limited security controls</li>
                   <li>Reduced embedded protections</li>
+                  <li>Cloud service integration</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Web browser security:
                 <ul>
@@ -1629,103 +1950,152 @@
                   <li>Use phishing/malware databases</li>
                   <li>Configure pop-up blockers</li>
                   <li>Control plugin installation</li>
-                  <li>DNS filtering implementation</li>
+                  <li>Implement DNS filtering</li>
+                  <li>Regular updates and patches</li>
                 </ul>
               </li>
               <li>Email security measures:
                 <ul>
-                  <li>Spam filtering</li>
+                  <li>Spam filtering implementation</li>
                   <li>Malware scanning</li>
-                  <li>DMARC implementation</li>
+                  <li>DMARC deployment</li>
                   <li>Attachment restrictions</li>
                   <li>Encryption tools</li>
+                  <li>Content filtering</li>
                 </ul>
               </li>
-              <li>User training:
+              <li>User awareness:
                 <ul>
-                  <li>Phishing awareness</li>
+                  <li>Phishing recognition training</li>
                   <li>Reporting procedures</li>
                   <li>Security best practices</li>
                   <li>Regular testing</li>
+                  <li>Incident response</li>
                 </ul>
               </li>
               <li>Technical controls:
                 <ul>
                   <li>URL filtering</li>
-                  <li>Content scanning</li>
+                  <li>Content inspection</li>
                   <li>Attachment analysis</li>
                   <li>Sandbox testing</li>
+                  <li>SSL/TLS inspection</li>
+                  <li>Access controls</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>9.1 Ensure Use of Only Fully Supported Browsers and Email Clients</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>9.1 Ensure Use of Only Fully Supported Browsers and Email Clients</h4>
                 <ul>
-                  <li>Latest versions only</li>
-                  <li>Vendor-supported versions</li>
+                  <li>Latest vendor versions only</li>
+                  <li>Regular update checks</li>
+                  <li>Security patch compliance</li>
+                  <li>Version control enforcement</li>
                 </ul>
-              </li>
-              <li><strong>9.2 Use DNS Filtering Services</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>9.2 Use DNS Filtering Services</h4>
                 <ul>
                   <li>Block malicious domains</li>
-                  <li>All enterprise assets</li>
+                  <li>Filter suspicious content</li>
+                  <li>Monitor DNS requests</li>
+                  <li>Update block lists regularly</li>
                 </ul>
-              </li>
-              <li><strong>9.3 Maintain and Enforce Network-Based URL Filters</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>9.3 Maintain and Enforce Network-Based URL Filters</h4>
                 <ul>
                   <li>Category-based filtering</li>
                   <li>Reputation-based filtering</li>
-                  <li>Block list implementation</li>
+                  <li>Custom block lists</li>
+                  <li>SSL/TLS inspection</li>
                 </ul>
-              </li>
-              <li><strong>9.4 Restrict Unnecessary or Unauthorized Browser and Email Client Extensions</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>9.4 Restrict Unnecessary or Unauthorized Browser and Email Client Extensions</h4>
                 <ul>
-                  <li>Uninstall/disable unauthorized</li>
-                  <li>Control plugin usage</li>
+                  <li>Extension whitelisting</li>
+                  <li>Regular review process</li>
+                  <li>Security assessment</li>
+                  <li>Removal procedures</li>
                 </ul>
-              </li>
-              <li><strong>9.5 Implement DMARC</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>9.5 Implement DMARC</h4>
                 <ul>
                   <li>SPF implementation</li>
-                  <li>DKIM standards</li>
-                  <li>Email authentication</li>
+                  <li>DKIM configuration</li>
+                  <li>Monitoring and reporting</li>
+                  <li>Policy enforcement</li>
                 </ul>
-              </li>
-              <li><strong>9.6 Block Unnecessary File Types</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>9.6 Block Unnecessary File Types</h4>
                 <ul>
-                  <li>Email gateway filtering</li>
-                  <li>Attachment restrictions</li>
+                  <li>Email attachment filtering</li>
+                  <li>High-risk file blocking</li>
+                  <li>Archive file inspection</li>
+                  <li>Policy-based controls</li>
                 </ul>
-              </li>
-              <li><strong>9.7 Deploy and Maintain Email Server Anti-Malware Protections</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>9.7 Deploy and Maintain Email Server Anti-Malware Protections</h4>
                 <ul>
-                  <li>Attachment scanning</li>
-                  <li>Sandbox analysis</li>
-                  <li>Continuous protection</li>
+                  <li>Real-time scanning</li>
+                  <li>Attachment analysis</li>
+                  <li>Sandbox detonation</li>
+                  <li>Threat intelligence integration</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 10 -->
-      <article id="control10">
-        <header>
-          <h2>Control 10: Malware Defenses</h2>
-        </header>
-        <section class="card">
-          <h3>Summary 🏰</h3>
-          <p>Prevent or control the installation, spread, and execution of malicious applications, code, or scripts on enterprise assets.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control10" class="card">
+        <div class="control-header">
+          <span class="control-number">10</span>
+          <div class="control-title">
+            <h2>Malware Defenses</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">7</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Devices</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Protect, Detect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Prevent or control the installation, spread, and execution of malicious applications, code, or scripts on enterprise assets.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
-              <li>Malware characteristics:
+              <li>Malware characteristics and capabilities:
                 <ul>
                   <li>Integral part of internet threats</li>
                   <li>Multiple malicious purposes</li>
@@ -1733,9 +2103,10 @@
                   <li>Data theft functionality</li>
                   <li>Network reconnaissance</li>
                   <li>Data encryption/destruction</li>
+                  <li>System control and persistence</li>
                 </ul>
               </li>
-              <li>Entry points:
+              <li>Entry points and vectors:
                 <ul>
                   <li>Enterprise vulnerabilities</li>
                   <li>Email attachments</li>
@@ -1743,6 +2114,7 @@
                   <li>Cloud services</li>
                   <li>Mobile devices</li>
                   <li>Removable media</li>
+                  <li>Supply chain compromises</li>
                 </ul>
               </li>
               <li>User behavior risks:
@@ -1751,6 +2123,7 @@
                   <li>Opening suspicious attachments</li>
                   <li>Installing unauthorized software</li>
                   <li>Using unsafe removable media</li>
+                  <li>Bypassing security controls</li>
                 </ul>
               </li>
               <li>Modern malware challenges:
@@ -1759,19 +2132,25 @@
                   <li>Machine learning techniques</li>
                   <li>Designed to avoid detection</li>
                   <li>Can disable defenses</li>
+                  <li>Fileless malware</li>
+                  <li>Polymorphic code</li>
+                  <li>Zero-day exploits</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Malware protection components:
                 <ul>
                   <li>Traditional endpoint prevention</li>
-                  <li>Detection suites</li>
+                  <li>Advanced detection suites</li>
                   <li>Automated vendor updates</li>
                   <li>Centralized management</li>
+                  <li>Behavioral monitoring</li>
+                  <li>Machine learning analysis</li>
                 </ul>
               </li>
               <li>Detection methods:
@@ -1779,7 +2158,9 @@
                   <li>Signature-based detection</li>
                   <li>Behavioral monitoring</li>
                   <li>Heuristic analysis</li>
-                  <li>Machine learning</li>
+                  <li>Machine learning models</li>
+                  <li>Sandboxing</li>
+                  <li>Memory analysis</li>
                 </ul>
               </li>
               <li>Logging and monitoring:
@@ -1788,6 +2169,8 @@
                   <li>Alert generation</li>
                   <li>Incident response support</li>
                   <li>IOC tracking</li>
+                  <li>Threat hunting</li>
+                  <li>Pattern analysis</li>
                 </ul>
               </li>
               <li>Living-off-the-land defense:
@@ -1796,60 +2179,82 @@
                   <li>Track system features</li>
                   <li>Log suspicious usage</li>
                   <li>Behavior analysis</li>
+                  <li>Command-line monitoring</li>
+                  <li>Script execution control</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>10.1 Deploy and Maintain Anti-Malware Software</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>10.1 Deploy and Maintain Anti-Malware Software</h4>
                 <ul>
-                  <li>All enterprise assets</li>
-                  <li>Continuous protection</li>
-                </ul>
-              </li>
-              <li><strong>10.2 Configure Automatic Anti-Malware Signature Updates</strong>
-                <ul>
+                  <li>Enterprise-wide deployment</li>
+                  <li>Real-time protection</li>
                   <li>Regular updates</li>
-                  <li>All enterprise assets</li>
+                  <li>Centralized management</li>
                 </ul>
-              </li>
-              <li><strong>10.3 Disable Autorun and Autoplay for Removable Media</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>10.2 Configure Automatic Anti-Malware Signature Updates</h4>
                 <ul>
-                  <li>Prevent auto-execute</li>
-                  <li>Control removable media</li>
+                  <li>Automated updates</li>
+                  <li>Version control</li>
+                  <li>Distribution monitoring</li>
+                  <li>Compliance verification</li>
                 </ul>
-              </li>
-              <li><strong>10.4 Configure Automatic Anti-Malware Scanning of Removable Media</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>10.3 Disable Autorun and Autoplay for Removable Media</h4>
                 <ul>
-                  <li>Scan on connection</li>
-                  <li>Before access allowed</li>
+                  <li>Policy enforcement</li>
+                  <li>Device control</li>
+                  <li>User notification</li>
+                  <li>Exception handling</li>
                 </ul>
-              </li>
-              <li><strong>10.5 Enable Anti-Exploitation Features</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>10.4 Configure Automatic Anti-Malware Scanning of Removable Media</h4>
+                <ul>
+                  <li>On-connection scanning</li>
+                  <li>Quarantine procedures</li>
+                  <li>Logging and alerts</li>
+                  <li>User guidance</li>
+                </ul>
+              </div>
+              <div class="safeguard-item">
+                <h4>10.5 Enable Anti-Exploitation Features</h4>
                 <ul>
                   <li>DEP implementation</li>
                   <li>WDEG features</li>
                   <li>SIP and Gatekeeper</li>
+                  <li>Memory protection</li>
                 </ul>
-              </li>
-              <li><strong>10.6 Centrally Manage Anti-Malware Software</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>10.6 Centrally Manage Anti-Malware Software</h4>
                 <ul>
-                  <li>Enterprise-wide management</li>
-                  <li>Consistent policies</li>
+                  <li>Policy management</li>
+                  <li>Configuration control</li>
+                  <li>Update distribution</li>
+                  <li>Status monitoring</li>
                 </ul>
-              </li>
-              <li><strong>10.7 Use Behavior-Based Anti-Malware Software</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>10.7 Use Behavior-Based Anti-Malware Software</h4>
                 <ul>
                   <li>Advanced detection</li>
+                  <li>Machine learning</li>
                   <li>Behavioral analysis</li>
-                  <li>Machine learning capabilities</li>
+                  <li>Threat intelligence</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 11 -->
