@@ -4079,96 +4079,565 @@
       </article>
       
       <!-- Acronyms Section -->
-      <section id="acronyms">
-        <header>
-          <h2>Acronyms and Abbreviations</h2>
-        </header>
-        <table>
-          <thead>
-            <tr>
-              <th>Acronym</th>
-              <th>Definition</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>AAA</td><td>Authentication, Authorization, and Auditing</td></tr>
-            <tr><td>ACL</td><td>Access Control List</td></tr>
-            <tr><td>AD</td><td>Active Directory</td></tr>
-            <tr><td>API</td><td>Application Programming Interface</td></tr>
-            <tr><td>BEC</td><td>Business Email Compromise</td></tr>
-            <tr><td>C2</td><td>Command and Control</td></tr>
-            <tr><td>CCE</td><td>Common Configuration Enumeration</td></tr>
-            <tr><td>CDM</td><td>Community Defense Model</td></tr>
-            <tr><td>CIA</td><td>Confidentiality, Integrity, and Availability</td></tr>
-            <tr><td>CIS</td><td>Center for Internet Security</td></tr>
-            <tr><td>CIS-CAT</td><td>CIS Configuration Assessment Tool</td></tr>
-            <tr><td>COTS</td><td>Commercial off-the-Shelf</td></tr>
-            <tr><td>CPE</td><td>Common Platform Enumeration</td></tr>
-            <tr><td>CSA</td><td>Cloud Security Alliance</td></tr>
-            <tr><td>CSP</td><td>Cloud Service Provider</td></tr>
-            <tr><td>CVE</td><td>Common Vulnerabilities and Exposures</td></tr>
-            <tr><td>CVSS</td><td>Common Vulnerability Scoring System</td></tr>
-            <tr><td>DBIR</td><td>Data Breach Investigations Report</td></tr>
-            <tr><td>DHCP</td><td>Dynamic Host Configuration Protocol</td></tr>
-            <tr><td>DKIM</td><td>DomainKeys Identified Mail</td></tr>
-            <tr><td>DLP</td><td>Data Loss Prevention</td></tr>
-            <tr><td>DMARC</td><td>Domain-based Message Authentication, Reporting, and Conformance</td></tr>
-            <tr><td>DMS</td><td>Database Management System</td></tr>
-            <tr><td>DNS</td><td>Domain Name System</td></tr>
-            <tr><td>DPI</td><td>Deep Packet Inspection</td></tr>
-            <tr><td>EDR</td><td>Endpoint Detection and Response</td></tr>
-            <tr><td>EOL</td><td>End of Life</td></tr>
-            <tr><td>FISMA</td><td>Federal Information Security Modernization Act</td></tr>
-            <tr><td>GRC</td><td>Governance Risk and Compliance</td></tr>
-            <tr><td>HIPAA</td><td>Health Insurance Portability and Accountability Act</td></tr>
-            <tr><td>HTTP</td><td>Hypertext Transfer Protocol</td></tr>
-            <tr><td>HTTPS</td><td>Hypertext Transfer Protocol Secure</td></tr>
-            <tr><td>IaaS</td><td>Infrastructure as a Service</td></tr>
-            <tr><td>IAM</td><td>Identity and Access Management</td></tr>
-            <tr><td>IDS</td><td>Intrusion Detection System</td></tr>
-            <tr><td>IoT</td><td>Internet of Things</td></tr>
-            <tr><td>IPS</td><td>Intrusion Prevention System</td></tr>
-            <tr><td>ISO</td><td>International Organization for Standardization</td></tr>
-            <tr><td>MDM</td><td>Mobile Device Management</td></tr>
-            <tr><td>MFA</td><td>Multi-Factor Authentication</td></tr>
-            <tr><td>MITRE</td><td>MITRE ATT&amp;CK Framework</td></tr>
-            <tr><td>NIST</td><td>National Institute of Standards and Technology</td></tr>
-            <tr><td>OS</td><td>Operating System</td></tr>
-            <tr><td>OWASP</td><td>Open Web Application Security Project</td></tr>
-            <tr><td>PaaS</td><td>Platform as a Service</td></tr>
-            <tr><td>PAM</td><td>Privileged Access Management</td></tr>
-            <tr><td>PCI</td><td>Payment Card Industry</td></tr>
-            <tr><td>SaaS</td><td>Software as a Service</td></tr>
-            <tr><td>SCAP</td><td>Security Content Automation Protocol</td></tr>
-            <tr><td>SIEM</td><td>Security Information and Event Management</td></tr>
-            <tr><td>SSH</td><td>Secure Shell</td></tr>
-            <tr><td>SSO</td><td>Single Sign-On</td></tr>
-            <tr><td>TLS</td><td>Transport Layer Security</td></tr>
-            <tr><td>VPN</td><td>Virtual Private Network</td></tr>
-            <tr><td>WPA2</td><td>Wi-Fi Protected Access 2</td></tr>
-          </tbody>
-        </table>
-      </section>
+      <article id="acronyms" class="card">
+        <div class="control-header">
+          <span class="control-number">📚</span>
+          <div class="control-title">
+            <h2>Acronyms and Abbreviations</h2>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Common Security Acronyms 📋</h3>
+            <div class="acronym-grid">
+              <div class="acronym-category">
+                <h4>Authentication & Access Control</h4>
+                <table>
+                  <tbody>
+                    <tr><td>AAA</td><td>Authentication, Authorization, and Auditing</td></tr>
+                    <tr><td>ACL</td><td>Access Control List</td></tr>
+                    <tr><td>AD</td><td>Active Directory</td></tr>
+                    <tr><td>IAM</td><td>Identity and Access Management</td></tr>
+                    <tr><td>MFA</td><td>Multi-Factor Authentication</td></tr>
+                    <tr><td>PAM</td><td>Privileged Access Management</td></tr>
+                    <tr><td>SSO</td><td>Single Sign-On</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="acronym-category">
+                <h4>Network & Infrastructure</h4>
+                <table>
+                  <tbody>
+                    <tr><td>DHCP</td><td>Dynamic Host Configuration Protocol</td></tr>
+                    <tr><td>DNS</td><td>Domain Name System</td></tr>
+                    <tr><td>DPI</td><td>Deep Packet Inspection</td></tr>
+                    <tr><td>HTTP</td><td>Hypertext Transfer Protocol</td></tr>
+                    <tr><td>HTTPS</td><td>Hypertext Transfer Protocol Secure</td></tr>
+                    <tr><td>IoT</td><td>Internet of Things</td></tr>
+                    <tr><td>SSH</td><td>Secure Shell</td></tr>
+                    <tr><td>TLS</td><td>Transport Layer Security</td></tr>
+                    <tr><td>VPN</td><td>Virtual Private Network</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="acronym-category">
+                <h4>Security Operations</h4>
+                <table>
+                  <tbody>
+                    <tr><td>EDR</td><td>Endpoint Detection and Response</td></tr>
+                    <tr><td>IDS</td><td>Intrusion Detection System</td></tr>
+                    <tr><td>IPS</td><td>Intrusion Prevention System</td></tr>
+                    <tr><td>SIEM</td><td>Security Information and Event Management</td></tr>
+                    <tr><td>SOC</td><td>Security Operations Center</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="acronym-category">
+                <h4>Cloud & Services</h4>
+                <table>
+                  <tbody>
+                    <tr><td>IaaS</td><td>Infrastructure as a Service</td></tr>
+                    <tr><td>PaaS</td><td>Platform as a Service</td></tr>
+                    <tr><td>SaaS</td><td>Software as a Service</td></tr>
+                    <tr><td>CSP</td><td>Cloud Service Provider</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="acronym-category">
+                <h4>Standards & Compliance</h4>
+                <table>
+                  <tbody>
+                    <tr><td>CIS</td><td>Center for Internet Security</td></tr>
+                    <tr><td>FISMA</td><td>Federal Information Security Modernization Act</td></tr>
+                    <tr><td>HIPAA</td><td>Health Insurance Portability and Accountability Act</td></tr>
+                    <tr><td>ISO</td><td>International Organization for Standardization</td></tr>
+                    <tr><td>NIST</td><td>National Institute of Standards and Technology</td></tr>
+                    <tr><td>PCI</td><td>Payment Card Industry</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="acronym-category">
+                <h4>Security Tools & Technologies</h4>
+                <table>
+                  <tbody>
+                    <tr><td>CVE</td><td>Common Vulnerabilities and Exposures</td></tr>
+                    <tr><td>CVSS</td><td>Common Vulnerability Scoring System</td></tr>
+                    <tr><td>DLP</td><td>Data Loss Prevention</td></tr>
+                    <tr><td>MDM</td><td>Mobile Device Management</td></tr>
+                    <tr><td>SCAP</td><td>Security Content Automation Protocol</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
       
-      <!-- Additional Resources Section -->
-      <section id="resources">
-        <header>
-          <h2>Additional Resources</h2>
-        </header>
-        <section class="card">
-          <ul>
-            <li><a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Critical Security Controls v8</a></li>
-            <li><a href="https://nvlpubs.nist.gov/" target="_blank" rel="noopener">NIST Publications</a></li>
-            <li><a href="https://owasp.org/" target="_blank" rel="noopener">OWASP</a></li>
-            <li><a href="https://pages.nist.gov/800-63-3/" target="_blank" rel="noopener">NIST Digital Identity Guidelines</a></li>
-          </ul>
-        </section>
-      </section>
+      <!-- Resources Section -->
+      <article id="resources" class="card">
+        <div class="control-header">
+          <span class="control-number">📖</span>
+          <div class="control-title">
+            <h2>Additional Resources</h2>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Official Documentation & Standards 📋</h3>
+            <div class="resources-grid">
+              <div class="resource-category">
+                <h4>CIS Resources</h4>
+                <ul>
+                  <li><a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Critical Security Controls v8</a></li>
+                  <li><a href="https://www.cisecurity.org/white-papers/cis-password-policy-guide/" target="_blank" rel="noopener">CIS Password Policy Guide</a></li>
+                  <li><a href="https://learn.cisecurity.org/cis-cat-lite" target="_blank" rel="noopener">CIS-CAT Lite Configuration Assessment Tool</a></li>
+                  <li><a href="https://www.cisecurity.org/controls/v8/companion-guides" target="_blank" rel="noopener">CIS Controls Companion Guides</a></li>
+                </ul>
+              </div>
+
+              <div class="resource-category">
+                <h4>NIST Publications</h4>
+                <ul>
+                  <li><a href="https://pages.nist.gov/800-63-3/" target="_blank" rel="noopener">NIST Digital Identity Guidelines</a></li>
+                  <li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf" target="_blank" rel="noopener">NIST SP 800-53 Security Controls</a></li>
+                  <li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-171r2.pdf" target="_blank" rel="noopener">NIST SP 800-171 Protecting CUI</a></li>
+                  <li><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">NIST Cybersecurity Framework</a></li>
+                </ul>
+              </div>
+
+              <div class="resource-category">
+                <h4>Security Organizations</h4>
+                <ul>
+                  <li><a href="https://owasp.org/" target="_blank" rel="noopener">OWASP (Open Web Application Security Project)</a></li>
+                  <li><a href="https://www.sans.org/information-security-policy/" target="_blank" rel="noopener">SANS Security Policy Templates</a></li>
+                  <li><a href="https://attack.mitre.org/" target="_blank" rel="noopener">MITRE ATT&CK Framework</a></li>
+                  <li><a href="https://www.first.org/" target="_blank" rel="noopener">FIRST (Forum of Incident Response and Security Teams)</a></li>
+                </ul>
+              </div>
+
+              <div class="resource-category">
+                <h4>Compliance & Standards</h4>
+                <ul>
+                  <li><a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener">ISO/IEC 27001</a></li>
+                  <li><a href="https://www.pcisecuritystandards.org/" target="_blank" rel="noopener">PCI DSS Standards</a></li>
+                  <li><a href="https://www.hhs.gov/hipaa/" target="_blank" rel="noopener">HIPAA Security Rule</a></li>
+                  <li><a href="https://gdpr.eu/" target="_blank" rel="noopener">GDPR Requirements</a></li>
+                </ul>
+              </div>
+
+              <div class="resource-category">
+                <h4>Training & Education</h4>
+                <ul>
+                  <li><a href="https://www.cybrary.it/" target="_blank" rel="noopener">Cybrary - Free Cybersecurity Training</a></li>
+                  <li><a href="https://www.sans.org/security-awareness-training/" target="_blank" rel="noopener">SANS Security Awareness</a></li>
+                  <li><a href="https://niccs.cisa.gov/" target="_blank" rel="noopener">NICCS Training Catalog</a></li>
+                  <li><a href="https://www.coursera.org/courses?query=cybersecurity" target="_blank" rel="noopener">Coursera Cybersecurity Courses</a></li>
+                </ul>
+              </div>
+
+              <div class="resource-category">
+                <h4>Tools & Utilities</h4>
+                <ul>
+                  <li><a href="https://www.kali.org/" target="_blank" rel="noopener">Kali Linux Security Tools</a></li>
+                  <li><a href="https://www.wireshark.org/" target="_blank" rel="noopener">Wireshark Network Protocol Analyzer</a></li>
+                  <li><a href="https://nmap.org/" target="_blank" rel="noopener">Nmap Security Scanner</a></li>
+                  <li><a href="https://www.metasploit.com/" target="_blank" rel="noopener">Metasploit Framework</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <style>
+          .acronym-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+          }
+
+          .acronym-category {
+            background: var(--surface-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+          }
+
+          .acronym-category h4 {
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-sm);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: var(--spacing-xs);
+          }
+
+          .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+          }
+
+          .resource-category {
+            background: var(--surface-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+          }
+
+          .resource-category h4 {
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-sm);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: var(--spacing-xs);
+          }
+
+          .resource-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+
+          .resource-category li {
+            margin-bottom: var(--spacing-sm);
+          }
+
+          .resource-category a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+            display: inline-block;
+            position: relative;
+          }
+
+          .resource-category a:hover {
+            color: var(--accent-color);
+          }
+
+          .resource-category a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--accent-color);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform var(--transition-normal);
+          }
+
+          .resource-category a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        </style>
+      </article>
     </main>
     
     <!-- Footer -->
-    <footer>
-      <p>&copy; Jetlock INC.</p>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>About CIS Controls</h3>
+            <p>The CIS Critical Security Controls® (CIS Controls) are a prioritized set of actions that collectively form a defense-in-depth approach to cybersecurity. These controls are developed and maintained by cybersecurity experts from around the world.</p>
+            <div class="footer-links">
+              <a href="https://www.cisecurity.org/controls/" target="_blank" rel="noopener">Learn More</a>
+              <a href="https://www.cisecurity.org/blog" target="_blank" rel="noopener">CIS Blog</a>
+              <a href="https://www.cisecurity.org/webinars" target="_blank" rel="noopener">Webinars</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Implementation Groups</h3>
+            <div class="implementation-info">
+              <div class="ig-item">
+                <span class="ig-badge ig-1">IG1</span>
+                <p>Essential cyber hygiene – basic protections that every enterprise should apply</p>
+              </div>
+              <div class="ig-item">
+                <span class="ig-badge ig-2">IG2</span>
+                <p>Intermediate controls for organizations with moderate resources and cybersecurity expertise</p>
+              </div>
+              <div class="ig-item">
+                <span class="ig-badge ig-3">IG3</span>
+                <p>Advanced controls for organizations with significant resources and cybersecurity expertise</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <nav class="footer-nav">
+              <div class="footer-nav-column">
+                <h4>Controls</h4>
+                <ul>
+                  <li><a href="#control1">Enterprise Assets</a></li>
+                  <li><a href="#control2">Software Assets</a></li>
+                  <li><a href="#control3">Data Protection</a></li>
+                  <li><a href="#control4">Secure Configuration</a></li>
+                  <li><a href="#control5">Account Management</a></li>
+                </ul>
+              </div>
+              <div class="footer-nav-column">
+                <h4>Resources</h4>
+                <ul>
+                  <li><a href="#acronyms">Acronyms Guide</a></li>
+                  <li><a href="#resources">Additional Resources</a></li>
+                  <li><a href="https://www.cisecurity.org/controls/cis-controls-navigator" target="_blank" rel="noopener">Controls Navigator</a></li>
+                  <li><a href="https://www.cisecurity.org/controls/v8/download" target="_blank" rel="noopener">Download PDF</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+          <div class="footer-section">
+            <h3>Stay Connected</h3>
+            <div class="social-links">
+              <a href="https://twitter.com/CISecurity" target="_blank" rel="noopener" aria-label="Twitter">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/company/cisecurity" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="https://github.com/cisagov" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.2-1.8-1.2-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.1-3.2-.1-.3-.5-1.5.1-3.2 0 0 .9-.3 3 1.1a10.4 10.4 0 0 1 5.5 0c2.1-1.4 3-1.1 3-1.1.6 1.7.2 2.9.1 3.2.7.8 1.1 1.9 1.1 3.2 0 4.6-2.8 5.6-5.5 5.9.4.3.7 1 .7 2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 0z"></path>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/cisecurity" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M23.5 6.2c-.3-1-1-1.8-2-2C19.9 4 12 4 12 4s-7.9 0-9.5.2c-1 .2-1.7 1-2 2C.2 7.8 0 9.4 0 12c0 2.6.2 4.2.5 5.8.3 1 1 1.8 2 2 1.6.2 9.5.2 9.5.2s7.9 0 9.5-.2c1-.2 1.7-1 2-2 .3-1.6.5-3.2.5-5.8 0-2.6-.2-4.2-.5-5.8z"></path>
+                  <path d="M9.5 15.5V8.5l6.3 3.5-6.3 3.5z" fill="currentColor"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="newsletter-signup">
+              <h4>Subscribe to Updates</h4>
+              <p>Stay informed about CIS Controls updates and cybersecurity best practices.</p>
+              <a href="https://www.cisecurity.org/newsletter" target="_blank" rel="noopener" class="subscribe-button">Subscribe Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2024 Center for Internet Security, Inc. All rights reserved.</p>
+            <p>CIS Controls® is a registered trademark of the Center for Internet Security, Inc.</p>
+          </div>
+          <div class="footer-meta">
+            <nav class="meta-links">
+              <a href="https://www.cisecurity.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+              <a href="https://www.cisecurity.org/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>
+              <a href="https://www.cisecurity.org/accessibility" target="_blank" rel="noopener">Accessibility</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .site-footer {
+          background: var(--surface-color);
+          border-top: 1px solid var(--border-color);
+          padding: var(--spacing-xl) 0;
+          margin-top: var(--spacing-xl);
+        }
+
+        .footer-content {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 var(--spacing-lg);
+        }
+
+        .footer-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: var(--spacing-xl);
+          margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-section {
+          padding: var(--spacing-md);
+        }
+
+        .footer-section h3 {
+          color: var(--accent-color);
+          margin-bottom: var(--spacing-md);
+          font-size: 1.2rem;
+        }
+
+        .footer-section h4 {
+          color: var(--text-secondary);
+          margin-bottom: var(--spacing-sm);
+          font-size: 1rem;
+        }
+
+        .footer-section p {
+          color: var(--text-secondary);
+          margin-bottom: var(--spacing-md);
+          line-height: 1.6;
+        }
+
+        .footer-links {
+          display: flex;
+          gap: var(--spacing-md);
+          flex-wrap: wrap;
+        }
+
+        .footer-links a {
+          color: var(--text-primary);
+          text-decoration: none;
+          transition: color var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+          color: var(--accent-color);
+        }
+
+        .implementation-info {
+          display: flex;
+          flex-direction: column;
+          gap: var(--spacing-md);
+        }
+
+        .ig-item {
+          display: flex;
+          align-items: flex-start;
+          gap: var(--spacing-md);
+        }
+
+        .ig-badge {
+          padding: var(--spacing-xs) var(--spacing-sm);
+          border-radius: var(--border-radius);
+          font-size: 0.9rem;
+          font-weight: bold;
+        }
+
+        .footer-nav {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: var(--spacing-lg);
+        }
+
+        .footer-nav ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .footer-nav li {
+          margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-nav a {
+          color: var(--text-secondary);
+          text-decoration: none;
+          transition: color var(--transition-fast);
+        }
+
+        .footer-nav a:hover {
+          color: var(--accent-color);
+        }
+
+        .social-links {
+          display: flex;
+          gap: var(--spacing-md);
+          margin-bottom: var(--spacing-lg);
+        }
+
+        .social-icon {
+          width: 24px;
+          height: 24px;
+          fill: var(--text-secondary);
+          transition: fill var(--transition-fast);
+        }
+
+        .social-icon:hover {
+          fill: var(--accent-color);
+        }
+
+        .newsletter-signup {
+          background: var(--card-bg);
+          padding: var(--spacing-md);
+          border-radius: var(--border-radius);
+          border: 1px solid var(--border-color);
+        }
+
+        .subscribe-button {
+          display: inline-block;
+          padding: var(--spacing-sm) var(--spacing-md);
+          background: var(--accent-color);
+          color: white;
+          text-decoration: none;
+          border-radius: var(--border-radius);
+          transition: background var(--transition-fast);
+          margin-top: var(--spacing-sm);
+        }
+
+        .subscribe-button:hover {
+          background: var(--accent-hover);
+        }
+
+        .footer-bottom {
+          border-top: 1px solid var(--border-color);
+          padding-top: var(--spacing-lg);
+          margin-top: var(--spacing-xl);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: var(--spacing-md);
+        }
+
+        .copyright {
+          color: var(--text-tertiary);
+          font-size: 0.9rem;
+        }
+
+        .meta-links {
+          display: flex;
+          gap: var(--spacing-md);
+        }
+
+        .meta-links a {
+          color: var(--text-tertiary);
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: color var(--transition-fast);
+        }
+
+        .meta-links a:hover {
+          color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+          .footer-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .footer-bottom {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .meta-links {
+            justify-content: center;
+          }
+        }
+      </style>
     </footer>
     
     <!--================================================
