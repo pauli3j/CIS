@@ -2258,23 +2258,50 @@
       </article>
       
       <!-- Control 11 -->
-      <article id="control11">
-        <header>
-          <h2>Control 11: Data Recovery</h2>
-        </header>
-        <section class="card">
-          <h3>Summary ⏪</h3>
-          <p>Establish and maintain data recovery practices sufficient to restore in-scope enterprise assets to a pre-incident and trusted state.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control11" class="card">
+        <div class="control-header">
+          <span class="control-number">11</span>
+          <div class="control-title">
+            <h2>Data Recovery</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">5</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Data</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Recover, Protect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Establish and maintain data recovery practices sufficient to restore in-scope enterprise assets to a pre-incident and trusted state.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
               <li>Data availability importance:
                 <ul>
                   <li>Critical for business decisions</li>
-                  <li>Sometimes more vital than confidentiality</li>
-                  <li>Impact of unavailable/untrusted data</li>
+                  <li>Often more vital than confidentiality</li>
+                  <li>Impact of unavailable data</li>
+                  <li>Business continuity requirements</li>
+                  <li>Regulatory compliance needs</li>
                 </ul>
               </li>
               <li>System compromise impacts:
@@ -2283,6 +2310,8 @@
                   <li>Unauthorized accounts</li>
                   <li>Software/script modifications</li>
                   <li>Malicious code insertion</li>
+                  <li>System file corruption</li>
+                  <li>Data integrity issues</li>
                 </ul>
               </li>
               <li>Recovery challenges:
@@ -2291,6 +2320,8 @@
                   <li>Detecting corrupted applications</li>
                   <li>Restoring trusted state</li>
                   <li>Verifying system integrity</li>
+                  <li>Time constraints</li>
+                  <li>Resource limitations</li>
                 </ul>
               </li>
               <li>Ransomware considerations:
@@ -2299,27 +2330,34 @@
                   <li>Data encryption threats</li>
                   <li>Extortion techniques</li>
                   <li>Data exfiltration risks</li>
+                  <li>Business impact assessment</li>
+                  <li>Recovery prioritization</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Backup procedures:
                 <ul>
-                  <li>Based on data value</li>
-                  <li>Consider sensitivity levels</li>
-                  <li>Define retention requirements</li>
-                  <li>Determine backup frequency</li>
+                  <li>Data value assessment</li>
+                  <li>Sensitivity classification</li>
+                  <li>Retention requirements</li>
+                  <li>Backup frequency determination</li>
+                  <li>Storage location selection</li>
+                  <li>Encryption requirements</li>
                 </ul>
               </li>
               <li>Testing requirements:
                 <ul>
                   <li>Quarterly minimum testing</li>
                   <li>Random backup sampling</li>
-                  <li>Test bed environment</li>
+                  <li>Test bed environment setup</li>
                   <li>Verification procedures</li>
+                  <li>Documentation requirements</li>
+                  <li>Success criteria definition</li>
                 </ul>
               </li>
               <li>Recovery verification:
@@ -2328,76 +2366,118 @@
                   <li>Application functionality</li>
                   <li>Data completeness</li>
                   <li>System usability</li>
+                  <li>Performance validation</li>
+                  <li>Security control verification</li>
                 </ul>
               </li>
               <li>Malware considerations:
                 <ul>
-                  <li>Use pre-infection backups</li>
-                  <li>Verify backup integrity</li>
-                  <li>Isolate restored systems</li>
-                  <li>Monitor for reinfection</li>
+                  <li>Pre-infection backup identification</li>
+                  <li>Backup integrity verification</li>
+                  <li>Isolated recovery environment</li>
+                  <li>Reinfection prevention</li>
+                  <li>Security control validation</li>
+                  <li>Monitoring requirements</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>11.1 Establish and Maintain a Data Recovery Process</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>11.1 Establish and Maintain a Data Recovery Process</h4>
                 <ul>
                   <li>Define recovery scope</li>
                   <li>Set recovery priorities</li>
                   <li>Ensure backup security</li>
+                  <li>Document procedures</li>
                   <li>Annual review minimum</li>
                 </ul>
-              </li>
-              <li><strong>11.2 Perform Automated Backups</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>11.2 Perform Automated Backups</h4>
                 <ul>
                   <li>Weekly minimum frequency</li>
                   <li>Based on data sensitivity</li>
                   <li>Automated execution</li>
+                  <li>Verification checks</li>
+                  <li>Monitoring and alerting</li>
                 </ul>
-              </li>
-              <li><strong>11.3 Protect Recovery Data</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>11.3 Protect Recovery Data</h4>
                 <ul>
                   <li>Match original security controls</li>
                   <li>Implement encryption</li>
                   <li>Ensure data separation</li>
+                  <li>Access control enforcement</li>
+                  <li>Integrity monitoring</li>
                 </ul>
-              </li>
-              <li><strong>11.4 Establish and Maintain an Isolated Instance of Recovery Data</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>11.4 Establish and Maintain an Isolated Instance of Recovery Data</h4>
                 <ul>
-                  <li>Offline backups</li>
-                  <li>Cloud-based copies</li>
-                  <li>Off-site storage</li>
+                  <li>Offline backup storage</li>
+                  <li>Cloud-based replication</li>
+                  <li>Off-site facilities</li>
                   <li>Version control</li>
+                  <li>Geographic distribution</li>
                 </ul>
-              </li>
-              <li><strong>11.5 Test Data Recovery</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>11.5 Test Data Recovery</h4>
                 <ul>
-                  <li>Quarterly testing</li>
+                  <li>Quarterly testing schedule</li>
                   <li>Sample verification</li>
                   <li>Recovery validation</li>
                   <li>Process improvement</li>
+                  <li>Documentation updates</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 12 -->
-      <article id="control12">
-        <header>
-          <h2>Control 12: Network Infrastructure Management</h2>
-        </header>
-        <section class="card">
-          <h3>Summary 🚦</h3>
-          <p>Establish, implement, and actively manage (track, report, correct) network devices, in order to prevent attackers from exploiting vulnerable network services and access points.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control12" class="card">
+        <div class="control-header">
+          <span class="control-number">12</span>
+          <div class="control-title">
+            <h2>Network Infrastructure Management</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">8</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Network, Devices</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Protect, Identify</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Establish, implement, and actively manage (track, report, correct) network devices, in order to prevent attackers from exploiting vulnerable network services and access points.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
               <li>Network security fundamentals:
                 <ul>
@@ -2405,6 +2485,7 @@
                   <li>Security architecture importance</li>
                   <li>Default configuration risks</li>
                   <li>Vulnerability management</li>
+                  <li>Access control requirements</li>
                 </ul>
               </li>
               <li>Default configuration risks:
@@ -2413,6 +2494,8 @@
                   <li>Default accounts/passwords</li>
                   <li>Legacy protocol support</li>
                   <li>Unnecessary software</li>
+                  <li>Insecure management protocols</li>
+                  <li>Weak encryption settings</li>
                 </ul>
               </li>
               <li>Network evolution challenges:
@@ -2421,6 +2504,8 @@
                   <li>Configuration drift</li>
                   <li>Business exception requests</li>
                   <li>Security vs. functionality</li>
+                  <li>Cloud integration</li>
+                  <li>Remote access requirements</li>
                 </ul>
               </li>
               <li>Infrastructure management needs:
@@ -2429,12 +2514,15 @@
                   <li>Regular reassessment</li>
                   <li>Change tracking</li>
                   <li>Risk analysis</li>
+                  <li>Compliance monitoring</li>
+                  <li>Performance optimization</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Documentation requirements:
                 <ul>
@@ -2442,111 +2530,168 @@
                   <li>Security architecture plans</li>
                   <li>Infrastructure inventory</li>
                   <li>Configuration standards</li>
+                  <li>Change management procedures</li>
+                  <li>Disaster recovery plans</li>
                 </ul>
               </li>
               <li>Management practices:
                 <ul>
-                  <li>Version control</li>
-                  <li>Change management</li>
+                  <li>Version control systems</li>
+                  <li>Change management processes</li>
                   <li>Compliance monitoring</li>
                   <li>Regular updates</li>
+                  <li>Configuration backups</li>
+                  <li>Automation tools</li>
                 </ul>
               </li>
               <li>Security considerations:
                 <ul>
-                  <li>Access control</li>
-                  <li>Secure protocols</li>
+                  <li>Access control implementation</li>
+                  <li>Secure protocol adoption</li>
                   <li>Authentication methods</li>
                   <li>Monitoring systems</li>
+                  <li>Encryption requirements</li>
+                  <li>Incident response integration</li>
                 </ul>
               </li>
               <li>Infrastructure administration:
                 <ul>
-                  <li>Dedicated devices</li>
+                  <li>Dedicated management devices</li>
                   <li>Out-of-band management</li>
                   <li>Strong authentication</li>
                   <li>Secure protocols</li>
+                  <li>Privileged access control</li>
+                  <li>Activity logging</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>12.1 Ensure Network Infrastructure is Up-to-Date</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>12.1 Ensure Network Infrastructure is Up-to-Date</h4>
                 <ul>
                   <li>Latest stable releases</li>
                   <li>Supported NaaS offerings</li>
                   <li>Monthly review minimum</li>
+                  <li>Patch management</li>
+                  <li>Version tracking</li>
                 </ul>
-              </li>
-              <li><strong>12.2 Establish and Maintain a Secure Network Architecture</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>12.2 Establish and Maintain a Secure Network Architecture</h4>
                 <ul>
                   <li>Network segmentation</li>
                   <li>Least privilege access</li>
                   <li>High availability design</li>
+                  <li>Security zones</li>
+                  <li>Traffic flow control</li>
                 </ul>
-              </li>
-              <li><strong>12.3 Securely Manage Network Infrastructure</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>12.3 Securely Manage Network Infrastructure</h4>
                 <ul>
                   <li>Infrastructure-as-code</li>
                   <li>Secure protocols (SSH/HTTPS)</li>
                   <li>Version control</li>
+                  <li>Change management</li>
+                  <li>Configuration backups</li>
                 </ul>
-              </li>
-              <li><strong>12.4 Establish and Maintain Architecture Diagram(s)</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>12.4 Establish and Maintain Architecture Diagram(s)</h4>
                 <ul>
                   <li>Network documentation</li>
                   <li>System documentation</li>
                   <li>Annual updates</li>
+                  <li>Change tracking</li>
+                  <li>Access controls</li>
                 </ul>
-              </li>
-              <li><strong>12.5 Centralize Network Authentication, Authorization, and Auditing (AAA)</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>12.5 Centralize Network Authentication, Authorization, and Auditing (AAA)</h4>
                 <ul>
                   <li>Unified access control</li>
                   <li>Centralized management</li>
                   <li>Comprehensive logging</li>
+                  <li>Policy enforcement</li>
+                  <li>Monitoring capabilities</li>
                 </ul>
-              </li>
-              <li><strong>12.6 Use Secure Network Management and Communication Protocols</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>12.6 Use Secure Network Management and Communication Protocols</h4>
                 <ul>
                   <li>802.1X implementation</li>
                   <li>WPA2 Enterprise or better</li>
                   <li>Secure management protocols</li>
+                  <li>Encryption standards</li>
+                  <li>Protocol validation</li>
                 </ul>
-              </li>
-              <li><strong>12.7 Ensure Remote Devices Utilize a VPN</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>12.7 Ensure Remote Devices Utilize a VPN</h4>
                 <ul>
                   <li>Enterprise VPN requirement</li>
                   <li>AAA integration</li>
                   <li>Authentication enforcement</li>
+                  <li>Encryption standards</li>
+                  <li>Connection monitoring</li>
                 </ul>
-              </li>
-              <li><strong>12.8 Establish and Maintain Dedicated Computing Resources for All Administrative Work</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>12.8 Establish and Maintain Dedicated Computing Resources for All Administrative Work</h4>
                 <ul>
                   <li>Physical/logical separation</li>
                   <li>Network segmentation</li>
                   <li>Internet restriction</li>
                   <li>Administrative isolation</li>
+                  <li>Access control enforcement</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 13 -->
-      <article id="control13">
-        <header>
-          <h2>Control 13: Network Monitoring and Defense</h2>
-        </header>
-        <section class="card">
-          <h3>Summary 🕵️</h3>
-          <p>Operate processes and tooling to establish and maintain comprehensive network monitoring and defense against security threats across the enterprise's network infrastructure and user base.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control13" class="card">
+        <div class="control-header">
+          <span class="control-number">13</span>
+          <div class="control-title">
+            <h2>Network Monitoring and Defense</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">11</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Network</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Detect, Protect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Operate processes and tooling to establish and maintain comprehensive network monitoring and defense against security threats across the enterprise's network infrastructure and user base.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
               <li>Network defense challenges:
                 <ul>
@@ -2554,6 +2699,8 @@
                   <li>Shared exploit information</li>
                   <li>Security control bypasses</li>
                   <li>Tool misconfigurations</li>
+                  <li>Zero-day vulnerabilities</li>
+                  <li>Advanced persistent threats</li>
                 </ul>
               </li>
               <li>Monitoring requirements:
@@ -2562,6 +2709,8 @@
                   <li>Alert response capability</li>
                   <li>Human analysis needed</li>
                   <li>Multiple threat vectors</li>
+                  <li>Real-time detection</li>
+                  <li>Automated response</li>
                 </ul>
               </li>
               <li>Detection importance:
@@ -2570,6 +2719,8 @@
                   <li>Minimize attack impact</li>
                   <li>Prevent data loss</li>
                   <li>Enable quick response</li>
+                  <li>Threat containment</li>
+                  <li>Evidence preservation</li>
                 </ul>
               </li>
               <li>Situational awareness benefits:
@@ -2578,12 +2729,15 @@
                   <li>IOC cataloging</li>
                   <li>Proactive defense</li>
                   <li>Faster recovery</li>
+                  <li>Threat intelligence</li>
+                  <li>Pattern recognition</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Implementation approach:
                 <ul>
@@ -2591,14 +2745,18 @@
                   <li>Map network architecture</li>
                   <li>Document data flows</li>
                   <li>Identify key assets</li>
+                  <li>Define monitoring scope</li>
+                  <li>Establish baselines</li>
                 </ul>
               </li>
               <li>Security operations:
                 <ul>
-                  <li>Trained team</li>
-                  <li>Organized processes</li>
+                  <li>Trained team structure</li>
+                  <li>Defined processes</li>
                   <li>Incident detection</li>
                   <li>Response procedures</li>
+                  <li>Escalation paths</li>
+                  <li>24/7 coverage</li>
                 </ul>
               </li>
               <li>Monitoring scope:
@@ -2607,6 +2765,8 @@
                   <li>Asset behavior</li>
                   <li>User credentials</li>
                   <li>Data access</li>
+                  <li>System changes</li>
+                  <li>Security events</li>
                 </ul>
               </li>
               <li>Service options:
@@ -2615,107 +2775,168 @@
                   <li>Managed services</li>
                   <li>Hybrid approaches</li>
                   <li>Consultancy support</li>
+                  <li>Technology integration</li>
+                  <li>Vendor management</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>13.1 Centralize Security Event Alerting</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>13.1 Centralize Security Event Alerting</h4>
                 <ul>
                   <li>Consolidated view</li>
                   <li>Real-time alerting</li>
                   <li>Correlation capability</li>
+                  <li>Automated analysis</li>
+                  <li>Priority-based routing</li>
                 </ul>
-              </li>
-              <li><strong>13.2 Deploy a Host-Based Intrusion Detection Solution</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>13.2 Deploy a Host-Based Intrusion Detection Solution</h4>
                 <ul>
                   <li>Critical assets coverage</li>
                   <li>Behavioral monitoring</li>
                   <li>Alert generation</li>
-                </ul>
-              </li>
-              <li><strong>13.3 Deploy a Network Intrusion Detection Solution</strong>
-                <ul>
-                  <li>Traffic analysis</li>
                   <li>Signature detection</li>
                   <li>Anomaly identification</li>
                 </ul>
-              </li>
-              <li><strong>13.4 Perform Traffic Filtering Between Network Segments</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>13.3 Deploy a Network Intrusion Detection Solution</h4>
+                <ul>
+                  <li>Traffic analysis</li>
+                  <li>Protocol validation</li>
+                  <li>Signature matching</li>
+                  <li>Behavioral analysis</li>
+                  <li>Performance monitoring</li>
+                </ul>
+              </div>
+              <div class="safeguard-item">
+                <h4>13.4 Perform Traffic Filtering Between Network Segments</h4>
                 <ul>
                   <li>Network segregation</li>
                   <li>Access control</li>
                   <li>Policy enforcement</li>
+                  <li>Traffic inspection</li>
+                  <li>Rule management</li>
                 </ul>
-              </li>
-              <li><strong>13.5 Manage Access Control for Remote Assets</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>13.5 Manage Access Control for Remote Assets</h4>
                 <ul>
                   <li>Remote access control</li>
                   <li>Authentication requirements</li>
                   <li>Connection monitoring</li>
+                  <li>Session management</li>
+                  <li>Policy compliance</li>
                 </ul>
-              </li>
-              <li><strong>13.6 Collect Network Traffic Flow Data</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>13.6 Collect Network Traffic Flow Data</h4>
                 <ul>
                   <li>Flow monitoring</li>
                   <li>Traffic analysis</li>
                   <li>Pattern detection</li>
+                  <li>Baseline comparison</li>
+                  <li>Capacity planning</li>
                 </ul>
-              </li>
-              <li><strong>13.7 Deploy Network-Based Intrusion Prevention</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>13.7 Deploy Network-Based Intrusion Prevention</h4>
                 <ul>
                   <li>Active prevention</li>
                   <li>Threat blocking</li>
                   <li>Attack mitigation</li>
+                  <li>Signature updates</li>
+                  <li>Performance tuning</li>
                 </ul>
-              </li>
-              <li><strong>13.8 Deploy Network-Based Sandbox</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>13.8 Deploy Network-Based Sandbox</h4>
                 <ul>
                   <li>Malware analysis</li>
                   <li>Behavior testing</li>
                   <li>Safe detonation</li>
+                  <li>Threat intelligence</li>
+                  <li>Automated response</li>
                 </ul>
-              </li>
-              <li><strong>13.9 Deploy Port-Level Access Control</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>13.9 Deploy Port-Level Access Control</h4>
                 <ul>
                   <li>802.1x implementation</li>
                   <li>Port security</li>
                   <li>Access restriction</li>
+                  <li>Device authentication</li>
+                  <li>VLAN assignment</li>
                 </ul>
-              </li>
-              <li><strong>13.10 Perform Application Layer Filtering</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>13.10 Perform Application Layer Filtering</h4>
                 <ul>
                   <li>Deep packet inspection</li>
                   <li>Protocol validation</li>
                   <li>Content filtering</li>
+                  <li>SSL/TLS inspection</li>
+                  <li>Application control</li>
                 </ul>
-              </li>
-              <li><strong>13.11 Tune Security Event Alerting Thresholds</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>13.11 Tune Security Event Alerting Thresholds</h4>
                 <ul>
                   <li>Alert optimization</li>
                   <li>False positive reduction</li>
                   <li>Regular review</li>
+                  <li>Performance monitoring</li>
+                  <li>Threshold adjustment</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 14 -->
-      <article id="control14">
-        <header>
-          <h2>Control 14: Security Awareness and Skills Training</h2>
-        </header>
-        <section class="card">
-          <h3>Summary 📚</h3>
-          <p>Establish and maintain a security awareness program to influence behavior among the workforce to be security conscious and properly skilled to reduce cybersecurity risks to the enterprise.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control14" class="card">
+        <div class="control-header">
+          <span class="control-number">14</span>
+          <div class="control-title">
+            <h2>Security Awareness and Skills Training</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">9</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Users</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Protect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Establish and maintain a security awareness program to influence behavior among the workforce to be security conscious and properly skilled to reduce cybersecurity risks to the enterprise.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
               <li>Human factor importance:
                 <ul>
@@ -2723,6 +2944,8 @@
                   <li>Social engineering risks</li>
                   <li>Behavioral vulnerabilities</li>
                   <li>Security culture impact</li>
+                  <li>Insider threat potential</li>
+                  <li>Human error mitigation</li>
                 </ul>
               </li>
               <li>Training objectives:
@@ -2731,6 +2954,8 @@
                   <li>Security best practices</li>
                   <li>Policy compliance</li>
                   <li>Incident reporting</li>
+                  <li>Role-specific skills</li>
+                  <li>Security responsibilities</li>
                 </ul>
               </li>
               <li>Risk mitigation:
@@ -2739,6 +2964,8 @@
                   <li>Improve threat detection</li>
                   <li>Enhance response time</li>
                   <li>Strengthen defense</li>
+                  <li>Prevent data breaches</li>
+                  <li>Build security mindset</li>
                 </ul>
               </li>
               <li>Program benefits:
@@ -2747,12 +2974,15 @@
                   <li>Compliance support</li>
                   <li>Incident prevention</li>
                   <li>Risk reduction</li>
+                  <li>Employee empowerment</li>
+                  <li>Continuous improvement</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Training components:
                 <ul>
@@ -2760,6 +2990,8 @@
                   <li>Phishing simulations</li>
                   <li>Interactive modules</li>
                   <li>Skills assessment</li>
+                  <li>Role-based training</li>
+                  <li>Security updates</li>
                 </ul>
               </li>
               <li>Content areas:
@@ -2770,6 +3002,8 @@
                   <li>Data protection</li>
                   <li>Mobile security</li>
                   <li>Remote work safety</li>
+                  <li>Physical security</li>
+                  <li>Incident reporting</li>
                 </ul>
               </li>
               <li>Delivery methods:
@@ -2778,6 +3012,10 @@
                   <li>In-person sessions</li>
                   <li>Newsletters</li>
                   <li>Awareness campaigns</li>
+                  <li>Microlearning modules</li>
+                  <li>Gamification</li>
+                  <li>Video content</li>
+                  <li>Hands-on exercises</li>
                 </ul>
               </li>
               <li>Measurement:
@@ -2786,93 +3024,150 @@
                   <li>Knowledge assessment</li>
                   <li>Behavior monitoring</li>
                   <li>Effectiveness metrics</li>
+                  <li>Phishing test results</li>
+                  <li>Incident statistics</li>
+                  <li>Feedback analysis</li>
+                  <li>Program improvement</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>14.1 Establish and Maintain a Security Awareness Program</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>14.1 Establish and Maintain a Security Awareness Program</h4>
                 <ul>
                   <li>Regular updates</li>
                   <li>Comprehensive coverage</li>
                   <li>Documented process</li>
+                  <li>Measurable objectives</li>
+                  <li>Executive support</li>
                 </ul>
-              </li>
-              <li><strong>14.2 Train Workforce Members to Recognize Social Engineering Attacks</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>14.2 Train Workforce Members to Recognize Social Engineering Attacks</h4>
                 <ul>
                   <li>Phishing awareness</li>
                   <li>Common tactics</li>
                   <li>Response procedures</li>
+                  <li>Real-world examples</li>
+                  <li>Reporting methods</li>
                 </ul>
-              </li>
-              <li><strong>14.3 Train Workforce Members on Authentication Best Practices</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>14.3 Train Workforce Members on Authentication Best Practices</h4>
                 <ul>
                   <li>Password security</li>
                   <li>MFA usage</li>
                   <li>Account protection</li>
+                  <li>Secure login practices</li>
+                  <li>Credential management</li>
                 </ul>
-              </li>
-              <li><strong>14.4 Train Workforce on Data Handling Best Practices</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>14.4 Train Workforce on Data Handling Best Practices</h4>
                 <ul>
                   <li>Classification guidelines</li>
                   <li>Protection measures</li>
                   <li>Sharing protocols</li>
+                  <li>Storage requirements</li>
+                  <li>Disposal procedures</li>
                 </ul>
-              </li>
-              <li><strong>14.5 Train Workforce Members on Causes of Unintentional Data Exposure</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>14.5 Train Workforce Members on Causes of Unintentional Data Exposure</h4>
                 <ul>
                   <li>Common mistakes</li>
                   <li>Prevention methods</li>
                   <li>Risk awareness</li>
+                  <li>Case studies</li>
+                  <li>Best practices</li>
                 </ul>
-              </li>
-              <li><strong>14.6 Train Workforce Members on Security Event Reporting</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>14.6 Train Workforce Members on Security Event Reporting</h4>
                 <ul>
                   <li>Incident recognition</li>
                   <li>Reporting procedures</li>
                   <li>Response protocols</li>
+                  <li>Escalation paths</li>
+                  <li>Documentation requirements</li>
                 </ul>
-              </li>
-              <li><strong>14.7 Train Workforce on How to Identify and Report Security Incidents</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>14.7 Train Workforce on How to Identify and Report Security Incidents</h4>
                 <ul>
                   <li>Incident indicators</li>
                   <li>Escalation paths</li>
                   <li>Documentation requirements</li>
+                  <li>Response timing</li>
+                  <li>Follow-up procedures</li>
                 </ul>
-              </li>
-              <li><strong>14.8 Train Workforce on Sensitive Data Access</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>14.8 Train Workforce on Sensitive Data Access</h4>
                 <ul>
                   <li>Access controls</li>
                   <li>Handling procedures</li>
                   <li>Security measures</li>
+                  <li>Compliance requirements</li>
+                  <li>Audit awareness</li>
                 </ul>
-              </li>
-              <li><strong>14.9 Conduct Role-Specific Security Training</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>14.9 Conduct Role-Specific Security Training</h4>
                 <ul>
                   <li>Targeted content</li>
                   <li>Job-specific risks</li>
                   <li>Specialized procedures</li>
+                  <li>Technical requirements</li>
+                  <li>Compliance obligations</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 15 -->
-      <article id="control15">
-        <header>
-          <h2>Control 15: Service Provider Management</h2>
-        </header>
-        <section class="card">
-          <h3>Summary 💌</h3>
-          <p>Develop and implement processes to evaluate and manage the security risks associated with service providers and third parties throughout their relationship with the enterprise.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control15" class="card">
+        <div class="control-header">
+          <span class="control-number">15</span>
+          <div class="control-title">
+            <h2>Service Provider Management</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">7</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Data</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Identify, Protect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Develop and implement processes to evaluate and manage the security risks associated with service providers and third parties throughout their relationship with the enterprise.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
               <li>Third-party risks:
                 <ul>
@@ -2880,6 +3175,8 @@
                   <li>Data access concerns</li>
                   <li>Security control variations</li>
                   <li>Compliance implications</li>
+                  <li>Supply chain vulnerabilities</li>
+                  <li>Interconnected systems</li>
                 </ul>
               </li>
               <li>Provider relationships:
@@ -2888,6 +3185,8 @@
                   <li>Shared responsibilities</li>
                   <li>Service dependencies</li>
                   <li>Contract management</li>
+                  <li>Performance monitoring</li>
+                  <li>Incident coordination</li>
                 </ul>
               </li>
               <li>Security considerations:
@@ -2896,6 +3195,8 @@
                   <li>Access control needs</li>
                   <li>Incident response coordination</li>
                   <li>Compliance obligations</li>
+                  <li>Security standards alignment</li>
+                  <li>Risk transfer management</li>
                 </ul>
               </li>
               <li>Risk management:
@@ -2904,12 +3205,15 @@
                   <li>Continuous monitoring</li>
                   <li>Performance metrics</li>
                   <li>Security standards</li>
+                  <li>Due diligence processes</li>
+                  <li>Exit strategies</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Assessment process:
                 <ul>
@@ -2917,6 +3221,8 @@
                   <li>Documentation review</li>
                   <li>On-site audits</li>
                   <li>Compliance verification</li>
+                  <li>Risk scoring</li>
+                  <li>Technical testing</li>
                 </ul>
               </li>
               <li>Contract requirements:
@@ -2925,6 +3231,10 @@
                   <li>Service levels</li>
                   <li>Incident reporting</li>
                   <li>Compliance standards</li>
+                  <li>Data handling</li>
+                  <li>Audit rights</li>
+                  <li>Breach notification</li>
+                  <li>Termination clauses</li>
                 </ul>
               </li>
               <li>Monitoring methods:
@@ -2933,6 +3243,10 @@
                   <li>Security metrics</li>
                   <li>Incident reviews</li>
                   <li>Compliance reports</li>
+                  <li>Service availability</li>
+                  <li>Security testing</li>
+                  <li>Vulnerability scanning</li>
+                  <li>Continuous assessment</li>
                 </ul>
               </li>
               <li>Risk mitigation:
@@ -2941,86 +3255,130 @@
                   <li>Control validation</li>
                   <li>Regular assessments</li>
                   <li>Corrective actions</li>
+                  <li>Incident management</li>
+                  <li>Business continuity</li>
+                  <li>Disaster recovery</li>
+                  <li>Change management</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>15.1 Establish and Maintain an Inventory of Service Providers</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>15.1 Establish and Maintain an Inventory of Service Providers</h4>
                 <ul>
                   <li>Complete listing</li>
                   <li>Service details</li>
                   <li>Risk classifications</li>
                   <li>Regular updates</li>
+                  <li>Contact information</li>
                 </ul>
-              </li>
-              <li><strong>15.2 Establish and Maintain a Service Provider Management Policy</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>15.2 Establish and Maintain a Service Provider Management Policy</h4>
                 <ul>
                   <li>Security requirements</li>
                   <li>Assessment criteria</li>
                   <li>Monitoring procedures</li>
                   <li>Annual review</li>
+                  <li>Policy enforcement</li>
                 </ul>
-              </li>
-              <li><strong>15.3 Classify Service Providers</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>15.3 Classify Service Providers</h4>
                 <ul>
                   <li>Risk levels</li>
                   <li>Data sensitivity</li>
                   <li>Service criticality</li>
                   <li>Access scope</li>
+                  <li>Compliance requirements</li>
                 </ul>
-              </li>
-              <li><strong>15.4 Ensure Service Provider Contracts Include Security Requirements</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>15.4 Ensure Service Provider Contracts Include Security Requirements</h4>
                 <ul>
                   <li>Control specifications</li>
                   <li>Compliance obligations</li>
                   <li>Incident reporting</li>
                   <li>Right to audit</li>
+                  <li>Data protection</li>
                 </ul>
-              </li>
-              <li><strong>15.5 Assess Service Providers</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>15.5 Assess Service Providers</h4>
                 <ul>
                   <li>Initial evaluation</li>
                   <li>Periodic reviews</li>
                   <li>Control validation</li>
                   <li>Compliance checks</li>
+                  <li>Performance monitoring</li>
                 </ul>
-              </li>
-              <li><strong>15.6 Monitor Service Providers</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>15.6 Monitor Service Providers</h4>
                 <ul>
                   <li>Ongoing assessment</li>
                   <li>Performance tracking</li>
                   <li>Security metrics</li>
                   <li>Compliance status</li>
+                  <li>Incident response</li>
                 </ul>
-              </li>
-              <li><strong>15.7 Securely Decommission Service Providers</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>15.7 Securely Decommission Service Providers</h4>
                 <ul>
                   <li>Access termination</li>
                   <li>Data return/destruction</li>
                   <li>Asset recovery</li>
                   <li>Documentation updates</li>
+                  <li>Final security review</li>
                 </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       
       <!-- Control 16 -->
-      <article id="control16">
-        <header>
-          <h2>Control 16: Application Software Security</h2>
-        </header>
-        <section class="card">
-          <h3>Summary 🍽️</h3>
-          <p>Manage the security life cycle of all in-house developed and acquired software to prevent, detect, and remediate security weaknesses before they can impact the enterprise.</p>
-        </section>
-        <section>
-          <button class="collapsible" aria-expanded="false">Why is this Control critical? 🤔</button>
-          <div class="content">
+      <article id="control16" class="card">
+        <div class="control-header">
+          <span class="control-number">16</span>
+          <div class="control-title">
+            <h2>Application Software Security</h2>
+            <div class="implementation-groups">
+              <span class="ig-badge ig-1">IG1</span>
+              <span class="ig-badge ig-2">IG2</span>
+              <span class="ig-badge ig-3">IG3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-metadata">
+          <div class="metadata-item">
+            <span class="metadata-label">Total Safeguards</span>
+            <span class="metadata-value">12</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Asset Type</span>
+            <span class="metadata-value">Applications</span>
+          </div>
+          <div class="metadata-item">
+            <span class="metadata-label">Security Function</span>
+            <span class="metadata-value">Protect, Detect</span>
+          </div>
+        </div>
+
+        <div class="control-content">
+          <section class="control-section">
+            <h3>Overview 📋</h3>
+            <p>Manage the security life cycle of all in-house developed and acquired software to prevent, detect, and remediate security weaknesses before they can impact the enterprise.</p>
+          </section>
+
+          <section class="control-section">
+            <h3>Why is this Control critical? 🤔</h3>
             <ul>
               <li>Application security risks:
                 <ul>
@@ -3028,6 +3386,10 @@
                   <li>Data exposure risks</li>
                   <li>Business process impacts</li>
                   <li>System compromise potential</li>
+                  <li>Supply chain vulnerabilities</li>
+                  <li>Zero-day exploits</li>
+                  <li>API security concerns</li>
+                  <li>Authentication bypasses</li>
                 </ul>
               </li>
               <li>Development challenges:
@@ -3036,6 +3398,10 @@
                   <li>Legacy code issues</li>
                   <li>Third-party components</li>
                   <li>Rapid deployment needs</li>
+                  <li>Technical debt</li>
+                  <li>Framework vulnerabilities</li>
+                  <li>Integration complexities</li>
+                  <li>Resource constraints</li>
                 </ul>
               </li>
               <li>Security integration:
@@ -3044,6 +3410,10 @@
                   <li>DevSecOps practices</li>
                   <li>Testing frameworks</li>
                   <li>Continuous monitoring</li>
+                  <li>Automated scanning</li>
+                  <li>Code review processes</li>
+                  <li>Security gates</li>
+                  <li>Compliance validation</li>
                 </ul>
               </li>
               <li>Risk management:
@@ -3052,12 +3422,17 @@
                   <li>Code review processes</li>
                   <li>Security testing</li>
                   <li>Incident response</li>
+                  <li>Patch management</li>
+                  <li>Configuration control</li>
+                  <li>Change management</li>
+                  <li>Access control</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Procedures &amp; Tools 🔧</button>
-          <div class="content">
+          </section>
+
+          <section class="control-section">
+            <h3>Procedures and Tools 🔧</h3>
             <ul>
               <li>Development practices:
                 <ul>
@@ -3065,23 +3440,34 @@
                   <li>Code analysis tools</li>
                   <li>Security testing</li>
                   <li>Version control</li>
+                  <li>Peer review process</li>
+                  <li>Security champions</li>
+                  <li>Developer training</li>
+                  <li>Security documentation</li>
                 </ul>
               </li>
               <li>Testing methods:
                 <ul>
-                  <li>Static analysis</li>
-                  <li>Dynamic testing</li>
+                  <li>Static analysis (SAST)</li>
+                  <li>Dynamic testing (DAST)</li>
+                  <li>Interactive testing (IAST)</li>
                   <li>Penetration testing</li>
                   <li>Vulnerability scanning</li>
+                  <li>Fuzz testing</li>
+                  <li>Security regression</li>
+                  <li>Compliance testing</li>
                 </ul>
               </li>
               <li>Security controls:
                 <ul>
                   <li>Input validation</li>
+                  <li>Output encoding</li>
                   <li>Authentication</li>
                   <li>Authorization</li>
-                  <li>Encryption</li>
-                  <li>Logging</li>
+                  <li>Session management</li>
+                  <li>Error handling</li>
+                  <li>Logging/monitoring</li>
+                  <li>Data protection</li>
                 </ul>
               </li>
               <li>Monitoring and response:
@@ -3090,38 +3476,50 @@
                   <li>Incident detection</li>
                   <li>Patch management</li>
                   <li>Emergency response</li>
+                  <li>Threat intelligence</li>
+                  <li>Performance monitoring</li>
+                  <li>Security metrics</li>
+                  <li>Continuous assessment</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <button class="collapsible" aria-expanded="false">Safeguards 🔒</button>
-          <div class="content">
-            <ul>
-              <li><strong>16.1 Establish and Maintain a Secure Application Development Process</strong>
+          </section>
+
+          <section class="control-section">
+            <h3>Safeguards 🔒</h3>
+            <div class="safeguards-grid">
+              <div class="safeguard-item">
+                <h4>16.1 Establish and Maintain a Secure Application Development Process</h4>
                 <ul>
                   <li>SDLC integration</li>
                   <li>Security requirements</li>
                   <li>Development standards</li>
                   <li>Regular updates</li>
+                  <li>Quality assurance</li>
                 </ul>
-              </li>
-              <li><strong>16.2 Establish and Maintain a Process to Accept and Address Software Vulnerabilities</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>16.2 Establish and Maintain a Process to Accept and Address Software Vulnerabilities</h4>
                 <ul>
                   <li>Vulnerability tracking</li>
                   <li>Risk assessment</li>
                   <li>Remediation process</li>
                   <li>Stakeholder communication</li>
+                  <li>Verification procedures</li>
                 </ul>
-              </li>
-              <li><strong>16.3 Perform Root Cause Analysis on Security Vulnerabilities</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>16.3 Perform Root Cause Analysis on Security Vulnerabilities</h4>
                 <ul>
                   <li>Incident analysis</li>
                   <li>Pattern identification</li>
                   <li>Process improvement</li>
                   <li>Knowledge sharing</li>
+                  <li>Prevention strategies</li>
                 </ul>
-              </li>
-              <li><strong>16.4 Establish and Manage an Inventory of Third-Party Software Components</strong>
+              </div>
+              <div class="safeguard-item">
+                <h4>16.4 Establish and Manage an Inventory of Third-Party Software Components</h4>
                 <ul>
                   <li>Component tracking</li>
                   <li>Version management</li>
