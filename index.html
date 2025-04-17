@@ -2,14 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Ensure optimal scaling on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CIS Controls v8 – A Creative, Accessible Masterpiece</title>
-    <!-- Google Fonts for quirky, modern headings -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CIS Controls v8</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
+      /* Base styles */
       :root {
-        /* Color palette */
         --bg-color: #000000;
         --surface-color: #0a0a0a;
         --surface-hover-color: #1a1a1a;
@@ -19,27 +17,144 @@
         --accent-color: #00ff99;
         --link-color: #00ffcc;
         --border-color: #004400;
-        
-        /* Typography */
-        --font-mono: 'Courier New', Courier, monospace;
-        --font-sans: 'Share Tech Mono', monospace;
-        
-        /* Effects */
-        --glow-effect: 0 0 5px var(--text-color),
-                      0 0 10px var(--text-color),
-                      0 0 15px var(--accent-color);
-        --scan-line: linear-gradient(
-          to bottom,
-          transparent 50%,
-          rgba(0, 255, 0, 0.02) 50%
-        );
+        --header-height: 60px;
+        --nav-width: 250px;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: 'Share Tech Mono', monospace;
+        line-height: 1.6;
+      }
+
+      /* Header */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--header-height);
+        background: var(--surface-color);
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        z-index: 1000;
+      }
+
+      /* Navigation toggle */
+      .nav-toggle {
+        width: 30px;
+        height: 30px;
+        background: none;
+        border: 1px solid var(--border-color);
+        padding: 5px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 20px;
+      }
+
+      .nav-toggle:hover {
+        border-color: var(--accent-color);
+      }
+
+      .nav-toggle span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: var(--text-color);
+        transition: 0.3s;
+      }
+
+      /* Navigation */
+      .nav {
+        position: fixed;
+        top: var(--header-height);
+        left: -var(--nav-width);
+        width: var(--nav-width);
+        height: calc(100vh - var(--header-height));
+        background: var(--surface-color);
+        border-right: 1px solid var(--border-color);
+        transition: 0.3s;
+        overflow-y: auto;
+        z-index: 999;
+      }
+
+      .nav.active {
+        left: 0;
+      }
+
+      .nav ul {
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .nav li {
+        margin-bottom: 10px;
+      }
+
+      .nav a {
+        display: block;
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: 0.3s;
+      }
+
+      .nav a:hover {
+        background: var(--surface-hover-color);
+        color: var(--text-bright);
+      }
+
+      /* Main content */
+      .main {
+        margin-top: var(--header-height);
+        padding: 20px;
+        transition: 0.3s;
+      }
+
+      .main.nav-active {
+        margin-left: var(--nav-width);
+      }
+
+      /* Overlay */
+      .overlay {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        z-index: 998;
+      }
+
+      .overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .main.nav-active {
+          margin-left: 0;
+        }
       }
 
       /* Global Styles */
       body {
         background-color: var(--bg-color);
         color: var(--text-color);
-        font-family: var(--font-mono);
+        font-family: 'Share Tech Mono', monospace;
         line-height: 1.6;
         position: relative;
       }
@@ -61,7 +176,7 @@
       /* Typography */
       h1, h2, h3, h4, h5, h6 {
         color: var(--text-bright);
-        font-family: var(--font-sans);
+        font-family: 'Share Tech Mono', monospace;
         text-transform: uppercase;
         letter-spacing: 2px;
         text-shadow: var(--glow-effect);
@@ -171,7 +286,7 @@
         background: var(--border-color);
         border-radius: 4px;
       }
-
+      
       ::-webkit-scrollbar-thumb:hover {
         background: var(--text-dim);
       }
@@ -242,7 +357,7 @@
 
       /* Add a font import for Share Tech Mono */
       @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
+      
       /*================================================
         Modern CSS Variables & Theme
       =================================================*/
@@ -978,7 +1093,7 @@
     
     <!-- Navigation Overlay -->
     <div class="nav-overlay"></div>
-
+    
     <!-- Off-canvas Navigation -->
     <nav class="side-nav">
       <ul>
@@ -5191,7 +5306,7 @@
           }
         });
       });
-
+      
       // Close nav on escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && sideNav.classList.contains('active')) {
