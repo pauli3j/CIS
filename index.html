@@ -5,51 +5,13 @@
     <!-- Ensure optimal scaling on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CIS Controls v8 – A Creative, Accessible Masterpiece</title>
-    <!-- Add preconnect for Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Update font imports for better readability -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for quirky, modern headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
     <style>
       /*================================================
         Modern CSS Variables & Theme
       =================================================*/
       :root {
-        /* Update typography variables */
-        --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        --font-display: 'Poppins', var(--font-primary);
-        
-        /* Fluid typography sizes using clamp */
-        --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-        --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
-        --text-base: clamp(1rem, 0.925rem + 0.375vw, 1.125rem);
-        --text-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
-        --text-xl: clamp(1.25rem, 1.125rem + 0.625vw, 1.5rem);
-        --text-2xl: clamp(1.5rem, 1.375rem + 0.625vw, 1.875rem);
-        --text-3xl: clamp(1.875rem, 1.75rem + 0.625vw, 2.25rem);
-        
-        /* Line heights */
-        --leading-tight: 1.2;
-        --leading-snug: 1.375;
-        --leading-normal: 1.5;
-        --leading-relaxed: 1.625;
-        --leading-loose: 2;
-        
-        /* Letter spacing */
-        --tracking-tight: -0.025em;
-        --tracking-normal: 0;
-        --tracking-wide: 0.025em;
-        
-        /* Paragraph max width for optimal readability */
-        --content-width: 70ch;
-        
-        /* Update existing variables */
-        --spacing-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.375rem);
-        --spacing-sm: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
-        --spacing-md: clamp(1rem, 0.875rem + 0.625vw, 1.5rem);
-        --spacing-lg: clamp(1.5rem, 1.375rem + 0.625vw, 2rem);
-        --spacing-xl: clamp(2rem, 1.75rem + 1.25vw, 3rem);
-        
         /* Colors - Using modern HSL for better color manipulation */
         --primary-hue: 180;
         --primary-color: hsl(var(--primary-hue), 100%, 50%);
@@ -61,10 +23,10 @@
         --surface-color: hsl(220, 15%, 15%);
         --surface-color-hover: hsl(220, 15%, 18%);
         
-        /* Text colors */
+        /* Text colors with enhanced contrast */
         --text-primary: hsl(220, 15%, 95%);
-        --text-secondary: hsl(220, 15%, 75%);
-        --text-tertiary: hsl(220, 15%, 60%);
+        --text-secondary: hsl(220, 15%, 80%);
+        --text-tertiary: hsl(220, 15%, 65%);
         
         /* Accent colors */
         --accent-color: var(--primary-color);
@@ -79,223 +41,242 @@
                       0 2px 4px -1px rgba(0, 0, 0, 0.06);
         
         /* Typography */
-        --heading-font: var(--font-display);
-        --body-font: var(--font-primary);
+        --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        --font-heading: 'Inter', var(--font-sans);
+        --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', Menlo, Monaco, Consolas, monospace;
+        
+        /* Fluid font sizes using clamp */
+        --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+        --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+        --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+        --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+        --text-xl: clamp(1.25rem, 1.125rem + 0.75vw, 1.5rem);
+        --text-2xl: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+        --text-3xl: clamp(1.875rem, 1.5rem + 1.5vw, 2.5rem);
+        
+        /* Line heights for better readability */
+        --leading-tight: 1.2;
+        --leading-snug: 1.375;
+        --leading-normal: 1.5;
+        --leading-relaxed: 1.625;
+        --leading-loose: 2;
         
         /* Spacing */
-        --spacing-xs: var(--spacing-xs);
-        --spacing-sm: var(--spacing-sm);
-        --spacing-md: var(--spacing-md);
-        --spacing-lg: var(--spacing-lg);
-        --spacing-xl: var(--spacing-xl);
+        --spacing-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+        --spacing-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+        --spacing-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+        --spacing-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+        --spacing-xl: clamp(2rem, 1.6rem + 2vw, 3rem);
+        
+        /* Max line length for optimal readability */
+        --content-width: 75ch;
         
         /* Transitions */
         --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
         --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
         --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
-        
-        /* Animations */
-        --animation-bounce: bounce 1s infinite;
-        --animation-fade: fadeIn 0.5s ease-out;
-        --animation-slide: slideIn 0.5s ease-out;
-
-        /* Add new navigation-specific variables */
-        --nav-width: 280px;
-        --nav-collapsed-width: 0px;
-        --header-height: 60px;
-        --nav-item-height: 40px;
       }
 
-      /* Modern Animations */
-      @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-
-      @keyframes slideIn {
-        from { transform: translateY(20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-      }
-
-      @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-      }
-
-      @keyframes glow {
-        0% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.2); }
-        50% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.4); }
-        100% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.2); }
-      }
+      /* Modern Base Styles */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
       /* Enhanced Base Styles */
+      html {
+        font-size: 100%;
+        text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: var(--body-font);
+        font-family: var(--font-sans);
+        font-size: var(--text-base);
+        line-height: var(--leading-normal);
         background: var(--bg-color);
         color: var(--text-primary);
-        line-height: var(--leading-normal);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+        text-rendering: optimizeLegibility;
         overflow-x: hidden;
-        scroll-behavior: smooth;
-        display: grid;
-        grid-template-areas:
-          "header header"
-          "nav main";
-        grid-template-columns: auto 1fr;
-        grid-template-rows: var(--header-height) 1fr;
-        min-height: 100vh;
-        margin: 0;
+        max-width: 100vw;
       }
 
-      /* Navigation and Layout Styles */
-      .site-header {
-        grid-area: header;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: var(--header-height);
-        background: var(--surface-color);
-        border-bottom: 1px solid var(--border-color);
-        padding: 0 var(--spacing-md);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        z-index: 1000;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+      /* Typography Enhancements */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        line-height: var(--leading-tight);
+        margin-bottom: var(--spacing-md);
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
       }
 
-      .site-title {
-        font-family: var(--heading-font);
-        font-size: var(--text-lg);
+      h1 {
+        font-size: var(--text-3xl);
         font-weight: 700;
-        color: var(--text-primary);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-sm);
       }
 
-      .site-title svg {
-        width: 24px;
-        height: 24px;
-        fill: var(--accent-color);
+      h2 {
+        font-size: var(--text-2xl);
       }
 
-      .nav-toggle {
-        display: none;
-        background: none;
-        border: none;
-        color: var(--text-primary);
-        cursor: pointer;
-        padding: var(--spacing-sm);
-        font-size: 1.5rem;
+      h3 {
+        font-size: var(--text-xl);
       }
 
-      .site-nav {
-        grid-area: nav;
-        position: fixed;
-        top: var(--header-height);
-        left: 0;
-        bottom: 0;
-        width: var(--nav-width);
-        background: var(--surface-color);
-        border-right: 1px solid var(--border-color);
-        overflow-y: auto;
-        transition: transform var(--transition-normal);
-        z-index: 900;
+      h4 {
+        font-size: var(--text-lg);
       }
 
-      .nav-sections {
-        padding: var(--spacing-md);
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-md);
+      p {
+        margin-bottom: var(--spacing-md);
+        max-width: var(--content-width);
+        line-height: var(--leading-relaxed);
       }
 
-      .nav-section {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-xs);
+      /* List Styles */
+      ul, ol {
+        margin-bottom: var(--spacing-md);
+        padding-left: var(--spacing-lg);
       }
 
-      .nav-section-title {
+      li {
+        margin-bottom: var(--spacing-xs);
+        line-height: var(--leading-relaxed);
+      }
+
+      /* Code Blocks */
+      pre, code {
+        font-family: var(--font-mono);
+        font-size: var(--text-sm);
+        line-height: var(--leading-snug);
+      }
+
+      /* Card Content */
+      .card {
+        font-size: var(--text-base);
+        line-height: var(--leading-normal);
+      }
+
+      .control-header h2 {
+        font-size: var(--text-2xl);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .control-number {
+        font-size: var(--text-3xl);
+        font-weight: 800;
+      }
+
+      .metadata-label {
         font-size: var(--text-xs);
-        letter-spacing: var(--tracking-wide);
         text-transform: uppercase;
-        color: var(--text-tertiary);
-        padding: var(--spacing-xs) var(--spacing-sm);
+        letter-spacing: 0.05em;
+        font-weight: 500;
       }
 
-      .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
+      .metadata-value {
+        font-size: var(--text-base);
+        font-weight: 500;
       }
 
-      .nav-link {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-sm);
-        height: var(--nav-item-height);
-        padding: 0 var(--spacing-sm);
-        color: var(--text-secondary);
-        text-decoration: none;
-        border-radius: var(--border-radius);
-        transition: all var(--transition-fast);
-      }
-
-      .nav-link:hover {
-        color: var(--text-primary);
-        background: var(--surface-color-hover);
-      }
-
-      .nav-link.active {
+      /* Enhanced Link Styles */
+      a {
         color: var(--accent-color);
-        background: var(--surface-color-hover);
+        text-decoration: none;
+        transition: all var(--transition-fast);
+        border-bottom: 1px solid transparent;
       }
 
-      .nav-link svg {
-        width: 18px;
-        height: 18px;
-        flex-shrink: 0;
+      a:hover {
+        color: var(--accent-hover);
+        border-bottom-color: currentColor;
       }
 
-      main {
-        grid-area: main;
-        padding: calc(var(--header-height) + var(--spacing-lg)) var(--spacing-lg) var(--spacing-lg);
-        max-width: 1200px;
-        margin: 0 auto;
-        width: 100%;
+      /* Focus Styles */
+      :focus {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
       }
 
-      @media (max-width: 768px) {
-        .nav-toggle {
-          display: block;
+      :focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+      }
+
+      /* Dark Mode Support */
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg-color: hsl(220, 15%, 98%);
+          --surface-color: hsl(220, 15%, 95%);
+          --surface-color-hover: hsl(220, 15%, 92%);
+          --text-primary: hsl(220, 15%, 15%);
+          --text-secondary: hsl(220, 15%, 25%);
+          --text-tertiary: hsl(220, 15%, 35%);
+        }
+      }
+
+      /* Reduced Motion */
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        body {
+          background: white;
+          color: black;
+          font-size: 12pt;
         }
 
-        .site-nav {
-          transform: translateX(-100%);
+        h1, h2, h3, h4, h5, h6 {
+          page-break-after: avoid;
+          page-break-inside: avoid;
         }
 
-        .site-nav.active {
-          transform: translateX(0);
+        img {
+          page-break-inside: avoid;
+          max-width: 100% !important;
+        }
+
+        .card {
+          break-inside: avoid;
+        }
+      }
+
+      /* Mobile Optimizations */
+      @media screen and (max-width: 640px) {
+        :root {
+          --text-base: 16px;
         }
 
         body {
-          grid-template-columns: 1fr;
+          padding: var(--spacing-sm);
         }
 
-        main {
-          padding: calc(var(--header-height) + var(--spacing-md)) var(--spacing-md) var(--spacing-md);
+        .card {
+          padding: var(--spacing-md);
+        }
+
+        .control-header {
+          flex-direction: column;
+          gap: var(--spacing-sm);
         }
       }
 
@@ -339,12 +320,11 @@
       }
       
       .control-number {
-        font-size: var(--text-3xl);
+        font-size: 2.5rem;
         font-weight: 700;
         color: var(--accent-color);
         font-family: var(--heading-font);
         line-height: 1;
-        letter-spacing: var(--tracking-tight);
       }
 
       .control-title {
@@ -353,7 +333,7 @@
 
       .control-title h2 {
         margin: 0;
-        font-size: var(--text-2xl);
+        font-size: 1.8rem;
         border: none;
       }
 
@@ -374,14 +354,14 @@
       }
 
       .metadata-label {
-        font-size: var(--text-xs);
+        font-size: 0.9rem;
         color: var(--text-tertiary);
         text-transform: uppercase;
-        letter-spacing: var(--tracking-wide);
+        letter-spacing: 0.05em;
       }
 
       .metadata-value {
-        font-size: var(--text-sm);
+        font-size: 1.1rem;
         color: var(--text-primary);
       }
 
@@ -399,7 +379,7 @@
       .control-section h3 {
         margin-top: 0;
         color: var(--accent-color);
-        font-size: var(--text-xl);
+        font-size: 1.4rem;
       }
 
       .safeguards-grid {
@@ -612,396 +592,44 @@
           --text-tertiary: hsl(220, 15%, 45%);
         }
       }
-
-      /* Base layout and responsive container */
-      .container {
-        width: 100%;
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 0 var(--spacing-md);
-      }
-
-      /* Grid layout improvements */
-      .grid {
-        display: grid;
-        gap: var(--spacing-md);
-        width: 100%;
-      }
-
-      /* Main layout structure */
-      .site-layout {
-        display: grid;
-        min-height: 100vh;
-        grid-template-columns: 100%;
-      }
-
-      @media (min-width: 1024px) {
-        .site-layout {
-          grid-template-columns: 280px 1fr;
-        }
-      }
-
-      /* Sidebar navigation */
-      .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--surface-color);
-        border-right: 1px solid var(--border-color);
-        transform: translateX(-100%);
-        transition: transform var(--transition-normal);
-        z-index: 50;
-        overflow-y: auto;
-      }
-
-      .sidebar.active {
-        transform: translateX(0);
-      }
-
-      @media (min-width: 1024px) {
-        .sidebar {
-          position: sticky;
-          transform: none;
-          width: 280px;
-          border-right: 1px solid var(--border-color);
-        }
-      }
-
-      /* Main content area */
-      .main-content {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-        padding: var(--spacing-md);
-      }
-
-      @media (min-width: 1024px) {
-        .main-content {
-          padding: var(--spacing-xl);
-        }
-      }
-
-      /* Card layouts */
-      .card {
-        background: var(--surface-color);
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-lg);
-        padding: var(--spacing-lg);
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-        margin-bottom: var(--spacing-lg);
-      }
-
-      .card-grid {
-        display: grid;
-        gap: var(--spacing-md);
-        grid-template-columns: 1fr;
-      }
-
-      @media (min-width: 640px) {
-        .card-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (min-width: 1024px) {
-        .card-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-
-      /* Navigation improvements */
-      .nav-toggle {
-        position: fixed;
-        top: var(--spacing-md);
-        right: var(--spacing-md);
-        z-index: 60;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 44px;
-        height: 44px;
-        background: var(--surface-color);
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-md);
-        cursor: pointer;
-      }
-
-      @media (min-width: 1024px) {
-        .nav-toggle {
-          display: none;
-        }
-      }
-
-      /* Control content layout */
-      .control-header {
-        display: grid;
-        gap: var(--spacing-md);
-        margin-bottom: var(--spacing-lg);
-      }
-
-      @media (min-width: 768px) {
-        .control-header {
-          grid-template-columns: auto 1fr;
-          align-items: center;
-        }
-      }
-
-      .metadata-grid {
-        display: grid;
-        gap: var(--spacing-md);
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        margin-bottom: var(--spacing-lg);
-      }
-
-      /* Content sections */
-      .content-section {
-        margin-bottom: var(--spacing-xl);
-      }
-
-      .content-section > *:last-child {
-        margin-bottom: 0;
-      }
-
-      /* Lists and text content */
-      ul, ol {
-        padding-left: var(--spacing-lg);
-        margin-bottom: var(--spacing-md);
-        max-width: 100%;
-      }
-
-      li {
-        margin-bottom: var(--spacing-xs);
-      }
-
-      p {
-        max-width: var(--content-width);
-        margin-bottom: var(--spacing-md);
-      }
-
-      /* Tables */
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: var(--spacing-lg);
-        font-size: var(--text-sm);
-      }
-
-      th, td {
-        padding: var(--spacing-sm);
-        border: 1px solid var(--border-color);
-        text-align: left;
-      }
-
-      /* Prevent horizontal scroll on code blocks */
-      pre, code {
-        max-width: 100%;
-        overflow-x: auto;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-      }
-
-      /* Footer improvements */
-      .site-footer {
-        margin-top: auto;
-        padding: var(--spacing-xl) 0;
-        background: var(--surface-color);
-        border-top: 1px solid var(--border-color);
-      }
-
-      .footer-grid {
-        display: grid;
-        gap: var(--spacing-xl);
-        grid-template-columns: 1fr;
-      }
-
-      @media (min-width: 768px) {
-        .footer-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (min-width: 1024px) {
-        .footer-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-
-      /* Utility classes */
-      .overflow-hidden {
-        overflow: hidden;
-      }
-
-      .visually-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-      }
     </style>
   </head>
   <body>
-    <header class="site-header">
-      <a href="#" class="site-title">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v5.7c0 4.83-3.4 9.36-7 10.8-3.6-1.44-7-5.97-7-10.8v-5.7l7-3.12z"/>
-          <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
-        </svg>
-        CIS Controls v8
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-        </svg>
-      </button>
+    <!-- Header with Site Title and Navigation Toggle -->
+    <header>
+      <h1>CIS Controls v8</h1>
+      <!-- Accessible hamburger menu button -->
+      <button class="menu-btn" aria-label="Toggle navigation" aria-controls="sideNav" aria-expanded="false">&#9776;</button>
     </header>
-
-    <nav id="site-nav" class="site-nav">
-      <div class="nav-sections">
-        <div class="nav-section">
-          <span class="nav-section-title">Basic Controls</span>
-          <div class="nav-links">
-            <a href="#control1" class="nav-link">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.7L20 9v8l-8 4-8-4V9l8-4.3z"/>
-              </svg>
-              01 Enterprise Assets
-            </a>
-            <a href="#control2" class="nav-link">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
-              </svg>
-              02 Software Assets
-            </a>
-            <a href="#control3" class="nav-link">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
-              </svg>
-              03 Data Protection
-            </a>
-          </div>
-        </div>
-
-        <div class="nav-section">
-          <span class="nav-section-title">Security Operations</span>
-          <div class="nav-links">
-            <a href="#control4" class="nav-link">04 Secure Configuration</a>
-            <a href="#control5" class="nav-link">05 Account Management</a>
-            <a href="#control6" class="nav-link">06 Access Control</a>
-            <a href="#control7" class="nav-link">07 Vulnerability Management</a>
-            <a href="#control8" class="nav-link">08 Audit Log Management</a>
-          </div>
-        </div>
-
-        <div class="nav-section">
-          <span class="nav-section-title">Technical Controls</span>
-          <div class="nav-links">
-            <a href="#control9" class="nav-link">09 Email and Web Browser</a>
-            <a href="#control10" class="nav-link">10 Malware Defenses</a>
-            <a href="#control11" class="nav-link">11 Data Recovery</a>
-            <a href="#control12" class="nav-link">12 Network Infrastructure</a>
-            <a href="#control13" class="nav-link">13 Network Monitoring</a>
-          </div>
-        </div>
-
-        <div class="nav-section">
-          <span class="nav-section-title">Organization Controls</span>
-          <div class="nav-links">
-            <a href="#control14" class="nav-link">14 Security Awareness</a>
-            <a href="#control15" class="nav-link">15 Service Provider Management</a>
-            <a href="#control16" class="nav-link">16 Application Security</a>
-            <a href="#control17" class="nav-link">17 Incident Response</a>
-            <a href="#control18" class="nav-link">18 Penetration Testing</a>
-          </div>
-        </div>
-
-        <div class="nav-section">
-          <span class="nav-section-title">Resources</span>
-          <div class="nav-links">
-            <a href="#acronyms" class="nav-link">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M19 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h4l3 3 3-3h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 16h-4.83l-.59.59L12 20.17l-1.59-1.59-.58-.58H5V4h14v14z"/>
-              </svg>
-              Acronyms Guide
-            </a>
-            <a href="#resources" class="nav-link">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
-              </svg>
-              Additional Resources
-            </a>
-          </div>
-        </div>
-      </div>
+    
+    <!-- Off-canvas Navigation -->
+    <nav id="sideNav" aria-label="Main Navigation">
+      <ul>
+        <!-- Each nav link should be descriptive -->
+        <li><a href="#control1">Control 1</a></li>
+        <li><a href="#control2">Control 2</a></li>
+        <li><a href="#control3">Control 3</a></li>
+        <li><a href="#control4">Control 4</a></li>
+        <li><a href="#control5">Control 5</a></li>
+        <li><a href="#control6">Control 6</a></li>
+        <li><a href="#control7">Control 7</a></li>
+        <li><a href="#control8">Control 8</a></li>
+        <li><a href="#control9">Control 9</a></li>
+        <li><a href="#control10">Control 10</a></li>
+        <li><a href="#control11">Control 11</a></li>
+        <li><a href="#control12">Control 12</a></li>
+        <li><a href="#control13">Control 13</a></li>
+        <li><a href="#control14">Control 14</a></li>
+        <li><a href="#control15">Control 15</a></li>
+        <li><a href="#control16">Control 16</a></li>
+        <li><a href="#control17">Control 17</a></li>
+        <li><a href="#control18">Control 18</a></li>
+        <li><a href="#acronyms">Acronyms</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
     </nav>
-
-    <script>
-      // Navigation Toggle
-      const navToggle = document.querySelector('.nav-toggle');
-      const siteNav = document.querySelector('.site-nav');
-      
-      navToggle.addEventListener('click', () => {
-        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !isExpanded);
-        siteNav.classList.toggle('active');
-      });
-
-      // Active Link Highlighting
-      const navLinks = document.querySelectorAll('.nav-link');
-      const sections = document.querySelectorAll('article');
-
-      function setActiveLink() {
-        let current = '';
-        
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (window.pageYOffset >= sectionTop - 100) {
-            current = '#' + section.getAttribute('id');
-          }
-        });
-
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === current) {
-            link.classList.add('active');
-          }
-        });
-      }
-
-      window.addEventListener('scroll', setActiveLink);
-      setActiveLink();
-
-      // Close mobile nav when clicking outside
-      document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768 && 
-            !e.target.closest('.site-nav') && 
-            !e.target.closest('.nav-toggle') && 
-            siteNav.classList.contains('active')) {
-          siteNav.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      // Close mobile nav when clicking a link
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.innerWidth <= 768) {
-            siteNav.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
-          }
-        });
-      });
-    </script>
-
-    <!-- Main content starts here -->
+    
+    <!-- Main Content Area -->
     <main>
       <!-- Each Control is wrapped in a semantic article/section -->
       
@@ -2025,7 +1653,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Develop a plan to continuously assess and track vulnerabilities on all enterprise assets within the enterprise's infrastructure, in order to remediate, and minimize, the window of opportunity for attackers. Monitor public and private industry sources for new threat and vulnerability information.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -2119,8 +1747,8 @@
                   <li>Define roles and responsibilities</li>
                   <li>Annual review and updates</li>
                   <li>Continuous improvement</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>7.2 Establish and Maintain a Remediation Process</h4>
                 <ul>
@@ -2128,16 +1756,16 @@
                   <li>Monthly review minimum</li>
                   <li>Clear SLAs</li>
                   <li>Verification procedures</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>7.3 Perform Automated Operating System Patch Management</h4>
-                <ul>
+            <ul>
                   <li>Monthly minimum frequency</li>
                   <li>Automated deployment</li>
                   <li>Testing procedures</li>
                   <li>Rollback capability</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>7.4 Perform Automated Application Patch Management</h4>
@@ -2175,8 +1803,8 @@
                   <li>Validate fixes</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -2213,7 +1841,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Collect, alert, review, and retain audit logs of events that could help detect, understand, or recover from an attack.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -2308,8 +1936,8 @@
                   <li>Cover collection, review, retention</li>
                   <li>Annual review and updates</li>
                   <li>Documentation maintenance</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>8.2 Collect Audit Logs</h4>
                 <ul>
@@ -2317,16 +1945,16 @@
                   <li>Follow management process</li>
                   <li>Verify collection</li>
                   <li>Monitor log status</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>8.3 Ensure Adequate Audit Log Storage</h4>
-                <ul>
+            <ul>
                   <li>Maintain sufficient storage</li>
                   <li>Meet retention requirements</li>
                   <li>Monitor capacity</li>
                   <li>Implement archiving</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>8.4 Standardize Time Synchronization</h4>
@@ -2409,8 +2037,8 @@
                   <li>Security events</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -2447,7 +2075,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Improve protections and detections of threats from email and web vectors, as these are opportunities for attackers to manipulate human behavior through direct engagement.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -2546,8 +2174,8 @@
                   <li>Regular update checks</li>
                   <li>Security patch compliance</li>
                   <li>Version control enforcement</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>9.2 Use DNS Filtering Services</h4>
                 <ul>
@@ -2555,16 +2183,16 @@
                   <li>Filter suspicious content</li>
                   <li>Monitor DNS requests</li>
                   <li>Update block lists regularly</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>9.3 Maintain and Enforce Network-Based URL Filters</h4>
-                <ul>
+            <ul>
                   <li>Category-based filtering</li>
                   <li>Reputation-based filtering</li>
                   <li>Custom block lists</li>
                   <li>SSL/TLS inspection</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>9.4 Restrict Unnecessary or Unauthorized Browser and Email Client Extensions</h4>
@@ -2602,8 +2230,8 @@
                   <li>Threat intelligence integration</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -2640,7 +2268,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Prevent or control the installation, spread, and execution of malicious applications, code, or scripts on enterprise assets.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -2746,8 +2374,8 @@
                   <li>Real-time protection</li>
                   <li>Regular updates</li>
                   <li>Centralized management</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>10.2 Configure Automatic Anti-Malware Signature Updates</h4>
                 <ul>
@@ -2755,16 +2383,16 @@
                   <li>Version control</li>
                   <li>Distribution monitoring</li>
                   <li>Compliance verification</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>10.3 Disable Autorun and Autoplay for Removable Media</h4>
-                <ul>
+            <ul>
                   <li>Policy enforcement</li>
                   <li>Device control</li>
                   <li>User notification</li>
                   <li>Exception handling</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>10.4 Configure Automatic Anti-Malware Scanning of Removable Media</h4>
@@ -2802,8 +2430,8 @@
                   <li>Threat intelligence</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -2840,7 +2468,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Establish and maintain data recovery practices sufficient to restore in-scope enterprise assets to a pre-incident and trusted state.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -2944,8 +2572,8 @@
                   <li>Ensure backup security</li>
                   <li>Document procedures</li>
                   <li>Annual review minimum</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>11.2 Perform Automated Backups</h4>
                 <ul>
@@ -2954,8 +2582,8 @@
                   <li>Automated execution</li>
                   <li>Verification checks</li>
                   <li>Monitoring and alerting</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>11.3 Protect Recovery Data</h4>
                 <ul>
@@ -2964,7 +2592,7 @@
                   <li>Ensure data separation</li>
                   <li>Access control enforcement</li>
                   <li>Integrity monitoring</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>11.4 Establish and Maintain an Isolated Instance of Recovery Data</h4>
@@ -2986,8 +2614,8 @@
                   <li>Documentation updates</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -3024,7 +2652,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Establish, implement, and actively manage (track, report, correct) network devices, in order to prevent attackers from exploiting vulnerable network services and access points.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -3128,8 +2756,8 @@
                   <li>Monthly review minimum</li>
                   <li>Patch management</li>
                   <li>Version tracking</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>12.2 Establish and Maintain a Secure Network Architecture</h4>
                 <ul>
@@ -3138,8 +2766,8 @@
                   <li>High availability design</li>
                   <li>Security zones</li>
                   <li>Traffic flow control</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>12.3 Securely Manage Network Infrastructure</h4>
                 <ul>
@@ -3148,7 +2776,7 @@
                   <li>Version control</li>
                   <li>Change management</li>
                   <li>Configuration backups</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>12.4 Establish and Maintain Architecture Diagram(s)</h4>
@@ -3200,8 +2828,8 @@
                   <li>Access control enforcement</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -3238,7 +2866,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Operate processes and tooling to establish and maintain comprehensive network monitoring and defense against security threats across the enterprise's network infrastructure and user base.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -3343,8 +2971,8 @@
                   <li>Correlation capability</li>
                   <li>Automated analysis</li>
                   <li>Priority-based routing</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>13.2 Deploy a Host-Based Intrusion Detection Solution</h4>
                 <ul>
@@ -3353,8 +2981,8 @@
                   <li>Alert generation</li>
                   <li>Signature detection</li>
                   <li>Anomaly identification</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>13.3 Deploy a Network Intrusion Detection Solution</h4>
                 <ul>
@@ -3363,7 +2991,7 @@
                   <li>Signature matching</li>
                   <li>Behavioral analysis</li>
                   <li>Performance monitoring</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>13.4 Perform Traffic Filtering Between Network Segments</h4>
@@ -3445,8 +3073,8 @@
                   <li>Threshold adjustment</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -3483,7 +3111,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Establish and maintain a security awareness program to influence behavior among the workforce to be security conscious and properly skilled to reduce cybersecurity risks to the enterprise.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -3594,8 +3222,8 @@
                   <li>Documented process</li>
                   <li>Measurable objectives</li>
                   <li>Executive support</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>14.2 Train Workforce Members to Recognize Social Engineering Attacks</h4>
                 <ul>
@@ -3604,8 +3232,8 @@
                   <li>Response procedures</li>
                   <li>Real-world examples</li>
                   <li>Reporting methods</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>14.3 Train Workforce Members on Authentication Best Practices</h4>
                 <ul>
@@ -3614,7 +3242,7 @@
                   <li>Account protection</li>
                   <li>Secure login practices</li>
                   <li>Credential management</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>14.4 Train Workforce on Data Handling Best Practices</h4>
@@ -3676,8 +3304,8 @@
                   <li>Compliance obligations</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -3714,7 +3342,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Develop and implement processes to evaluate and manage the security risks associated with service providers and third parties throughout their relationship with the enterprise.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -3825,8 +3453,8 @@
                   <li>Risk classifications</li>
                   <li>Regular updates</li>
                   <li>Contact information</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>15.2 Establish and Maintain a Service Provider Management Policy</h4>
                 <ul>
@@ -3835,8 +3463,8 @@
                   <li>Monitoring procedures</li>
                   <li>Annual review</li>
                   <li>Policy enforcement</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>15.3 Classify Service Providers</h4>
                 <ul>
@@ -3845,7 +3473,7 @@
                   <li>Service criticality</li>
                   <li>Access scope</li>
                   <li>Compliance requirements</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>15.4 Ensure Service Provider Contracts Include Security Requirements</h4>
@@ -3887,8 +3515,8 @@
                   <li>Final security review</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -3925,7 +3553,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Manage the security life cycle of all in-house developed and acquired software to prevent, detect, and remediate security weaknesses before they can impact the enterprise.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -4046,8 +3674,8 @@
                   <li>Development standards</li>
                   <li>Regular updates</li>
                   <li>Quality assurance</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>16.2 Establish and Maintain a Process to Accept and Address Software Vulnerabilities</h4>
                 <ul>
@@ -4056,8 +3684,8 @@
                   <li>Remediation process</li>
                   <li>Stakeholder communication</li>
                   <li>Verification procedures</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>16.3 Perform Root Cause Analysis on Security Vulnerabilities</h4>
                 <ul>
@@ -4066,7 +3694,7 @@
                   <li>Process improvement</li>
                   <li>Knowledge sharing</li>
                   <li>Prevention strategies</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>16.4 Establish and Manage an Inventory of Third-Party Software Components</h4>
@@ -4196,7 +3824,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Establish a program to develop and maintain an incident response capability (e.g., policies, plans, procedures, defined roles, training, and communications) to prepare, detect, and quickly respond to an attack.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -4317,8 +3945,8 @@
                   <li>Document responsibilities</li>
                   <li>Establish authority levels</li>
                   <li>Ensure 24/7 coverage</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>17.2 Establish and Maintain Contact Information</h4>
                 <ul>
@@ -4327,8 +3955,8 @@
                   <li>Define communication channels</li>
                   <li>Document escalation paths</li>
                   <li>Verify contact methods</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>17.3 Establish and Maintain an Enterprise Process for Reporting</h4>
                 <ul>
@@ -4337,7 +3965,7 @@
                   <li>Notification protocols</li>
                   <li>Follow-up processes</li>
                   <li>Tracking mechanisms</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>17.4 Establish and Maintain an Incident Response Process</h4>
@@ -4399,8 +4027,8 @@
                   <li>Measurement metrics</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -4437,7 +4065,7 @@
           <section class="control-section">
             <h3>Overview 📋</h3>
             <p>Test the effectiveness and resiliency of enterprise assets through identifying and exploiting weaknesses in controls (people, processes, and technology), and simulating the objectives and actions of an attacker.</p>
-          </section>
+        </section>
 
           <section class="control-section">
             <h3>Why is this Control critical? 🤔</h3>
@@ -4558,8 +4186,8 @@
                   <li>Determine scope boundaries</li>
                   <li>Select testing methodologies</li>
                   <li>Establish success criteria</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>18.2 Perform Periodic External Penetration Tests</h4>
                 <ul>
@@ -4568,8 +4196,8 @@
                   <li>Comprehensive coverage</li>
                   <li>Results documentation</li>
                   <li>Trend analysis</li>
-                </ul>
-              </div>
+            </ul>
+          </div>
               <div class="safeguard-item">
                 <h4>18.3 Remediate Penetration Test Findings</h4>
                 <ul>
@@ -4578,7 +4206,7 @@
                   <li>Validation testing</li>
                   <li>Progress monitoring</li>
                   <li>Effectiveness verification</li>
-                </ul>
+            </ul>
               </div>
               <div class="safeguard-item">
                 <h4>18.4 Validate Security Measures</h4>
@@ -4640,8 +4268,8 @@
                   <li>Metrics reporting</li>
                 </ul>
               </div>
-            </div>
-          </section>
+          </div>
+        </section>
         </div>
       </article>
       
@@ -4650,7 +4278,7 @@
         <div class="control-header">
           <span class="control-number">📚</span>
           <div class="control-title">
-            <h2>Acronyms and Abbreviations</h2>
+          <h2>Acronyms and Abbreviations</h2>
           </div>
         </div>
 
@@ -4660,11 +4288,11 @@
             <div class="acronym-grid">
               <div class="acronym-category">
                 <h4>Authentication & Access Control</h4>
-                <table>
-                  <tbody>
-                    <tr><td>AAA</td><td>Authentication, Authorization, and Auditing</td></tr>
-                    <tr><td>ACL</td><td>Access Control List</td></tr>
-                    <tr><td>AD</td><td>Active Directory</td></tr>
+        <table>
+          <tbody>
+            <tr><td>AAA</td><td>Authentication, Authorization, and Auditing</td></tr>
+            <tr><td>ACL</td><td>Access Control List</td></tr>
+            <tr><td>AD</td><td>Active Directory</td></tr>
                     <tr><td>IAM</td><td>Identity and Access Management</td></tr>
                     <tr><td>MFA</td><td>Multi-Factor Authentication</td></tr>
                     <tr><td>PAM</td><td>Privileged Access Management</td></tr>
@@ -4677,12 +4305,12 @@
                 <h4>Network & Infrastructure</h4>
                 <table>
                   <tbody>
-                    <tr><td>DHCP</td><td>Dynamic Host Configuration Protocol</td></tr>
-                    <tr><td>DNS</td><td>Domain Name System</td></tr>
-                    <tr><td>DPI</td><td>Deep Packet Inspection</td></tr>
-                    <tr><td>HTTP</td><td>Hypertext Transfer Protocol</td></tr>
-                    <tr><td>HTTPS</td><td>Hypertext Transfer Protocol Secure</td></tr>
-                    <tr><td>IoT</td><td>Internet of Things</td></tr>
+            <tr><td>DHCP</td><td>Dynamic Host Configuration Protocol</td></tr>
+            <tr><td>DNS</td><td>Domain Name System</td></tr>
+            <tr><td>DPI</td><td>Deep Packet Inspection</td></tr>
+            <tr><td>HTTP</td><td>Hypertext Transfer Protocol</td></tr>
+            <tr><td>HTTPS</td><td>Hypertext Transfer Protocol Secure</td></tr>
+            <tr><td>IoT</td><td>Internet of Things</td></tr>
                     <tr><td>SSH</td><td>Secure Shell</td></tr>
                     <tr><td>TLS</td><td>Transport Layer Security</td></tr>
                     <tr><td>VPN</td><td>Virtual Private Network</td></tr>
@@ -4696,7 +4324,7 @@
                   <tbody>
                     <tr><td>EDR</td><td>Endpoint Detection and Response</td></tr>
                     <tr><td>IDS</td><td>Intrusion Detection System</td></tr>
-                    <tr><td>IPS</td><td>Intrusion Prevention System</td></tr>
+            <tr><td>IPS</td><td>Intrusion Prevention System</td></tr>
                     <tr><td>SIEM</td><td>Security Information and Event Management</td></tr>
                     <tr><td>SOC</td><td>Security Operations Center</td></tr>
                   </tbody>
@@ -4722,9 +4350,9 @@
                     <tr><td>CIS</td><td>Center for Internet Security</td></tr>
                     <tr><td>FISMA</td><td>Federal Information Security Modernization Act</td></tr>
                     <tr><td>HIPAA</td><td>Health Insurance Portability and Accountability Act</td></tr>
-                    <tr><td>ISO</td><td>International Organization for Standardization</td></tr>
-                    <tr><td>NIST</td><td>National Institute of Standards and Technology</td></tr>
-                    <tr><td>PCI</td><td>Payment Card Industry</td></tr>
+            <tr><td>ISO</td><td>International Organization for Standardization</td></tr>
+            <tr><td>NIST</td><td>National Institute of Standards and Technology</td></tr>
+            <tr><td>PCI</td><td>Payment Card Industry</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -4737,12 +4365,12 @@
                     <tr><td>CVSS</td><td>Common Vulnerability Scoring System</td></tr>
                     <tr><td>DLP</td><td>Data Loss Prevention</td></tr>
                     <tr><td>MDM</td><td>Mobile Device Management</td></tr>
-                    <tr><td>SCAP</td><td>Security Content Automation Protocol</td></tr>
-                  </tbody>
-                </table>
+            <tr><td>SCAP</td><td>Security Content Automation Protocol</td></tr>
+          </tbody>
+        </table>
               </div>
             </div>
-          </section>
+      </section>
         </div>
       </article>
       
@@ -4751,7 +4379,7 @@
         <div class="control-header">
           <span class="control-number">📖</span>
           <div class="control-title">
-            <h2>Additional Resources</h2>
+          <h2>Additional Resources</h2>
           </div>
         </div>
 
@@ -4761,8 +4389,8 @@
             <div class="resources-grid">
               <div class="resource-category">
                 <h4>CIS Resources</h4>
-                <ul>
-                  <li><a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Critical Security Controls v8</a></li>
+          <ul>
+            <li><a href="https://www.cisecurity.org/controls/v8/" target="_blank" rel="noopener">CIS Critical Security Controls v8</a></li>
                   <li><a href="https://www.cisecurity.org/white-papers/cis-password-policy-guide/" target="_blank" rel="noopener">CIS Password Policy Guide</a></li>
                   <li><a href="https://learn.cisecurity.org/cis-cat-lite" target="_blank" rel="noopener">CIS-CAT Lite Configuration Assessment Tool</a></li>
                   <li><a href="https://www.cisecurity.org/controls/v8/companion-guides" target="_blank" rel="noopener">CIS Controls Companion Guides</a></li>
@@ -4772,11 +4400,11 @@
               <div class="resource-category">
                 <h4>NIST Publications</h4>
                 <ul>
-                  <li><a href="https://pages.nist.gov/800-63-3/" target="_blank" rel="noopener">NIST Digital Identity Guidelines</a></li>
+            <li><a href="https://pages.nist.gov/800-63-3/" target="_blank" rel="noopener">NIST Digital Identity Guidelines</a></li>
                   <li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf" target="_blank" rel="noopener">NIST SP 800-53 Security Controls</a></li>
                   <li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-171r2.pdf" target="_blank" rel="noopener">NIST SP 800-171 Protecting CUI</a></li>
                   <li><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">NIST Cybersecurity Framework</a></li>
-                </ul>
+          </ul>
               </div>
 
               <div class="resource-category">
@@ -4819,7 +4447,7 @@
                 </ul>
               </div>
             </div>
-          </section>
+        </section>
         </div>
 
         <style>
